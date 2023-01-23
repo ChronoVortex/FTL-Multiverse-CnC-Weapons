@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mod:findName type="event" name="MV_TRAVELER_GENERIC_NORMAL">
+    <mod:findLike type="loadEventList">
+        <mod-append:event name="MV_TRAVELER_BOSS_BANSHEE_A_NORMAL"/>
+        <mod-append:event name="MV_TRAVELER_BOSS_BANSHEE_C_NORMAL"/>
+    </mod:findLike>
+</mod:findName>
+<mod:findName type="event" name="MV_TRAVELER_GENERIC_CHALLENGE">
+    <mod:findLike type="loadEventList">
+        <mod-append:event name="MV_TRAVELER_BOSS_BANSHEE_A_CHALLENGE"/>
+        <mod-append:event name="MV_TRAVELER_BOSS_BANSHEE_C_CHALLENGE"/>
+    </mod:findLike>
+</mod:findName>
+<mod:findName type="event" name="MV_TRAVELER_GENERIC_EXTREME">
+    <mod:findLike type="loadEventList">
+        <mod-append:event name="MV_TRAVELER_BOSS_BANSHEE_A_EXTREME"/>
+        <mod-append:event name="MV_TRAVELER_BOSS_BANSHEE_C_EXTREME"/>
+    </mod:findLike>
+</mod:findName>
+<mod:findName type="event" name="MV_TRAVELER_GENERIC_CHAOS">
+    <mod:findLike type="loadEventList">
+        <mod-append:event name="MV_TRAVELER_BOSS_BANSHEE_A_CHAOS"/>
+        <mod-append:event name="MV_TRAVELER_BOSS_BANSHEE_C_CHAOS"/>
+    </mod:findLike>
+</mod:findName>
+
+<!--BANSHEE A-->
+<ship name="SHIP_MTBOSS_BANSHEE_A_NORMAL" auto_blueprint="MT_BOSS_BANSHEE_A_NORMAL">
+    <destroyed load="MTBOSS_NODA_DESTROYED"/>
+    <deadCrew load="MTBOSS_NODA_DEADCREW"/>
+</ship>
+<ship name="SHIP_MTBOSS_BANSHEE_A_CHALLENGE" auto_blueprint="MT_BOSS_BANSHEE_A_CHALLENGE">
+    <destroyed load="MTBOSS_NODA_DESTROYED"/>
+    <deadCrew load="MTBOSS_NODA_DEADCREW"/>
+</ship>
+<ship name="SHIP_MTBOSS_BANSHEE_A_EXTREME" auto_blueprint="MT_BOSS_BANSHEE_A_EXTREME">
+    <destroyed load="MTBOSS_NODA_DESTROYED"/>
+    <deadCrew load="MTBOSS_NODA_DEADCREW"/>
+</ship>
+<ship name="SHIP_MTBOSS_BANSHEE_A_CHAOS" auto_blueprint="MT_BOSS_BANSHEE_A_CHAOS">
+    <destroyed load="MTBOSS_NODA_DESTROYED"/>
+    <deadCrew load="MTBOSS_NODA_DEADCREW"/>
+</ship>
+<event name="MV_TRAVELER_BOSS_BANSHEE_A_NORMAL">
+    <text>From out of the tunnel comes a small fighter vessel of unfamiliar design. It appears to be stealth oriented, and it carries weapons you've only recently started to see around the Multiverse.</text>
+    <ship load="SHIP_MTBOSS_BANSHEE_A_NORMAL" hostile="false"/> 
+    <choice hidden="true">
+        <text>Prepare to fight!</text>
+        <event>
+            <text>"Kane teaches us that oppressors must be destroyed without mercy. Your Federation is yet another boot on the throat of the abused and neglected, and through your destruction this universe will be brought one step closer to peace."</text>
+            <ship hostile="true"/> 
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="COMBAT_CHECK"/>
+            </choice>
+        </event>
+    </choice>
+    <choice>
+        <text>Pay tribute in scrap to avoid the fight.</text>
+        <event>
+            <text>Fortunately, the MV ship accepts the tribute in turn for letting you live.</text>
+            <item_modify>
+                <item type="scrap" min="-35" max="-50"/>
+            </item_modify>
+        </event>
+    </choice>
+    <choice hidden="true" req="JUDGE_BOON_RENEGADE">
+        <text>Use your blessing to avoid combat.</text>
+        <event load="MV_TRAVELER_BOON"/>
+    </choice>
+</event>
+<event name="MV_TRAVELER_BOSS_BANSHEE_A_CHALLENGE">
+    <text>From out of the tunnel comes a small fighter vessel of unfamiliar design. It appears to be stealth oriented, and it carries weapons you've only recently started to see around the Multiverse.</text>
+    <ship load="SHIP_MTBOSS_BANSHEE_A_CHALLENGE" hostile="false"/> 
+    <choice hidden="true">
+        <text>Prepare to fight!</text>
+        <event>
+            <text>"Kane teaches us that oppressors must be destroyed without mercy. Your Federation is yet another boot on the throat of the abused and neglected, and through your destruction this universe will be brought one step closer to peace."</text>
+            <ship hostile="true"/> 
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="COMBAT_CHECK"/>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true" req="LIST_CHECK_ANY_CREW" lvl="1" blue="false">
+        <text>Draw straws and send over a crew as tribute.</text>
+        <event>
+            <text>Fortunately, the MV ship accepts the tribute in turn for letting you live.</text>
+            <removeCrew>
+                <clone>false</clone>
+                <text>Tempting as it is, cloning living crew is against Federation law. God damn Federation laws...</text>
+            </removeCrew>
+        </event>
+    </choice>
+    <choice hidden="true" req="JUDGE_BOON_RENEGADE">
+        <text>Use your blessing to avoid combat.</text>
+        <event load="MV_TRAVELER_BOON"/>
+    </choice>
+</event>
+<event name="MV_TRAVELER_BOSS_BANSHEE_A_EXTREME">
+    <text>From out of the tunnel comes a small fighter vessel of unfamiliar design. It appears to be stealth oriented, and it carries weapons you've only recently started to see around the Multiverse.</text>
+    <ship load="SHIP_MTBOSS_BANSHEE_A_EXTREME" hostile="false"/> 
+    <choice hidden="true">
+        <text>Prepare to fight!</text>
+        <event>
+            <text>"Kane teaches us that oppressors must be destroyed without mercy. Your Federation is yet another boot on the throat of the abused and neglected, and through your destruction this universe will be brought one step closer to peace."</text>
+            <ship hostile="true"/> 
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="COMBAT_CHECK"/>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true" req="JUDGE_BOON_RENEGADE">
+        <text>Use your blessing to avoid combat.</text>
+        <event load="MV_TRAVELER_BOON"/>
+    </choice>
+</event>
+<event name="MV_TRAVELER_BOSS_BANSHEE_A_CHAOS">
+    <text>From out of the tunnel comes a small fighter vessel of unfamiliar design. It appears to be stealth oriented, and it carries weapons you've only recently started to see around the Multiverse.</text>
+    <ship load="SHIP_MTBOSS_BANSHEE_A_CHAOS" hostile="false"/> 
+    <choice hidden="true">
+        <text>Prepare to fight!</text>
+        <event>
+            <text>"Kane teaches us that oppressors must be destroyed without mercy. Your Federation is yet another boot on the throat of the abused and neglected, and through your destruction this universe will be brought one step closer to peace."</text>
+            <ship hostile="true"/> 
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="COMBAT_CHECK"/>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true" req="JUDGE_BOON_RENEGADE">
+        <text>Use your blessing to avoid combat.</text>
+        <event load="MV_TRAVELER_BOON"/>
+    </choice>
+</event>
+<event name="MTBOSS_NODA_DESTROYED">
+    <text>The mighty vessel has been eliminated! Within its wreckage remains plenty of scrap and supplies for the taking.</text>
+    <autoReward level="HIGH">standard_no_item</autoReward>
+    <variable name="ach_mv_nod_a" op="set" val="1"/>
+    <metaVariable name="prof_renegades_killed" op="add" val="1"/>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event load="MTBOSS_NODA_DROP_CHANCE"/>
+    </choice>
+</event>
+<eventList name="MTBOSS_NODA_DROP_CHANCE">
+    <event>
+        <text>Among the wreckage, you find a damaged cargo crate giving off highly unstable energy readings. You decide to pull the ship away just in time to avoid a massive explosion that consumes the remaining debris. Glad that you made it out with a decent haul of scrap and your life before it went off, you prepare to leave.</text>
+        <autoReward level="LOW">stuff</autoReward>
+    </event>
+    <event><loadEvent>MTBOSS_NODA_DROP</loadEvent></event>
+</eventList>
+<event name="MTBOSS_NODA_DEADCREW">
+    <text>The mighty vessel has been vanquished! Within the now cleared cruiser, plenty of scrap and supplies remain for the taking.</text>
+    <autoReward level="HIGH">standard_no_item</autoReward>
+    <variable name="ach_mv_nod_a" op="set" val="1"/>
+    <metaVariable name="prof_renegades_killed" op="add" val="1"/>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event><loadEvent>MTBOSS_NODA_DROP</loadEvent></event>
+    </choice>
+</event>
+<event name="MTBOSS_NODA_DROP">
+    <text>You're also surprised to find a cargo crate completly intact amongst the wreckage. It contains a warhead which you recognize as a small nuke! Not something you'd typically find in even the less civilized cultures these days, but an effective weapon nonetheless.</text>
+    <achievement silent="false">ACH_REN_NOD_A</achievement>
+    <autoReward level="LOW">stuff</autoReward>
+    <augment name="COMBAT_NUKE"/>
+</event>
+
+<!--BANSHEE C-->
+<ship name="SHIP_MTBOSS_BANSHEE_C_NORMAL" auto_blueprint="MT_BOSS_BANSHEE_C_NORMAL">
+    <destroyed load="MTBOSS_NODC_DESTROYED"/>
+    <deadCrew load="MTBOSS_NODC_DEADCREW"/>
+</ship>
+<ship name="SHIP_MTBOSS_BANSHEE_C_CHALLENGE" auto_blueprint="MT_BOSS_BANSHEE_C_CHALLENGE">
+    <destroyed load="MTBOSS_NODC_DESTROYED"/>
+    <deadCrew load="MTBOSS_NODC_DEADCREW"/>
+</ship>
+<ship name="SHIP_MTBOSS_BANSHEE_C_EXTREME" auto_blueprint="MT_BOSS_BANSHEE_C_EXTREME">
+    <destroyed load="MTBOSS_NODC_DESTROYED"/>
+    <deadCrew load="MTBOSS_NODC_DEADCREW"/>
+</ship>
+<ship name="SHIP_MTBOSS_BANSHEE_C_CHAOS" auto_blueprint="MT_BOSS_BANSHEE_C_CHAOS">
+    <destroyed load="MTBOSS_NODC_DESTROYED"/>
+    <deadCrew load="MTBOSS_NODC_DEADCREW"/>
+</ship>
+<event name="MV_TRAVELER_BOSS_BANSHEE_C_NORMAL">
+    <text>From out of the tunnel comes a small fighter vessel of unfamiliar design. It appears to be stealth oriented, and it carries weapons you've only recently started to see around the Multiverse.</text>
+    <ship load="SHIP_MTBOSS_BANSHEE_C_NORMAL" hostile="false"/> 
+    <choice hidden="true">
+        <text>Prepare to fight!</text>
+        <event>
+            <text>"We will not go silently into the void. If you do not give us what we need, we will take it by force."</text>
+            <ship hostile="true"/> 
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="COMBAT_CHECK"/>
+            </choice>
+        </event>
+    </choice>
+    <choice>
+        <text>Pay tribute in scrap to avoid the fight.</text>
+        <event>
+            <text>Fortunately, the MV ship accepts the tribute in turn for letting you live.</text>
+            <item_modify>
+                <item type="scrap" min="-35" max="-50"/>
+            </item_modify>
+        </event>
+    </choice>
+    <choice hidden="true" req="JUDGE_BOON_RENEGADE">
+        <text>Use your blessing to avoid combat.</text>
+        <event load="MV_TRAVELER_BOON"/>
+    </choice>
+</event>
+<event name="MV_TRAVELER_BOSS_BANSHEE_C_CHALLENGE">
+    <text>From out of the tunnel comes a small fighter vessel of unfamiliar design. It appears to be stealth oriented, and it carries weapons you've only recently started to see around the Multiverse.</text>
+    <ship load="SHIP_MTBOSS_BANSHEE_C_CHALLENGE" hostile="false"/> 
+    <choice hidden="true">
+        <text>Prepare to fight!</text>
+        <event>
+            <text>"We will not go silently into the void. If you do not give us what we need, we will take it by force."</text>
+            <ship hostile="true"/> 
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="COMBAT_CHECK"/>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true" req="LIST_CHECK_ANY_CREW" lvl="1" blue="false">
+        <text>Draw straws and send over a crew as tribute.</text>
+        <event>
+            <text>Fortunately, the MV ship accepts the tribute in turn for letting you live.</text>
+            <removeCrew>
+                <clone>false</clone>
+                <text>Tempting as it is, cloning living crew is against Federation law. God damn Federation laws...</text>
+            </removeCrew>
+        </event>
+    </choice>
+    <choice hidden="true" req="JUDGE_BOON_RENEGADE">
+        <text>Use your blessing to avoid combat.</text>
+        <event load="MV_TRAVELER_BOON"/>
+    </choice>
+</event>
+<event name="MV_TRAVELER_BOSS_BANSHEE_C_EXTREME">
+    <text>From out of the tunnel comes a small fighter vessel of unfamiliar design. It appears to be stealth oriented, and it carries weapons you've only recently started to see around the Multiverse.</text>
+    <ship load="SHIP_MTBOSS_BANSHEE_C_EXTREME" hostile="false"/> 
+    <choice hidden="true">
+        <text>Prepare to fight!</text>
+        <event>
+            <text>"We will not go silently into the void. If you do not give us what we need, we will take it by force."</text>
+            <ship hostile="true"/> 
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="COMBAT_CHECK"/>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true" req="JUDGE_BOON_RENEGADE">
+        <text>Use your blessing to avoid combat.</text>
+        <event load="MV_TRAVELER_BOON"/>
+    </choice>
+</event>
+<event name="MV_TRAVELER_BOSS_BANSHEE_C_CHAOS">
+    <text>From out of the tunnel comes a small fighter vessel of unfamiliar design. It appears to be stealth oriented, and it carries weapons you've only recently started to see around the Multiverse.</text>
+    <ship load="SHIP_MTBOSS_BANSHEE_C_CHAOS" hostile="false"/> 
+    <choice hidden="true">
+        <text>Prepare to fight!</text>
+        <event>
+            <text>"We will not go silently into the void. If you do not give us what we need, we will take it by force."</text>
+            <ship hostile="true"/> 
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="COMBAT_CHECK"/>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true" req="JUDGE_BOON_RENEGADE">
+        <text>Use your blessing to avoid combat.</text>
+        <event load="MV_TRAVELER_BOON"/>
+    </choice>
+</event>
+<event name="MTBOSS_NODC_DESTROYED">
+    <text>The mighty vessel has been eliminated! Within its wreckage remains plenty of scrap and supplies for the taking.</text>
+    <autoReward level="HIGH">standard_no_item</autoReward>
+    <variable name="ach_mv_nod_c" op="set" val="1"/>
+    <metaVariable name="prof_renegades_killed" op="add" val="1"/>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event load="MTBOSS_NODC_DROP_CHANCE"/>
+    </choice>
+</event>
+<eventList name="MTBOSS_NODC_DROP_CHANCE">
+    <event>
+		<text>You find the remains of a unique weapon model amongst the ruins of the ship, but it appears it did not survive the fight. You'll have to be more careful next time, or get lucky. Fortunately, there's still a bit more supplies to take with you.</text>
+        <autoReward level="LOW">stuff</autoReward>
+    </event>
+    <event><loadEvent>MTBOSS_NODC_DROP</loadEvent></event>
+</eventList>
+<event name="MTBOSS_NODC_DEADCREW">
+    <text>The mighty vessel has been vanquished! Within the now cleared cruiser, plenty of scrap and supplies remain for the taking.</text>
+    <autoReward level="HIGH">standard_no_item</autoReward>
+    <variable name="ach_mv_nod_c" op="set" val="1"/>
+    <metaVariable name="prof_renegades_killed" op="add" val="1"/>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event><loadEvent>MTBOSS_NODC_DROP</loadEvent></event>
+    </choice>
+</event>
+<event name="MTBOSS_NODC_DROP">
+    <text>You're also surprised to find not only a special weapon amongst the wreckage, but some kind of creature as well! It seems docile, and must be resilient for having survived the battle.</text>
+    <achievement silent="false">ACH_REN_NOD_C</achievement>
+    <autoReward level="LOW">stuff</autoReward>
+    <weapon name="BOMB_TIBERIUM"/>
+    <crewMember amount="1" class="tiberium_fiend"/>
+</event>
+
+
+
+<mod:findName type="event" name="SYLVAN_TRADES_DROPPOINT" panic="true">
+    <mod:findLike type="loadEventList">
+        <mod-append:event name="SYLVAN_CNC"/>
+        <mod-append:event name="SYLVAN_TIBERIUM"/>
+    </mod:findLike>
+</mod:findName>
+<mod:findName type="event" name="SYLVAN_TRADES_LASTSTAND" panic="true">
+    <mod:findLike type="loadEventList">
+        <mod-append:event name="SYLVAN_CNC"/>
+        <mod-append:event name="SYLVAN_TIBERIUM"/>
+    </mod:findLike>
+</mod:findName>
+<mod:findName type="event" name="SYLVAN_TRADES" panic="true">
+    <mod:findLike type="loadEventList">
+        <mod-append:event name="SYLVAN_CNC"/>
+        <mod-append:event name="SYLVAN_TIBERIUM"/>
+    </mod:findLike>
+</mod:findName>
+
+<event name="SYLVAN_CNC">
+    <text>"Aaaaah. Ssstranger ssstranger, I have sssomething ssspecial for you! There are universssesss out there that developed sssome pretty wild tech long before FTL travel wasss invented. Thessse weaponsss may look old, but sssome of them pack quite a punch!"</text>
+    <store>STORE_SYLVAN_CNC</store>
+</event>
+<event name="SYLVAN_TIBERIUM">
+    <text>"Aaaaah. Ssstranger ssstranger, thisss Tiberium ssstuff isss pretty nasssty. Heard it can dessstroy an entire ecosssyssstem in a jussst few decadesss. Careful where you ussse it, you wouldn't want to pissss off too many people at once."</text>
+    <store>STORE_SYLVAN_TIBERIUM</store>
+</event>

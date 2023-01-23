@@ -1,0 +1,1072 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- All weapons IDs with >0 rarity:
+ION_CANNON
+DISRUPTOR
+RAILGUN
+LASER_PRISM_1
+COMBAT_CHRONO
+MISSILES_V5_SINGLE
+MISSILES_TIB
+LASER_BANSHEE
+LASER_BANSHEE_2
+FOCUS_OBELISK
+NOD_LASER
+BOMB_TIBERIUM
+BOMB_TIBERIUM_BLUE
+-->
+
+<weaponBlueprint name="ION_CANNON">
+    <type>BEAM</type>
+    <tip>tip_beams</tip>
+    <title>Ion Cannon</title>
+    <short>Ion Cannon</short>
+    <desc>This super weapon was adapted to function aboard the Kodiak. Can heavily damage and ionize ships.</desc>
+    <tooltip>Large beam that does 2 damage and 2 ion damage per room.</tooltip>
+    <ion>3</ion>
+    <ionBeamFix>true</ionBeamFix>
+    <damage>3</damage>
+    <sp>0</sp>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>30</cooldown>
+    <power>4</power>
+    <color>
+        <r>211</r>
+        <g>252</g>
+        <b>254</b>
+    </color>
+    <speed>30</speed>
+    <cost>100</cost>
+    <bp>12</bp>
+    <rarity>5</rarity>
+    <length>60</length>
+    <image>beam_contact</image>
+    <launchSounds>
+        <sound>ionCannon</sound>
+    </launchSounds>
+    <weaponArt>ion_cannon</weaponArt> 
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="DISRUPTOR">
+    <type>BEAM</type>
+    <tip>tip_beams</tip>
+    <title>Sonic Disruptor</title>
+    <short>Disruptor</short>
+    <desc>Emits a sonic pulse across a particle field that can damage and breach ships and disrupt systems.</desc>
+    <tooltip>Two damage per room beam weapon with a high breach chance.</tooltip>
+    <damage>2</damage>
+    <sysDamage>1</sysDamage>
+    <sp>0</sp>
+    <fireChance>0</fireChance>
+    <breachChance>5</breachChance>
+    <cooldown>18</cooldown>
+    <speed>2</speed>
+    <power>3</power>
+    <color>
+        <r>0</r>
+        <g>255</g>
+        <b>145</b>
+    </color>
+    <cost>75</cost>
+    <bp>2</bp>
+    <rarity>4</rarity>
+    <image>beam_contact</image>
+    <length>50</length>
+    <launchSounds>
+        <sound>sonicShot</sound>
+    </launchSounds>
+    <weaponArt>disruptor</weaponArt> 
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="RAILGUN">
+    <type>LASER</type>
+    <flavorType>Railgun</flavorType>
+    <tip>tip_railguns</tip>
+    <title>Railgun</title>
+    <short>Railgun</short>
+    <desc>Advanced GDI weapon capable of piercing all shields and tearing apart hulls.</desc>
+    <tooltip>Fires 1 high-speed warhead; does 3 damage; pierces all shields and causes breaches.</tooltip>
+    <damage>3</damage>
+    <missiles>1</missiles>
+    <shots>1</shots>
+    <speed>120</speed>
+    <accuracyMod>15</accuracyMod>
+    <sp>10</sp>
+    <fireChance>0</fireChance>
+    <breachChance>10</breachChance>
+    <stunChance>2</stunChance>
+    <cooldown>16</cooldown>
+    <power>2</power>
+    <cost>70</cost>
+    <bp>5</bp>
+    <rarity>3</rarity>
+    <image>railgun_shot</image>
+    <launchSounds>
+        <sound>railShot</sound>
+    </launchSounds>
+    <hitShipSounds>
+        <sound>smallExplosion</sound>
+    </hitShipSounds>
+    <hitShieldSounds>
+        <sound>hitShield1</sound>
+        <sound>hitShield2</sound>
+        <sound>hitShield3</sound>
+    </hitShieldSounds>
+    <missSounds>
+        <sound>miss</sound>
+    </missSounds>
+    <weaponArt>railgun</weaponArt> 
+    <iconImage>missile</iconImage>
+</weaponBlueprint>
+
+
+
+<crewBlueprint name="dummy_prism_surge_trigger">
+    <desc>█</desc>
+    <cost>0</cost>
+    <bp>2</bp>
+    <title>█</title>
+    <short>█</short>
+    <rarity>0</rarity>
+    <powerList>
+        <power>█</power>
+    </powerList>
+</crewBlueprint>
+<weaponBlueprint name="LASER_PRISM_1">
+    <type>LASER</type>
+    <drone_targetable>-1</drone_targetable>
+    <flavorType>Prism</flavorType>
+    <tip>tip_laser</tip>
+    <title>Prism Cannon</title>
+    <short>Prism Cannon</short>
+    <desc>This chaotic weapon concentrates photons to deal damage. On impact with the enemy ship it refracts randomly, hitting up to 3 more rooms and dealing up to 5 total damage.</desc>
+    <tooltip>Refracting laser weapon.</tooltip>
+    <descriptionOverride>This chaotic weapon concentrates photons to deal damage. On impact with the enemy ship it refracts randomly, hitting up to 3 more rooms and dealing up to 5 total damage.
+
+Stats:
+Required Power: 2
+Charge Time: 13 seconds
+Accuracy Bonus: +50%
+
+Shots Per Charge: 1
+
+Base Hull Damage: 2
+Total System Damage: 2
+Total Crew Damage: 30
+
+Fire Chance: 20%
+
+Buy/Sell Price: 70~/35~
+</descriptionOverride>
+    <tooltipOverride>Required Power: 2
+Charge Time: 13 seconds
+Accuracy Bonus: +50%
+
+Shots Per Charge: 1
+
+Base Hull Damage: 2
+Total System Damage: 2
+Total Crew Damage: 30
+
+Fire Chance: 20%</tooltipOverride>
+    <damage>2</damage>
+    <accuracyMod>50</accuracyMod>
+    <shots>1</shots>
+    <speed>120</speed>
+    <sp>0</sp>
+    <fireChance>2</fireChance>
+    <breachChance>0</breachChance>
+    <spawnCrew>
+        <number>1</number>
+        <race>dummy_prism_surge_trigger</race>
+        <lifetime>0</lifetime>
+    </spawnCrew>
+    <cooldown>13</cooldown>
+    <power>2</power>
+    <cost>65</cost>
+    <bp>2</bp>
+    <rarity>2</rarity>
+    <image>laser_prism_shot</image>
+    <explosion>explosion_prism</explosion>
+    <launchSounds>
+        <sound>prismLaser</sound>
+    </launchSounds>
+    <hitShipSounds>
+        <sound>hitHull2</sound>
+        <sound>hitHull3</sound>
+    </hitShipSounds>
+    <hitShipSounds>
+        <sound>prismHitHull1</sound>
+        <sound>prismHitHull2</sound>
+        <sound>prismHitHull3</sound>
+    </hitShipSounds>
+    <missSounds>
+        <sound>miss</sound>
+    </missSounds>
+    <weaponArt>laser_prism</weaponArt>
+    <iconImage>laser</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="LASER_PRISM_SURGE_DUMMY">
+    <type>LASER</type>
+    <drone_targetable>-1</drone_targetable>
+    <flavorType>Prism</flavorType>
+    <tip>tip_laser</tip>
+    <title>Prism Surge Dummy</title>
+    <short>Prism Surge Dummy</short>
+    <desc>Gay rainbow gun go brrrrrrrr</desc>
+    <tooltip>U ded</tooltip>
+    <damage>1</damage>
+    <accuracyMod>50</accuracyMod>
+    <shots>1</shots>
+    <speed>60</speed>
+    <sp>0</sp>
+    <fireChance>2</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>9</cooldown>
+    <power>1</power>
+    <cost>0</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <image>laser_prism_shot</image>
+    <explosion>explosion_prism</explosion>
+    <launchSounds>
+        <sound>silence</sound>
+    </launchSounds>
+    <hitShipSounds>
+        <sound>hitHull2</sound>
+        <sound>hitHull3</sound>
+    </hitShipSounds>
+    <hitShipSounds>
+        <sound>prismHitHull1</sound>
+        <sound>prismHitHull2</sound>
+        <sound>prismHitHull3</sound>
+    </hitShipSounds>
+    <missSounds>
+        <sound>miss</sound>
+    </missSounds>
+    <weaponArt>laser_prism</weaponArt>
+    <iconImage>laser</iconImage>
+</weaponBlueprint>
+
+<augBlueprint name="COMBAT_CHRONO_COOLDOWN">
+    <title>You should never see this</title>
+    <desc>You should never see this</desc>
+    <cost>0</cost>
+    <rarity>0</rarity>
+    <stackable>true</stackable>
+    <bp>0</bp>
+</augBlueprint>
+<weaponBlueprint name="COMBAT_CHRONO">
+    <type>BOMB</type>
+    <flavorType>Temporal Discharge</flavorType>
+    <tip>tip_combatChrono</tip>
+    <title>Combat Chronosphere</title>
+    <short>Chrono Sphere</short>
+    <desc>This device can manipulate time to your advantage. Pierces all shields, disables systems and causes crew to go out of phase, preventing them from interacting with their surroundings and protecting them from hazards and enemies. While powered, weapons charge 15% faster.</desc>
+    <tooltip>Neutralizes crew, decreases weapon cooldown.</tooltip>
+    <descriptionOverride>This device can manipulate time to your advantage. Pierces all shields, disables systems and causes crew to go out of phase, preventing them from interacting with their surroundings and protecting them from hazards and enemies. While powered, weapons charge 15% faster.
+
+Stats:
+Required Power: 2
+Charge Time: 11 seconds
+
+Shots Per Charge: 1
+
+Ion Damage: 1
+
+Buy/Sell Price: 60~/30~
+</descriptionOverride>
+    <tooltipOverride>Required Power: 2
+Charge Time: 11 seconds
+
+Shots Per Charge: 1
+
+Ion Damage: 1</tooltipOverride>
+    <damage>0</damage>
+    <ion>1</ion>
+    <statBoosts>
+        <statBoost name="canFight">
+            <boostType>SET</boostType>
+            <value>FALSE</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <affectsSelf>true</affectsSelf>
+            <maxStacks>1</maxStacks>
+            <duration>10</duration>
+            <boostAnim>chrono_phase</boostAnim>
+        </statBoost>
+        <statBoost name="canRepair">
+            <boostType>SET</boostType>
+            <value>FALSE</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <affectsSelf>true</affectsSelf>
+            <maxStacks>1</maxStacks>
+            <duration>10</duration>
+        </statBoost>
+        <statBoost name="canSabotage">
+            <boostType>SET</boostType>
+            <value>FALSE</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <affectsSelf>true</affectsSelf>
+            <maxStacks>1</maxStacks>
+            <duration>10</duration>
+        </statBoost>
+        <statBoost name="canMan">
+            <boostType>SET</boostType>
+            <value>FALSE</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <affectsSelf>true</affectsSelf>
+            <maxStacks>1</maxStacks>
+            <duration>10</duration>
+        </statBoost>
+        <statBoost name="canSuffocate">
+            <boostType>SET</boostType>
+            <value>FALSE</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <affectsSelf>true</affectsSelf>
+            <maxStacks>1</maxStacks>
+            <duration>10</duration>
+        </statBoost>
+        <statBoost name="canBurn">
+            <boostType>SET</boostType>
+            <value>FALSE</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <affectsSelf>true</affectsSelf>
+            <maxStacks>1</maxStacks>
+            <duration>10</duration>
+        </statBoost>
+        <statBoost name="validTarget">
+            <boostType>SET</boostType>
+            <value>FALSE</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <affectsSelf>true</affectsSelf>
+            <maxStacks>1</maxStacks>
+            <duration>10</duration>
+        </statBoost>
+
+        <statBoost name="canPhaseThroughDoors">
+            <boostType>SET</boostType>
+            <value>TRUE</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <affectsSelf>true</affectsSelf>
+            <maxStacks>1</maxStacks>
+            <duration>10</duration>
+        </statBoost>
+        <statBoost name="resistsMindControl">
+            <boostType>SET</boostType>
+            <value>TRUE</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <affectsSelf>true</affectsSelf>
+            <maxStacks>1</maxStacks>
+            <duration>10</duration>
+        </statBoost>
+
+        <statBoost name="bonusPower">
+            <boostType>SET</boostType>
+            <amount>0</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <affectsSelf>true</affectsSelf>
+            <maxStacks>1</maxStacks>
+            <duration>10</duration>
+        </statBoost>
+        <statBoost name="stunMultiplier">
+            <boostType>SET</boostType>
+            <amount>0</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <affectsSelf>true</affectsSelf>
+            <maxStacks>1</maxStacks>
+            <duration>10</duration>
+        </statBoost>
+        <statBoost name="healSpeed">
+            <boostType>SET</boostType>
+            <amount>0</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <affectsSelf>true</affectsSelf>
+            <maxStacks>1</maxStacks>
+            <duration>10</duration>
+        </statBoost>
+        <statBoost name="allDamageTakenMultiplier">
+            <boostType>SET</boostType>
+            <amount>0</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <affectsSelf>true</affectsSelf>
+            <maxStacks>1</maxStacks>
+            <duration>10</duration>
+        </statBoost>
+        <statBoost name="passiveHealAmount">
+            <boostType>SET</boostType>
+            <amount>0</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <affectsSelf>true</affectsSelf>
+            <maxStacks>1</maxStacks>
+            <duration>10</duration>
+        </statBoost>
+        <statBoost name="truePassiveHealAmount">
+            <boostType>SET</boostType>
+            <amount>0</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <affectsSelf>true</affectsSelf>
+            <maxStacks>1</maxStacks>
+            <duration>10</duration>
+        </statBoost>
+        <statBoost name="healAmount">
+            <boostType>SET</boostType>
+            <amount>0</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <affectsSelf>true</affectsSelf>
+            <maxStacks>1</maxStacks>
+            <duration>10</duration>
+        </statBoost>
+        <statBoost name="trueHealAmount">
+            <boostType>SET</boostType>
+            <amount>0</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <affectsSelf>true</affectsSelf>
+            <maxStacks>1</maxStacks>
+            <duration>10</duration>
+        </statBoost>
+        <statBoost name="healCrewAmount">
+            <boostType>SET</boostType>
+            <amount>0</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <affectsSelf>true</affectsSelf>
+            <maxStacks>1</maxStacks>
+            <duration>10</duration>
+        </statBoost>
+        <statBoost name="damageEnemiesAmount">
+            <boostType>SET</boostType>
+            <amount>0</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <affectsSelf>true</affectsSelf>
+            <maxStacks>1</maxStacks>
+            <duration>10</duration>
+        </statBoost>
+        <statBoost name="powerDrain">
+            <boostType>SET</boostType>
+            <amount>0</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <affectsSelf>true</affectsSelf>
+            <maxStacks>1</maxStacks>
+            <duration>10</duration>
+        </statBoost>
+    </statBoosts>
+    <shots>1</shots>
+    <sp>0</sp>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>11</cooldown>
+    <power>2</power>
+    <cost>60</cost>
+    <bp>2</bp>
+    <rarity>3</rarity>
+    <image>invisible</image>
+    <explosion>explosion_chrono</explosion>
+    <launchSounds>
+        <sound>combatChrono</sound>
+    </launchSounds>
+    <hitShipSounds>
+        <sound>chronoDisch</sound>
+    </hitShipSounds>
+    <weaponArt>combat_chronosphere</weaponArt>
+    <iconImage>bomb</iconImage>
+</weaponBlueprint>
+
+
+
+<weaponBlueprint name="MISSILES_V5_SINGLE">
+    <type>MISSILES</type>
+    <flavorType>Toggling Weapon</flavorType>
+    <tip>tip_missiles</tip>
+    <title>V5 Missiles [P]</title>
+    <short>V5 [P]</short>
+    <desc>[Current Mode: Precision] A versatile Missile weapon which can be toggled between precision single-warhead mode and multi-warhead scatter mode.</desc>
+    <tooltip>Fires 1 missile; does 3 damage; pierces all shields.</tooltip>
+    <damage>3</damage>
+    <missiles>1</missiles>
+    <accuracyMod>10</accuracyMod>
+    <speed>50</speed>
+    <shots>1</shots>
+    <sp>10</sp>
+    <fireChance>3</fireChance>
+    <breachChance>3</breachChance>
+    <stunChance>4</stunChance>
+    <cooldown>14</cooldown>
+    <power>2</power>
+    <cost>65</cost>
+    <bp>6</bp>
+    <rarity>4</rarity>
+    <image>missile_v5_single</image>
+    <launchSounds>
+        <sound>smallMissile1</sound>
+        <sound>smallMissile2</sound>
+    </launchSounds>
+    <hitShipSounds>
+        <sound>explosion_heavy</sound>
+    </hitShipSounds>
+    <hitShieldSounds>
+        <sound>hitShield1</sound>
+        <sound>hitShield2</sound>
+        <sound>hitShield3</sound>
+    </hitShieldSounds>
+    <missSounds>
+        <sound>miss</sound>
+    </missSounds>
+    <weaponArt>missiles_v5_single</weaponArt>
+    <iconImage>missile</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="MISSILES_V5_MULTI">
+    <type>BURST</type>
+    <drone_targetable>1</drone_targetable>
+    <flavorType>Toggling Weapon</flavorType>
+    <tip>tip_missiles</tip>
+    <title>V5 Missiles [M]</title>
+    <short>V5 [M]</short>
+    <desc>[Current Mode: Multi-Warhead] A versatile Missile weapon which can be toggled between precision single-warhead mode and multi-warhead scatter mode.</desc>
+    <tooltip>Fires 5 missiles; does 1 damage; pierces all shields.</tooltip>
+    <radius>70</radius>
+    <damage>1</damage>
+    <missiles>1</missiles>
+    <accuracyMod>10</accuracyMod>
+    <speed>50</speed>
+    <shots>1</shots>
+    <sp>10</sp>
+    <fireChance>2</fireChance>
+    <breachChance>1</breachChance>
+    <stunChance>2</stunChance>
+    <cooldown>14</cooldown>
+    <power>2</power>
+    <cost>65</cost>
+    <bp>6</bp>
+    <rarity>0</rarity>
+    <explosion>explosion_random</explosion>
+    <projectiles>
+        <projectile count="1" fake="true">missile_v5_multi_big2</projectile>
+        <projectile count="1" fake="true">missile_v5_multi_big1</projectile>
+        <projectile count="5" fake="false">missile_v5_multi_small</projectile>
+    </projectiles>
+    <launchSounds>
+        <sound>smallMissile1</sound>
+        <sound>smallMissile2</sound>
+    </launchSounds>
+    <hitShipSounds>
+        <sound>smallExplosion</sound>
+    </hitShipSounds>
+    <hitShieldSounds>
+        <sound>hitShield1</sound>
+        <sound>hitShield2</sound>
+        <sound>hitShield3</sound>
+    </hitShieldSounds>
+    <missSounds>
+        <sound>miss</sound>
+    </missSounds>
+    <weaponArt>missiles_v5_multi</weaponArt>
+    <iconImage>missile</iconImage>
+</weaponBlueprint>
+
+
+
+<weaponBlueprint name="MISSILES_TIB">
+    <type>BURST</type>
+    <drone_targetable>1</drone_targetable>
+    <flavorType>Cluster Missile</flavorType>
+    <title>Chemical Cluster Missile</title>
+    <short>Chem. M.</short>
+    <tip>tip_missiles</tip>
+    <desc>Tiberium based warhead capable of causing corrosive damage and killing crew.</desc>
+    <tooltip>Fires 3 missiles; does 1 damage each; kills crew; pierces all shields.</tooltip>
+    <radius>35</radius>
+    <damage>1</damage>
+    <persDamage>3</persDamage>
+    <missiles>1</missiles>
+    <shots>1</shots>
+    <sp>10</sp>
+    <fireChance>3</fireChance>
+    <stunChance>1</stunChance>
+    <cooldown>22</cooldown>
+    <power>3</power> 
+    <cost>65</cost>
+    <bp>6</bp>
+    <rarity>5</rarity>
+    <speed>45</speed>
+    <explosion>explosion_tib</explosion>
+    <projectiles>
+        <projectile count="1" fake="true">missile_tib_big2</projectile>
+        <projectile count="1" fake="true">missile_tib_big1</projectile>
+        <projectile count="3" fake="false">missile_tib_small</projectile>
+    </projectiles>
+    <launchSounds>
+        <sound>smallMissile1</sound>
+        <sound>smallMissile2</sound>
+    </launchSounds>
+    <hitShipSounds>
+        <sound>chemHit1</sound>
+        <sound>chemHit2</sound>
+        <sound>chemHit3</sound>
+    </hitShipSounds>
+    <hitShieldSounds>
+        <sound>hitShield1</sound>
+        <sound>hitShield2</sound>
+        <sound>hitShield3</sound>
+    </hitShieldSounds>
+    <missSounds>
+        <sound>miss</sound>
+    </missSounds>
+    <weaponArt>missiles_tib</weaponArt> 
+    <iconImage>missile</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LASER_BANSHEE">
+    <type>LASER</type>
+    <flavorType>Proton Blast</flavorType>
+    <title>Banshee Torpedoes</title>
+    <short>Banshee T.</short>
+    <tip>tip_proton</tip>
+    <locked>1</locked>
+    <desc>Fires a small blast of protons that can damage and disable systems.</desc>
+    <tooltip>Fires a single blast that does 1 damage and 1 ion damage. Can hit and disable shields as well as systems.</tooltip>
+    <damage>1</damage>
+    <ion>1</ion>
+    <speed>40</speed>
+    <shots>1</shots>
+    <sp>0</sp>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>10</cooldown>
+    <power>1</power>
+    <cost>50</cost>
+    <bp>4</bp>
+    <rarity>3</rarity>
+    <image>banshee_shot</image>
+    <launchSounds>
+        <sound>bansheeShot</sound>
+    </launchSounds>
+    <hitShipSounds>
+        <sound>hitHull2</sound>
+        <sound>hitHull3</sound>
+    </hitShipSounds>
+    <hitShieldSounds>
+        <sound>hitShield1</sound>
+        <sound>hitShield2</sound>
+        <sound>hitShield3</sound>
+    </hitShieldSounds>
+    <missSounds>
+        <sound>miss</sound>
+    </missSounds>
+    <weaponArt>banshee_laser</weaponArt>
+    <iconImage>ion</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LASER_BANSHEE_2">
+    <type>LASER</type>
+    <flavorType>Proton Blast</flavorType>
+    <title>Advanced Banshee Torpedoes</title>
+    <short>Adv. Bnsh. T.</short>
+    <tip>tip_proton</tip>
+    <locked>1</locked>
+    <desc>Improved proton blaster that can damage and disable systems extremely quickly.</desc>
+    <tooltip>Fires a single blast that does 1 damage and 1 ion damage. Can hit and disable shields as well as systems.</tooltip>
+    <damage>1</damage>
+    <ion>1</ion>
+    <speed>40</speed>
+    <shots>1</shots>
+    <sp>0</sp>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>6</cooldown>
+    <power>3</power>
+    <cost>65</cost>
+    <bp>4</bp>
+    <rarity>5</rarity>
+    <image>banshee_shot</image>
+    <launchSounds>
+        <sound>bansheeShot</sound>
+    </launchSounds>
+    <hitShipSounds>
+        <sound>hitHull2</sound>
+        <sound>hitHull3</sound>
+    </hitShipSounds>
+    <hitShieldSounds>
+        <sound>hitShield1</sound>
+        <sound>hitShield2</sound>
+        <sound>hitShield3</sound>
+    </hitShieldSounds>
+    <missSounds>
+        <sound>miss</sound>
+    </missSounds>
+    <weaponArt>banshee_laser_2</weaponArt>
+    <iconImage>ion</iconImage>
+</weaponBlueprint>
+
+
+
+<weaponBlueprint name="FOCUS_OBELISK">
+    <type>BEAM</type>
+    <flavorType>Pinpoint</flavorType>
+    <tip>tip_focus</tip>
+    <title>'Obelisk' Pinpoint</title>
+    <short>'Obelisk'</short>
+    <desc>Derived from a device whose hum meant death for any who heard it, this weapon adapts to annihilate whatever it targets.</desc>
+    <tooltip>One damage per room beam weapon</tooltip>
+    <damage>2</damage>
+    <hullBust>1</hullBust>
+    <sysDamage>1</sysDamage>
+    <persDamage>1.5</persDamage>
+    <sp>1</sp>
+    <fireChance>10</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>15</cooldown>
+    <speed>1</speed>
+    <power>2</power>
+    <cost>90</cost>
+    <bp>2</bp>
+    <rarity>4</rarity>
+    <image>beam_contact</image>
+    <length>1</length>
+    <launchSounds>
+        <sound>obeliskShot</sound>
+    </launchSounds>
+    <weaponArt>focus_obelisk</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="NOD_LASER">
+    <type>LASER</type>
+    <title>Nod Laser</title>
+    <short>Nod Laser</short>
+    <tip>tip_laser</tip>
+    <desc>Rapid fire dual shot laser based on a basic defense turret.</desc>
+    <tooltip>Shoots 2 lasers that do 1 damage each.</tooltip>
+    <damage>1</damage>
+    <shots>2</shots>
+    <sp>0</sp>
+    <fireChance>3</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>12</cooldown>
+    <power>1</power>
+    <speed>120</speed>
+    <cost>65</cost>
+    <bp>4</bp>
+    <rarity>4</rarity>
+    <image>laser_nod_shot</image>
+    <launchSounds>
+        <sound>nodLaserShot</sound>
+    </launchSounds>
+    <hitShipSounds>
+        <sound>hitHull2</sound>
+        <sound>hitHull3</sound>
+    </hitShipSounds>
+    <hitShieldSounds>
+        <sound>hitShield1</sound>
+        <sound>hitShield2</sound>
+        <sound>hitShield3</sound>
+    </hitShieldSounds>
+    <missSounds>
+        <sound>miss</sound>
+    </missSounds>
+    <weaponArt>laser_nod</weaponArt> 
+    <iconImage>laser</iconImage>
+</weaponBlueprint>
+
+
+
+<crewBlueprint name="tiberium_fiend">
+    <desc>This beast has been mutated by an ecosystem dominated by Tiberium. It is fit to compete with some of the fiercest creatures imaginable.</desc>
+    <cost>50</cost>
+    <title>Tiberium Fiend</title>
+    <short>Tiberium Fiend</short>
+    <rarity>0</rarity>
+    <powerList>
+        <power>Max Health is increased to 120</power>
+        <power>Moderate suffocation resistance, high fire resistance</power>
+        <power>1.2x move speed, 1.2x combat damage</power>
+        <power>Cannot repair, extinguish fires or man systems</power>
+    </powerList>
+    <colorList>
+        <layer> <!-- Layer 1 - Tiberium -->
+            <color r="148" g="247" b="89" a="1" /> <!-- Riparius -->
+            <color r="151" g="232" b="89" a="1" />
+            <color r="151" g="243" b="93" a="1" />
+            <color r="137" g="246" b="95" a="1" />
+            <color r="135" g="234" b="89" a="1" />
+            <color r="132" g="248" b="93" a="1" />
+            <color r="132" g="247" b="79" a="1" />
+            <color r="137" g="232" b="76" a="1" />
+            <color r="86" g="186" b="235" a="1" /> <!-- Vinifera -->
+            <color r="76" g="172" b="255" a="1" />
+            <color r="84" g="173" b="252" a="1" />
+            <color r="220" g="30" b="30" a="1" /> <!-- Cruentus -->
+        </layer>
+        <layer> <!-- Layer 2 - Skin -->
+            <color r="80" g="60" b="46" a="1" /> <!-- basic brown -->
+            <color r="73" g="62" b="54" a="1" /> <!-- desaturated brown -->
+            <color r="75" g="55" b="52" a="1" /> <!-- desaturated reddish-brown -->
+        </layer>
+        <layer> <!-- Layer 3 - Eyes -->
+            <color r="250" g="150" b="5" a="0.4" />
+            <color r="250" g="150" b="5" a="0.2" />
+            <color r="250" g="150" b="5" a="0.3" />
+            <color r="250" g="150" b="5" a="0.1" />
+            <color r="250" g="150" b="5" a="0.5" />
+        </layer>
+    </colorList>
+</crewBlueprint>
+
+<weaponBlueprint name="BOMB_TIBERIUM">
+    <type>BOMB</type>
+    <tip>tip_bombs</tip>
+    <title>Tiberium Bomb</title>
+    <short>Tib. Bomb</short>
+    <locked>1</locked>
+    <desc>Self-teleporting explosive that deploys Tiberium crystals which shatter, damaging systems. Residual crystals harm non-metalloid crew over time while healing Tiberium-based lifeforms.</desc>
+    <tooltip>Bomb weapon; requires a missile; does 2 damage, but only damages system, not hull. Hurts non-metalloid crew and heals Tiberium crew. Can target your own ship.</tooltip>
+    <damage>0</damage>
+    <sysDamage>2</sysDamage>
+    <persDamage>1</persDamage>
+    <accuracyMod>30</accuracyMod>
+    <missiles>1</missiles>
+    <shots>1</shots>
+    <sp>0</sp>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>13</cooldown>
+    <power>1</power>
+    <cost>55</cost>
+    <bp>4</bp>
+    <rarity>3</rarity>
+    <image>bomb_tiberium</image>
+    <explosion>explosion_tiberium</explosion>
+    <roomStatBoosts>
+        <statBoost name="trueHealAmount">
+            <boostType>FLAT</boostType>
+            <amount>-8</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>CREW</droneTarget>
+            <!-- Loading a blueprintList here is broken for some reason
+            <blackList load="LIST_CREW_METALLOID">
+                <tiberium_fiend/>
+            </blackList>
+            -->
+            <blackList>
+                <engi/>
+                <engi_separatist/>
+                <engi_separatist_nano/>
+                <engi_defender/>
+                <unique_turzil/>
+                <lanius/>
+                <lanius_welder/>
+                <lanius_augmented/>
+                <unique_anointed/>
+                <unique_eater/>
+                <obelisk/>
+                <obelisk_royal/>
+                <unique_wither/>
+                <cognitive/>
+                <cognitive_automated/>
+                <cognitive_advanced/>
+                <cognitive_advanced_automated/>
+                <human_technician_drone/>
+                <drone_battle/>
+                <atom/>
+                <pony_engi/>
+                <pony_engi_chaos/>
+                <tiberium_fiend/>
+            </blackList>
+            <duration>8.75</duration>
+            <roomAnim renderLayer="3">
+                <anim animType="center">hazard_tiberium_crystal</anim>
+            </roomAnim>
+        </statBoost>
+        <statBoost name="trueHealAmount">
+            <boostType>FLAT</boostType>
+            <amount>8</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>CREW</droneTarget>
+            <whiteList>
+                <tiberium_fiend/>
+            </whiteList>
+            <duration>8.75</duration>
+        </statBoost>
+    </roomStatBoosts>
+    <launchSounds>
+        <sound>bombTeleport</sound>
+    </launchSounds>
+    <hitShipSounds>
+        <sound>crystalExplosion</sound>
+    </hitShipSounds>
+    <weaponArt>bomblauncher_tiberium</weaponArt>
+    <iconImage>bomb</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="BOMB_TIBERIUM_BLUE">
+    <type>BOMB</type>
+    <tip>tip_bombs</tip>
+    <title>Blue Tiberium Bomb</title>
+    <short>Blue Tib. B.</short>
+    <desc>Self-teleporting explosive with a payload of Vinifera, a more potent but less stable Tiberium variant. Deals heavy crew damage and minor damage to ships.</desc>
+    <tooltip>Bomb weapon; requires a missile; does 1 damage and high crew damage. Can target your own ship.</tooltip>
+    <damage>1</damage>
+    <persDamage>3</persDamage>
+    <accuracyMod>30</accuracyMod>
+    <missiles>1</missiles>
+    <stun>5</stun>
+    <shots>1</shots>
+    <sp>0</sp>
+    <fireChance>0</fireChance>
+    <breachChance>3</breachChance>
+    <cooldown>16</cooldown>
+    <power>1</power>
+    <cost>65</cost>
+    <bp>4</bp>
+    <rarity>4</rarity>
+    <image>bomb_tiberium_blue</image>
+    <explosion>explosion_random</explosion>
+    <launchSounds>
+        <sound>bombTeleport</sound>
+    </launchSounds>
+    <hitShipSounds>
+        <sound>smallExplosion</sound>
+    </hitShipSounds>
+    <weaponArt>bomblauncher_tiberium_blue</weaponArt>
+    <iconImage>bomb</iconImage>
+</weaponBlueprint>
+
+
+
+<!-- Non-weapon blueprints -->
+<crewBlueprint name="human_black_hand">
+    <desc>Elite Human Crew. The Black Hand is a relic of humanity's past in a distant universe. Its operatives are trained to crush the opposition without mercy.
+
+Inherited Human stat: minor suffocation resistance</desc>
+    <cost>100</cost>
+    <title>Black Hand Operative</title>
+    <short>Black Hand</short>
+    <rarity>0</rarity>
+    <powerList>
+        <power>Active Ability: Activates stealth generator to avoid damage and focus on sabotaging systems with enhanced damage. Moves slower but ignores doors when cloaked. Sabotage bonus is reduced for each enemy crew present in the room.</power>
+        <power>Inflicts 1.3x damage in combat</power>
+        <power>Takes 0.7x damage from combat and 0.6x from fires</power>
+        <power>Immune to mind control</power>
+        <power>Learns skills much faster</power>
+    </powerList>
+</crewBlueprint>
+
+<augBlueprint name="COMBAT_NUKE">
+    <title>Nuclear Payload</title>
+    <desc>Single use combat augment that can be deployed before combat at the cost of 3 missiles to fire a nuke at the enemy ship, dealing massive damage on impact. If the missile is stopped by a Super Shield or intercepted by a defense drone, it has no effect.</desc>
+    <cost>60</cost>
+    <rarity>0</rarity>
+    <stackable>true</stackable>
+</augBlueprint>
+<crewBlueprint name="dummy_nuke_surge_trigger">
+    <desc>█</desc>
+    <cost>0</cost>
+    <bp>2</bp>
+    <title>█</title>
+    <short>█</short>
+    <rarity>0</rarity>
+    <powerList>
+        <power>█</power>
+    </powerList>
+</crewBlueprint>
+<weaponBlueprint name="WEAPON_NUKE_SURGE_INITIAL">
+    <type>MISSILES</type>
+    <tip>tip_missiles</tip>
+    <title>Nuclear Missile</title>
+    <short>Nuke</short>
+    <desc>You should never see this</desc>
+    <tooltip>You should never see this</tooltip>
+    <damage>5</damage>
+    <missiles>1</missiles>
+    <accuracyMod>100</accuracyMod>
+    <shots>1</shots>
+    <sp>10</sp>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <spawnCrew>
+        <number>1</number>
+        <race>dummy_nuke_surge_trigger</race>
+        <lifetime>0</lifetime>
+    </spawnCrew>
+    <stunChance>0</stunChance>
+    <cooldown>10</cooldown>
+    <power>1</power>
+    <cost>10</cost>
+    <bp>6</bp>
+    <rarity>0</rarity>
+    <image>missile_nuke</image>
+    <explosion>explosion_nuke</explosion>
+    <launchSounds>
+        <sound>nukeMissileLaunch</sound>
+    </launchSounds>
+    <hitShipSounds>
+        <sound>explosionNuke</sound>
+    </hitShipSounds>
+    <hitShieldSounds>
+        <sound>explosionNuke</sound>
+    </hitShieldSounds>
+    <missSounds>
+        <sound>miss</sound>
+    </missSounds>
+    <weaponArt>laser_burst_1</weaponArt>
+    <iconImage>missile</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="WEAPON_NUKE_SURGE_DAMAGE">
+    <type>LASER</type>
+    <tip>tip_missiles</tip>
+    <title>Nuclear Missile</title>
+    <short>Nuke</short>
+    <desc>You should never see this</desc>
+    <tooltip>You should never see this</tooltip>
+    <damage>1</damage>
+    <persDamage>2</persDamage>
+    <accuracyMod>100</accuracyMod>
+    <shots>1</shots>
+    <sp>10</sp>
+    <fireChance>5</fireChance>
+    <breachChance>10</breachChance>
+    <cooldown>10</cooldown>
+    <power>1</power>
+    <cost>10</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <image>invisible</image>
+    <explosion>invisible</explosion>
+    <launchSounds>
+        <sound>silence</sound>
+    </launchSounds>
+    <hitShipSounds>
+        <sound>silence</sound>
+    </hitShipSounds>
+    <hitShieldSounds>
+        <sound>silence</sound>
+    </hitShieldSounds>
+    <missSounds>
+        <sound>silence</sound>
+    </missSounds>
+    <weaponArt>laser_burst_1</weaponArt>
+    <iconImage>laser</iconImage>
+</weaponBlueprint>

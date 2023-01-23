@@ -1,0 +1,34 @@
+<silence volume="0">weapons/silence.ogg</silence>
+
+<ionCannon volume="3">weapons/bp_ionCannon.ogg</ionCannon>
+<railShot volume="3">weapons/bp_railShot.ogg</railShot>
+<sonicShot volume="3">weapons/bp_sonicShot.ogg</sonicShot>
+<rpgShot volume="5">weapons/bp_rpg_shot.ogg</rpgShot>
+
+
+<missileTib volume="8">weapons/bp_missile_tib.ogg</missileTib>
+<chemHit1 volume="3">explosions/bp_chem_hit_hull_1.ogg</chemHit1>
+<chemHit2 volume="3">explosions/bp_chem_hit_hull_2.ogg</chemHit2>
+<chemHit3 volume="3">explosions/bp_chem_hit_hull_2.ogg</chemHit3>
+
+<bansheeShot volume="2">weapons/bp_bansheeShot.ogg</bansheeShot>
+
+<prismLaser volume="2">weapons/bp_prism.ogg</prismLaser>
+<prismHitHull1 volume="10">explosions/bp_prism_hit_hull_1.ogg</prismHitHull1>
+<prismHitHull2 volume="10">explosions/bp_prism_hit_hull_2.ogg</prismHitHull2>
+<prismHitHull3 volume="10">explosions/bp_prism_hit_hull_2.ogg</prismHitHull3>
+
+<combatChrono volume="2">weapons/bp_combatChrono.ogg</combatChrono>
+<chronoDisch volume="2">explosions/bp_chronoDisch.ogg</chronoDisch>
+
+<obeliskShot volume="4">weapons/obelisk_shot.ogg</obeliskShot>
+<nodLaserShot volume="2">weapons/nod_laser_shot.ogg</nodLaserShot>
+
+<fiendDeath volume="5">aliens/bp_sfx_TibFiend_Death.ogg</fiendDeath>
+
+<fiendShoot1 volume="3">aliens/bp_sfx_TibFiend_Throw1.ogg</fiendShoot1>
+<fiendShoot2 volume="3">aliens/bp_sfx_TibFiend_Throw2.ogg</fiendShoot2>
+<fiendShoot3 volume="3">aliens/bp_sfx_TibFiend_Throw3.ogg</fiendShoot3>
+
+<nukeMissileLaunch volume="9">weapons/bp_nuke_launch.ogg</nukeMissileLaunch>
+<explosionNuke volume="12">explosions/bp_nuke_explode.ogg</explosionNuke>

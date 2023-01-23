@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mod:findName type="event" name="STORAGE_CHECK_STATUS_MV">
+    <mod-append:choice hidden="true" req="ach_mv_nod_a" lvl="1" blue="false">
+        <text>Banshee Fighter</text>
+        <event>
+            <text>CLASS: Banshee Fighter
+FACTION: The Brotherhood of Nod
+
+Recently, you've been hearing rumors about interlopers from a distant collection of universes where neither the Federation nor the Rebellion ever existed. Until you encountered one of their ships, the only evidence for these interlopers you knew of came in the form of some unusual weapons tech that's been appearing throughout the Multiverse. According to what you've heard, the humans of these universes were forced to flee Earth when its ecosystem was destroyed by a substance called Tiberium. Despite this, many of them belive Tiberium to be part of humanity's next evolutionary step, and seek to spread their belief by force.
+            </text>
+            <choice>
+                <text>Continue...</text>
+                <event load="STORAGE_CHECK_STATUS"/>
+            </choice>
+        </event>
+    </mod-append:choice>
+    <mod-append:choice hidden="true" req="ach_mv_nod_c" lvl="1" blue="false">
+        <text>Commandeered Banshee Fighter</text>
+        <event>
+            <text>CLASS: Banshee Fighter
+FACTION: The Forgotten
+
+A substance known as Tiberium has been slowly becoming more prominent in universes which play host to the war between the Federation and the Rebellion. Many of the humans in the universes which Tiberium originated from have been forced to adapt to ecosystems dominated by it, and have become proficient in using it as a weapon. A small group of these humans were apparently able to steal a ship belonging to one of their universe's major factions and use it to escape. They probobly attacked you out of necessity, hoping that the supplies they'd get from defeating you would keep them afloat a little longer. You hope that Tiberium never does to your home what it did to theirs.
+            </text>
+            <choice>
+                <text>Continue...</text>
+                <event load="STORAGE_CHECK_STATUS"/>
+            </choice>
+        </event>
+    </mod-append:choice>
+    <mod:findWithChildLike type="choice" child-type="text" panic="true">
+        <mod:selector>Return.</mod:selector>
+        <mod:removeTag />
+    </mod:findWithChildLike>
+    <mod-append:choice>
+        <text>Return.</text>
+        <event load="STORAGE_CHECK_STATUS"/>
+    </mod-append:choice>
+</mod:findName>
+
+<mod:findName type="event" name="COMBAT_CHECK_REAL">
+    <mod-append:choice req="COMBAT_NUKE" blue="false">
+        <text>(Nuclear Payload) Fire your nuke.</text>
+        <event load="COMBAT_CHECK_NUKE"/>
+    </mod-append:choice>
+    <mod:findWithChildLike type="choice" child-type="text" panic="true">
+        <mod:selector>Do some last minute check-ups while we charge the weapons.</mod:selector>
+        <mod:removeTag />
+    </mod:findWithChildLike>
+    <mod:findWithChildLike type="choice" child-type="text" panic="true">
+        <mod:selector>Do nothing.</mod:selector>
+        <mod:removeTag />
+    </mod:findWithChildLike>
+    <mod-append:choice>
+        <text>Do some last minute check-ups while we charge the weapons.</text>
+        <event load="COMBAT_CHECK_GENERIC"/>
+    </mod-append:choice>
+    <mod-append:choice>
+        <text>Do nothing.</text>
+        <event>
+            <status type="clear" target="enemy" system="teleporter" amount="100"/>
+        </event>
+    </mod-append:choice>
+</mod:findName>
+
+<event name="COMBAT_CHECK_NUKE">
+    <text>Are you sure you want to do this?
+[Consumes 3 missiles and the payload. If the missile is stopped by a Super Shield or intercepted by a defense drone, it will have no effect.]</text>
+    <choice hidden="true">
+        <text>Yes</text>
+        <event>
+            <text>You fire the nuke.</text>
+            <item_modify>
+                <item type="missiles" min="-3" max="-3"/>
+            </item_modify>
+            <remove name="COMBAT_NUKE"/>
+            <choice>
+                <text>Continue to the fight!</text>
+                <event>
+                    <superBarrage player="true" name="NUKE_MISSILE_SURGE_INITIAL"/>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice blue="false" req="loc_flagship" lvl="0" max_group="1"  >
+        <text>Do something else instead.</text>
+        <event load="COMBAT_CHECK"/>
+    </choice>
+    <choice blue="false" req="loc_flagship" lvl="1" max_group="1">
+        <text>Do something else instead.</text>
+        <event load="COMBAT_CHECK_FLAGSHIP"/>
+    </choice>
+    <choice>
+        <text>Nevermind, let's fight!</text>
+        <event>
+            <text>You decide not to do anything and prepare to fight.</text>
+            <status type="clear" target="enemy" system="teleporter" amount="100"/>
+        </event>
+    </choice>
+</event>
+
+
+
+<mod:findName type="event" name="COMBAT_CHECK_TOGGLE" panic="true">
+    <mod:findLike type="choice">
+        <mod:selector req="MISSILES_V5_SINGLE" />
+        <mod:removeTag />
+    </mod:findLike>
+    <mod:findLike type="choice">
+        <mod:selector req="MISSILES_V5_MULTI" />
+        <mod:removeTag />
+    </mod:findLike>
+    <mod-append:choice req="MISSILES_V5_SINGLE" blue="false">
+        <text>(V5 Missiles) Set the state of the missiles. [Current mode: Precision]</text>
+        <event load="COMBAT_CHECK_V5_MISSILES_SINGLE"/>
+    </mod-append:choice>
+    <mod-append:choice req="MISSILES_V5_MULTI" blue="false">
+        <text>(V5 Missiles) Set the state of the missiles. [Current mode: Multi-Warhead]</text>
+        <event load="COMBAT_CHECK_V5_MISSILES_MULTI"/>
+    </mod-append:choice>
+</mod:findName>
+<event name="COMBAT_CHECK_V5_MISSILES_SINGLE">
+    <text>Are you sure you want to change the missiles' settings?</text>
+    <choice hidden="true">
+        <text>Set the missiles to Multi-Warhead Mode.</text>
+        <event>
+            <text>You start calibrating the missiles...</text>
+            <remove name="MISSILES_V5_SINGLE"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>You finish calibrating the missiles successfully.</text>
+                    <weapon name="MISSILES_V5_MULTI"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Return to the toggle menu.</text>
+        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+    </choice>
+</event>
+<event name="COMBAT_CHECK_V5_MISSILES_MULTI">
+    <text>Are you sure you want to change the missiles' settings?</text>
+    <choice hidden="true">
+        <text>Set the missiles to Precision Mode.</text>
+        <event>
+            <text>You start calibrating the missiles...</text>
+            <remove name="MISSILES_V5_MULTI"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>You finish calibrating the missiles successfully.</text>
+                    <weapon name="MISSILES_V5_SINGLE"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Return to the toggle menu.</text>
+        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+    </choice>
+</event>

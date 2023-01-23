@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Banshee A boss -->
+<shipBlueprint name="MT_BOSS_BANSHEE_A_NORMAL" layout="mt_boss_banshee_a" img="mt_boss_banshee_a">
+    <class>Renegade Fighter</class>
+    <systemList>
+        <cloaking power="2" max="2" room="9" start="true" />
+        <doors power="3" max="3" room="3" start="true" />
+        <engines power="2" max="2" room="4" start="true" />
+        <medbay power="2" max="2" room="11" start="true" />
+        <oxygen power="3" max="3" room="7" start="true" />
+        <pilot power="1" max="1" room="0" start="true" />
+        <shields power="2" max="4" room="8" start="true" />
+        <weapons power="6" max="6" room="6" start="true" />
+    </systemList>
+    <weaponSlots>4</weaponSlots>
+    <droneSlots>0</droneSlots>
+    <weaponList missiles="14" count="4">
+        <weapon name="LASER_BANSHEE" />
+        <weapon name="LASER_BANSHEE_2" />
+        <weapon name="FOCUS_OBELISK" />
+    </weaponList>
+    <droneList drones="2" count="0" />
+    <health amount="14" />
+    <maxPower amount="20" />
+    <crewCount amount="1" max="3" class="human" />
+    <boardingAI>sabotage</boardingAI>
+    <aug name="UPG_CLOAK_FIRE" />
+</shipBlueprint>
+<shipBlueprint name="MT_BOSS_BANSHEE_A_CHALLENGE" layout="mt_boss_banshee_a" img="mt_boss_banshee_a">
+    <class>Renegade Fighter</class>
+    <systemList>
+        <cloaking power="3" max="3" room="9" start="true" />
+        <doors power="3" max="3" room="3" start="true" />
+        <engines power="2" max="2" room="4" start="true" />
+        <medbay power="2" max="2" room="11" start="true" />
+        <oxygen power="3" max="3" room="7" start="true" />
+        <pilot power="1" max="1" room="0" start="true" />
+        <shields power="2" max="6" room="8" start="true" />
+        <weapons power="6" max="6" room="6" start="true" />
+    </systemList>
+    <weaponSlots>4</weaponSlots>
+    <droneSlots>0</droneSlots>
+    <weaponList missiles="14" count="4">
+        <weapon name="LASER_BANSHEE" />
+        <weapon name="LASER_BANSHEE_2" />
+        <weapon name="FOCUS_OBELISK" />
+    </weaponList>
+    <droneList drones="2" count="0" />
+    <health amount="15" />
+    <maxPower amount="22" />
+    <crewCount amount="1" max="3" class="human" />
+    <boardingAI>sabotage</boardingAI>
+    <aug name="UPG_CLOAK_FIRE" />
+</shipBlueprint>
+<shipBlueprint name="MT_BOSS_BANSHEE_A_EXTREME" layout="mt_boss_banshee_a" img="mt_boss_banshee_a">
+    <class>Renegade Fighter</class>
+    <systemList>
+        <cloaking power="4" max="4" room="9" start="true" />
+        <doors power="3" max="3" room="3" start="true" />
+        <engines power="2" max="2" room="4" start="true" />
+        <medbay power="3" max="3" room="11" start="true" />
+        <oxygen power="4" max="4" room="7" start="true" />
+        <pilot power="1" max="1" room="0" start="true" />
+        <shields power="2" max="6" room="8" start="true" />
+        <weapons power="8" max="8" room="6" start="true" />
+    </systemList>
+    <weaponSlots>4</weaponSlots>
+    <droneSlots>0</droneSlots>
+    <weaponList missiles="14" count="4">
+        <weapon name="LASER_BANSHEE_2" />
+        <weapon name="LASER_BANSHEE_2" />
+        <weapon name="FOCUS_OBELISK" />
+    </weaponList>
+    <droneList drones="2" count="0" />
+    <health amount="18" />
+    <maxPower amount="29" />
+    <crewCount amount="1" max="3" class="human" />
+    <boardingAI>sabotage</boardingAI>
+    <aug name="UPG_CLOAK_FIRE" />
+</shipBlueprint>
+<shipBlueprint name="MT_BOSS_BANSHEE_A_CHAOS" layout="mt_boss_banshee_a" img="mt_boss_banshee_a">
+    <class>Chaotic Renegade Fighter</class>
+    <systemList>
+        <cloaking power="4" max="4" room="9" start="true" />
+        <doors power="3" max="3" room="3" start="true" />
+        <engines power="2" max="2" room="4" start="true" />
+        <medbay power="3" max="3" room="11" start="true" />
+        <oxygen power="4" max="4" room="7" start="true" />
+        <pilot power="1" max="1" room="0" start="true" />
+        <shields power="2" max="6" room="8" start="true" />
+        <weapons power="7" max="7" room="6" start="true" />
+    </systemList>
+    <weaponSlots>4</weaponSlots>
+    <droneSlots>0</droneSlots>
+    <weaponList missiles="14" count="4">
+        <weapon name="LASER_BANSHEE_2" />
+        <weapon name="FOCUS_OBELISK" />
+        <weapon name="LASER_NOD" />
+        <weapon name="LASER_NOD" />
+    </weaponList>
+    <droneList drones="2" count="0" />
+    <health amount="18" />
+    <maxPower amount="29" />
+    <crewCount amount="1" max="3" class="human" />
+    <boardingAI>sabotage</boardingAI>
+    <aug name="UPG_CLOAK_FIRE" />
+</shipBlueprint>
+
+<!-- Banshee C boss -->
+<shipBlueprint name="MT_BOSS_BANSHEE_C_NORMAL" layout="mt_boss_banshee_c" img="mt_boss_banshee_c">
+    <class>Renegade Fighter</class>
+    <systemList>
+        <cloaking power="2" max="2" room="10" start="true" />
+        <doors power="3" max="3" room="7" start="true" />
+        <engines power="2" max="2" room="3" start="true" />
+        <medbay power="2" max="2" room="1" start="true" />
+        <oxygen power="3" max="3" room="5" start="true" />
+        <pilot power="1" max="1" room="2" start="true" />
+        <shields power="2" max="4" room="8" start="true" />
+        <teleporter power="2" max="2" room="0" start="true" />
+        <weapons power="3" max="3" room="4" start="true" />
+    </systemList>
+    <weaponSlots>4</weaponSlots>
+    <droneSlots>0</droneSlots>
+    <weaponList missiles="30" count="4">
+        <weapon name="BOMB_TIBERIUM" />
+        <weapon name="BOMB_TIBERIUM_BLUE" />
+        <weapon name="BOMB_TIBERIUM_BLUE" />
+    </weaponList>
+    <droneList drones="2" count="0" />
+    <health amount="14" />
+    <maxPower amount="20" />
+    <crewCount amount="2" max="4" class="human" />
+    <boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+<shipBlueprint name="MT_BOSS_BANSHEE_C_CHALLENGE" layout="mt_boss_banshee_c" img="mt_boss_banshee_c">
+    <class>Renegade Fighter</class>
+    <systemList>
+        <cloaking power="3" max="3" room="10" start="true" />
+        <doors power="3" max="3" room="7" start="true" />
+        <engines power="2" max="2" room="3" start="true" />
+        <medbay power="2" max="2" room="1" start="true" />
+        <oxygen power="3" max="3" room="5" start="true" />
+        <pilot power="1" max="1" room="2" start="true" />
+        <shields power="2" max="6" room="8" start="true" />
+        <teleporter power="3" max="3" room="0" start="true" />
+        <weapons power="3" max="3" room="4" start="true" />
+    </systemList>
+    <weaponSlots>4</weaponSlots>
+    <droneSlots>0</droneSlots>
+    <weaponList missiles="30" count="4">
+        <weapon name="BOMB_TIBERIUM" />
+        <weapon name="BOMB_TIBERIUM_BLUE" />
+        <weapon name="BOMB_TIBERIUM_BLUE" />
+    </weaponList>
+    <droneList drones="2" count="0" />
+    <health amount="15" />
+    <maxPower amount="22" />
+    <crewCount amount="2" max="4" class="human" />
+    <boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+<shipBlueprint name="MT_BOSS_BANSHEE_C_EXTREME" layout="mt_boss_banshee_c" img="mt_boss_banshee_c">
+    <class>Renegade Fighter</class>
+    <systemList>
+        <cloaking power="4" max="4" room="10" start="true" />
+        <doors power="3" max="3" room="7" start="true" />
+        <engines power="2" max="2" room="3" start="true" />
+        <medbay power="3" max="3" room="1" start="true" />
+        <oxygen power="3" max="3" room="5" start="true" />
+        <pilot power="1" max="1" room="2" start="true" />
+        <shields power="2" max="6" room="8" start="true" />
+        <teleporter power="4" max="4" room="0" start="true" />
+        <weapons power="4" max="4" room="4" start="true" />
+    </systemList>
+    <weaponSlots>4</weaponSlots>
+    <droneSlots>0</droneSlots>
+    <weaponList missiles="40" count="4">
+        <weapon name="BOMB_TIBERIUM" />
+        <weapon name="BOMB_TIBERIUM_BLUE" />
+        <weapon name="BOMB_TIBERIUM_BLUE" />
+        <weapon name="BOMB_TIBERIUM_BLUE" />
+    </weaponList>
+    <droneList drones="2" count="0" />
+    <health amount="18" />
+    <maxPower amount="29" />
+    <crewCount amount="2" max="4" class="human" />
+    <boardingAI>sabotage</boardingAI>
+    <aug name="UPG_CLOAK_FIRE" />
+</shipBlueprint>
+<shipBlueprint name="MT_BOSS_BANSHEE_C_CHAOS" layout="mt_boss_banshee_c" img="mt_boss_banshee_c">
+    <class>Renegade Fighter</class>
+    <systemList>
+        <cloaking power="4" max="4" room="10" start="true" />
+        <doors power="3" max="3" room="7" start="true" />
+        <engines power="2" max="2" room="3" start="true" />
+        <medbay power="3" max="3" room="1" start="true" />
+        <oxygen power="3" max="3" room="5" start="true" />
+        <pilot power="1" max="1" room="2" start="true" />
+        <shields power="2" max="6" room="8" start="true" />
+        <teleporter power="4" max="4" room="0" start="true" />
+        <weapons power="4" max="4" room="4" start="true" />
+    </systemList>
+    <weaponSlots>4</weaponSlots>
+    <droneSlots>0</droneSlots>
+    <weaponList missiles="15" count="4">
+        <weapon name="BOMB_TIBERIUM" />
+        <weapon name="NOD_LASER" />
+        <weapon name="NOD_LASER" />
+        <weapon name="NOD_LASER" />
+    </weaponList>
+    <droneList drones="2" count="0" />
+    <health amount="18" />
+    <maxPower amount="29" />
+    <crewCount amount="2" max="4" class="human" />
+    <boardingAI>sabotage</boardingAI>
+    <aug name="UPG_CLOAK_FIRE" />
+</shipBlueprint>
+
+
+
+<!-- Refer to lanius_welder and LIST_CREW_LANIUS for updates -->
+<blueprintList name="LIST_CREW_METALLOID">
+    <name>engi</name>
+    <name>engi_separatist</name>
+    <name>engi_separatist_nano</name>
+    <name>engi_defender</name>
+    <name>unique_turzil</name>
+    <name>lanius</name>
+    <name>lanius_welder</name>
+    <name>lanius_augmented</name>
+    <name>unique_anointed</name>
+    <name>unique_eater</name>
+    <name>obelisk</name>
+    <name>obelisk_royal</name>
+    <name>unique_wither</name>
+    <name>cognitive</name>
+    <name>cognitive_automated</name>
+    <name>cognitive_advanced</name>
+    <name>cognitive_advanced_automated</name>
+    <name>human_technician_drone</name>
+    <name>drone_battle</name>
+    <name>atom</name>
+    <name>pony_engi</name>
+    <name>pony_engi_chaos</name>
+</blueprintList>
+
+
+
+<!-- New Sylvan shop lists -->
+<blueprintList name="SHOP_ITEM_SYLVAN_CNC_LASERS">
+    <name>LASER_PRISM_1</name>
+    <name>LASER_BANSHEE</name>
+    <name>LASER_BANSHEE_2</name>
+    <name>NOD_LASER</name>
+</blueprintList>
+<blueprintList name="SHOP_ITEM_SYLVAN_CNC_BEAMS">
+    <name>ION_CANNON</name>
+    <name>DISRUPTOR</name>
+    <name>FOCUS_OBELISK</name>
+</blueprintList>
+<blueprintList name="SHOP_ITEM_SYLVAN_CNC_MISSILES">
+    <name>RAILGUN</name>
+    <name>MISSILES_V5_SINGLE</name>
+    <name>MISSILES_TIB</name>
+</blueprintList>
+<blueprintList name="SHOP_ITEM_SYLVAN_CNC_BOMBS">
+    <name>COMBAT_CHRONO</name>
+    <name>BOMB_TIBERIUM</name>
+    <name>BOMB_TIBERIUM_BLUE</name>
+</blueprintList>
+
+
+
+<mod:findName type="blueprintList" name="BLUELIST_ION">
+    <mod-append:name>COMBAT_CHRONO</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="BLUELIST_MISSILES_ALL">
+    <mod-append:name>RAILGUN</mod-append:name>
+    <mod-append:name>MISSILES_V5_SINGLE</mod-append:name>
+    <mod-append:name>MISSILES_V5_MULTI</mod-append:name>
+    <mod-append:name>MISSILES_TIB</mod-append:name>
+</mod:findName>
+<mod:findName type="blueprintList" name="BLUELIST_MISSILES_DAMAGE">
+    <mod-append:name>RAILGUN</mod-append:name>
+    <mod-append:name>MISSILES_V5_SINGLE</mod-append:name>
+    <mod-append:name>MISSILES_V5_MULTI</mod-append:name>
+    <mod-append:name>MISSILES_TIB</mod-append:name>
+</mod:findName>
+<mod:findName type="blueprintList" name="WEAPONS_MISSILES">
+    <mod-append:name>RAILGUN</mod-append:name>
+    <mod-append:name>MISSILES_V5_SINGLE</mod-append:name>
+    <mod-append:name>MISSILES_V5_MULTI</mod-append:name>
+    <mod-append:name>MISSILES_TIB</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="BLUELIST_BOMBS">
+    <mod-append:name>BOMB_TIBERIUM</mod-append:name>
+    <mod-append:name>BOMB_TIBERIUM_BLUE</mod-append:name>
+</mod:findName>
+<mod:findName type="blueprintList" name="BLUELIST_BOMBS_CREWDAMAGE">
+    <mod-append:name>BOMB_TIBERIUM</mod-append:name>
+    <mod-append:name>BOMB_TIBERIUM_BLUE</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="BLUELIST_BEAMS_ALL">
+    <mod-append:name>DISRUPTOR</mod-append:name>
+</mod:findName>
+<mod:findName type="blueprintList" name="BLUELIST_BEAMS_DAMAGE">
+    <mod-append:name>DISRUPTOR</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="BLUELIST_FOCUS_ALL">
+    <mod-append:name>FOCUS_OBELISK</mod-append:name>
+</mod:findName>
+<mod:findName type="blueprintList" name="BLUELIST_FOCUS_DAMAGE">
+    <mod-append:name>FOCUS_OBELISK</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="BLUELIST_WEAPONS_BEAM_POWERFUL">
+    <mod-append:name>ION_CANNON</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="BLUELIST_WEAPONS_HEAVY">
+    <mod-append:name>ION_CANNON</mod-append:name>
+    <mod-append:name>RAILGUN</mod-append:name>
+    <mod-append:name>DISRUPTOR</mod-append:name>
+    <mod-append:name>MISSILES_V5_SINGLE</mod-append:name>
+    <mod-append:name>MISSILES_V5_MULTI</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="BLUELIST_WEAPONS_FIRE_ALL">
+    <mod-append:name>FOCUS_OBELISK</mod-append:name>
+</mod:findName>
+<mod:findName type="blueprintList" name="BLUELIST_FIRE_ALL">
+    <mod-append:name>FOCUS_OBELISK</mod-append:name>
+</mod:findName>
+<mod:findName type="blueprintList" name="BLUELIST_FIRE_NONBALLISTIC">
+    <mod-append:name>FOCUS_OBELISK</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="BLUELIST_ANTIBIO">
+    <mod-append:name>MISSILES_TIB</mod-append:name>
+</mod:findName>
