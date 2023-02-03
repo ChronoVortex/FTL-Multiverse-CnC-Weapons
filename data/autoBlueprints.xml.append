@@ -219,37 +219,8 @@
 
 
 
-<!-- Refer to lanius_welder and LIST_CREW_LANIUS for updates -->
-<blueprintList name="LIST_CREW_METALLOID">
-    <name>engi</name>
-    <name>engi_separatist</name>
-    <name>engi_separatist_nano</name>
-    <name>engi_defender</name>
-    <name>unique_turzil</name>
-    <name>lanius</name>
-    <name>lanius_welder</name>
-    <name>lanius_augmented</name>
-    <name>unique_anointed</name>
-    <name>unique_eater</name>
-    <name>obelisk</name>
-    <name>obelisk_royal</name>
-    <name>unique_wither</name>
-    <name>cognitive</name>
-    <name>cognitive_automated</name>
-    <name>cognitive_advanced</name>
-    <name>cognitive_advanced_automated</name>
-    <name>human_technician_drone</name>
-    <name>drone_battle</name>
-    <name>atom</name>
-    <name>pony_engi</name>
-    <name>pony_engi_chaos</name>
-</blueprintList>
-
-
-
 <!-- New Sylvan shop lists -->
 <blueprintList name="SHOP_ITEM_SYLVAN_CNC_LASERS">
-    <name>LASER_PRISM_1</name>
     <name>LASER_BANSHEE</name>
     <name>LASER_BANSHEE_2</name>
     <name>NOD_LASER</name>
@@ -257,12 +228,18 @@
 <blueprintList name="SHOP_ITEM_SYLVAN_CNC_BEAMS">
     <name>ION_CANNON</name>
     <name>DISRUPTOR</name>
+    <name>BEAM_MC_COMBAT</name>
+</blueprintList>
+<blueprintList name="SHOP_ITEM_SYLVAN_CNC_PINPOINT">
     <name>FOCUS_OBELISK</name>
+    <name>FOCUS_MC_COMBAT</name>
+    <name>BEAM_PRISM_1</name>
 </blueprintList>
 <blueprintList name="SHOP_ITEM_SYLVAN_CNC_MISSILES">
     <name>RAILGUN</name>
     <name>MISSILES_V5_SINGLE</name>
     <name>MISSILES_TIB</name>
+    <name>AC_LASHER</name>
 </blueprintList>
 <blueprintList name="SHOP_ITEM_SYLVAN_CNC_BOMBS">
     <name>COMBAT_CHRONO</name>
@@ -276,70 +253,9 @@
     <mod-append:name>COMBAT_CHRONO</mod-append:name>
 </mod:findName>
 
-<mod:findName type="blueprintList" name="BLUELIST_MISSILES_ALL">
-    <mod-append:name>RAILGUN</mod-append:name>
-    <mod-append:name>MISSILES_V5_SINGLE</mod-append:name>
-    <mod-append:name>MISSILES_V5_MULTI</mod-append:name>
-    <mod-append:name>MISSILES_TIB</mod-append:name>
-</mod:findName>
-<mod:findName type="blueprintList" name="BLUELIST_MISSILES_DAMAGE">
-    <mod-append:name>RAILGUN</mod-append:name>
-    <mod-append:name>MISSILES_V5_SINGLE</mod-append:name>
-    <mod-append:name>MISSILES_V5_MULTI</mod-append:name>
-    <mod-append:name>MISSILES_TIB</mod-append:name>
-</mod:findName>
-<mod:findName type="blueprintList" name="WEAPONS_MISSILES">
-    <mod-append:name>RAILGUN</mod-append:name>
-    <mod-append:name>MISSILES_V5_SINGLE</mod-append:name>
-    <mod-append:name>MISSILES_V5_MULTI</mod-append:name>
-    <mod-append:name>MISSILES_TIB</mod-append:name>
-</mod:findName>
-
 <mod:findName type="blueprintList" name="BLUELIST_BOMBS">
-    <mod-append:name>BOMB_TIBERIUM</mod-append:name>
     <mod-append:name>BOMB_TIBERIUM_BLUE</mod-append:name>
 </mod:findName>
 <mod:findName type="blueprintList" name="BLUELIST_BOMBS_CREWDAMAGE">
-    <mod-append:name>BOMB_TIBERIUM</mod-append:name>
     <mod-append:name>BOMB_TIBERIUM_BLUE</mod-append:name>
-</mod:findName>
-
-<mod:findName type="blueprintList" name="BLUELIST_BEAMS_ALL">
-    <mod-append:name>DISRUPTOR</mod-append:name>
-</mod:findName>
-<mod:findName type="blueprintList" name="BLUELIST_BEAMS_DAMAGE">
-    <mod-append:name>DISRUPTOR</mod-append:name>
-</mod:findName>
-
-<mod:findName type="blueprintList" name="BLUELIST_FOCUS_ALL">
-    <mod-append:name>FOCUS_OBELISK</mod-append:name>
-</mod:findName>
-<mod:findName type="blueprintList" name="BLUELIST_FOCUS_DAMAGE">
-    <mod-append:name>FOCUS_OBELISK</mod-append:name>
-</mod:findName>
-
-<mod:findName type="blueprintList" name="BLUELIST_WEAPONS_BEAM_POWERFUL">
-    <mod-append:name>ION_CANNON</mod-append:name>
-</mod:findName>
-
-<mod:findName type="blueprintList" name="BLUELIST_WEAPONS_HEAVY">
-    <mod-append:name>ION_CANNON</mod-append:name>
-    <mod-append:name>RAILGUN</mod-append:name>
-    <mod-append:name>DISRUPTOR</mod-append:name>
-    <mod-append:name>MISSILES_V5_SINGLE</mod-append:name>
-    <mod-append:name>MISSILES_V5_MULTI</mod-append:name>
-</mod:findName>
-
-<mod:findName type="blueprintList" name="BLUELIST_WEAPONS_FIRE_ALL">
-    <mod-append:name>FOCUS_OBELISK</mod-append:name>
-</mod:findName>
-<mod:findName type="blueprintList" name="BLUELIST_FIRE_ALL">
-    <mod-append:name>FOCUS_OBELISK</mod-append:name>
-</mod:findName>
-<mod:findName type="blueprintList" name="BLUELIST_FIRE_NONBALLISTIC">
-    <mod-append:name>FOCUS_OBELISK</mod-append:name>
-</mod:findName>
-
-<mod:findName type="blueprintList" name="BLUELIST_ANTIBIO">
-    <mod-append:name>MISSILES_TIB</mod-append:name>
 </mod:findName>

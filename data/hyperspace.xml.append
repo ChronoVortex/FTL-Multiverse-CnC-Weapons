@@ -146,7 +146,7 @@
                 <price>-1</price>
             </item>    
             <item>
-                <blueprint>SHOP_ITEM_SYLVAN_CNC_BEAMS</blueprint>
+                <blueprint>SHOP_ITEM_SYLVAN_CNC_PINPOINT</blueprint>
                 <modifier min="0.8" max="1.1" flat="false"/>
                 <price>-1</price>
             </item>    
@@ -193,9 +193,6 @@
 </mod:findLike>
 
 <mod:findLike type="boss">
-    <mod-append:surgeBarrage name="LASER_PRISM_SURGE">
-        <weapon name="LASER_PRISM_SURGE_DUMMY" count="3"/>
-    </mod-append:surgeBarrage>
     <mod-append:surgeBarrage name="NUKE_MISSILE_SURGE_INITIAL">
         <weapon name="WEAPON_NUKE_SURGE_INITIAL" count="1"/>
     </mod-append:surgeBarrage>
@@ -205,137 +202,6 @@
 </mod:findLike>
 
 <mod:findLike type="crew">
-    <mod-append:race name="human_black_hand">
-        <damageMultiplier>1.3</damageMultiplier>
-        <damageTakenMultiplier>0.7</damageTakenMultiplier>
-        <fireDamageMultiplier>0.6</fireDamageMultiplier>
-        <suffocationModifier>0.83</suffocationModifier>
-        <resistsMindControl>true</resistsMindControl>
-        <animBase>human</animBase>
-        <deathSounds>
-            <deathSound>death1</deathSound>
-            <deathSound>death2</deathSound>
-            <deathSound>death1</deathSound>
-            <deathSound>death2</deathSound>
-            <deathSound>death1</deathSound>
-            <deathSound>death2</deathSound>
-            <deathSound>death1</deathSound>
-            <deathSound>death2</deathSound>
-            <deathSound>death1</deathSound>
-            <deathSound>death2</deathSound>
-            <deathSound>death1</deathSound>
-            <deathSound>death2</deathSound>
-            <deathSound>death1</deathSound>
-            <deathSound>death2</deathSound>
-            <deathSound>death1</deathSound>
-            <deathSound>death2</deathSound>
-            <deathSound>death1</deathSound>
-            <deathSound>death2</deathSound>
-            <deathSound>death1</deathSound>
-            <deathSound>death2</deathSound>
-            <deathSound>death1</deathSound>
-            <deathSound>death2</deathSound>
-            <deathSound>death1</deathSound>
-            <deathSound>death2</deathSound>
-            <deathSound>death1</deathSound>
-            <deathSound>death2</deathSound>
-            <deathSound>death1</deathSound>
-            <deathSound>death2</deathSound>
-            <deathSound>death1</deathSound>
-            <deathSound>death2</deathSound>
-            <deathSound>death1</deathSound>
-            <deathSound>death2</deathSound>
-            <deathSound>death1</deathSound>
-            <deathSound>death2</deathSound>
-            <deathSound>death1</deathSound>
-            <deathSound>death2</deathSound>
-            <deathSound>death1</deathSound>
-            <deathSound>death2</deathSound>
-            <deathSound>death1</deathSound>
-            <deathSound>death2</deathSound>
-            <deathSound>death1</deathSound>
-            <deathSound>death2</deathSound>
-            <deathSound>death1</deathSound>
-            <deathSound>death2</deathSound>
-            <deathSound>death1</deathSound>
-            <deathSound>death2</deathSound>
-            <deathSound>humanDeathSpecial</deathSound>
-        </deathSounds>
-        <skills>
-            <piloting req="10"/>
-            <engines req="10"/>
-            <shields req="43"/>
-            <weapons req="50"/>
-            <repair req="12"/>
-            <combat req="4"/>
-        </skills>
-        <powerEffect>
-            <cooldown>40</cooldown>
-            <powerSounds>
-                <powerSound>cloakNod</powerSound>
-            </powerSounds>
-            <jumpCooldown>full</jumpCooldown>
-            <buttonText>STEALTH</buttonText>
-            <tooltip>[COOLDOWN:40s  DURATION:20s]
-Cloak to become immune to damage and gain 3x sabotage damage. Lowers movement speed to 0.4x and cannot attack crew for the duration of the ability.</tooltip>
-            <cooldownColor r="153" g="45" b="38"/>
-            <temporaryEffect>
-                <duration>20</duration>
-                <cooldownColor r="198" g="198" b="198"/>
-                <finishSounds>
-                    <finishSound>cloakNod</finishSound>
-                </finishSounds>
-                <moveSpeedMultiplier>0.4</moveSpeedMultiplier>
-                <animSheet baseVisible="false">human_black_hand_cloak</animSheet>
-                <invulnerable>true</invulnerable>
-                <canFight>false</canFight>
-                <canSabotage>true</canSabotage>
-                <sabotageSpeedMultiplier>3</sabotageSpeedMultiplier>
-                <canPhaseThroughDoors>true</canPhaseThroughDoors>
-                <statBoosts>
-                    <statBoost name="statBoost">
-                        <shipTarget>CURRENT_ROOM</shipTarget>
-                        <crewTarget>ENEMIES</crewTarget>
-                        <maxStacks>1</maxStacks>
-                        <statBoost name="sabotageSpeedMultiplier">
-                            <boostType>FLAT</boostType>
-                            <amount>-0.5</amount>
-                            <whiteList>
-                                <slug_saboteur/>
-                            </whiteList>
-                            <shipTarget>CURRENT_ROOM</shipTarget>
-                            <crewTarget>ENEMIES</crewTarget>
-                            <priority>0</priority>
-                        </statBoost>
-                    </statBoost>
-                </statBoosts>
-            </temporaryEffect>
-        </powerEffect>
-    </mod-append:race>
-    <mod-append:race name="dummy_prism_surge_trigger">
-        <maxHealth>999</maxHealth>
-        <allDamageTakenMultiplier>0</allDamageTakenMultiplier>
-        <noSlot>true</noSlot>
-        <noClone>true</noClone>
-        <canFight>false</canFight>
-        <controllable>false</controllable>
-        <noAI>true</noAI>
-        <selectable>false</selectable>
-        <canRepair>false</canRepair>
-        <canSabotage>false</canSabotage>
-        <canMan>false</canMan>
-        <canTeleport>false</canTeleport>
-        <canSuffocate>false</canSuffocate>
-        <canBurn>false</canBurn>
-        <validTarget>false</validTarget>
-        <canMove>false</canMove>
-        <deathSounds>
-            <deathSound>silence</deathSound>
-        </deathSounds>
-        <deathEffect>
-            <playerEvent load="SURGESTART_LASER_PRISM"/>
-        </deathEffect>
-    </mod-append:race>
     <mod-append:race name="dummy_nuke_surge_trigger">
         <maxHealth>999</maxHealth>
         <allDamageTakenMultiplier>0</allDamageTakenMultiplier>
@@ -361,32 +227,9 @@ Cloak to become immune to damage and gain 3x sabotage damage. Lowers movement sp
             <playerEvent load="SURGESTART_NUKE_MISSILE_SURGE_DAMAGE"/>
         </deathEffect>
     </mod-append:race>
-    <mod-append:race name="tiberium_fiend">
-        <maxHealth>120</maxHealth>
-        <canRepair>false</canRepair>
-        <canMan>false</canMan>
-        <moveSpeedMultiplier>1.2</moveSpeedMultiplier>
-        <damageMultiplier>1.2</damageMultiplier>
-        <suffocationModifier>0.8</suffocationModifier>
-        <fireDamageMultiplier>0.5</fireDamageMultiplier>
-        <deathSounds>
-            <deathSound>fiendDeath</deathSound>
-        </deathSounds>
-        <shootingSounds>
-            <shootingSound>fiendShoot1</shootingSound>
-            <shootingSound>fiendShoot2</shootingSound>
-            <shootingSound>fiendShoot3</shootingSound>
-        </shootingSounds>
-        <animBase>mantis</animBase>
-    </mod-append:race>
 </mod:findLike>
 
 <mod:findLike type="scripts">
-    <mod-append:script>chronoutil.lua</mod-append:script>
-    <mod:findLike type="script" start="1">
-        <mod:selector>chronoutil.lua</mod:selector>
-        <mod:removeTag />
-    </mod:findLike>
     <mod-append:script>cncweapons.lua</mod-append:script>
 </mod:findLike>
 
