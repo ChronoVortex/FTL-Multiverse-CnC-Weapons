@@ -249,7 +249,7 @@ BEAM_MC_COMBAT
     <power>2</power>
     <cost>60</cost>
     <bp>2</bp>
-    <rarity>0</rarity>
+    <rarity>5</rarity>
     <image>invisible</image>
     <explosion>explosion_chrono</explosion>
     <launchSounds>
