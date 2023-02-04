@@ -339,6 +339,21 @@
     </mod:findLike>
 </mod:findName>
 
+<mod:findName type="eventList" name="SYLVAN_TRADES_CHOICE" panic="true">
+    <mod-append:event name="SYLVAN_TRADES_CHOICE_CNC"/>
+</mod:findName>
+<event name="SYLVAN_TRADES_CHOICE_CNC">
+    <text id="text_sylvan_boon"/>
+    <choice hidden="true">
+        <text>Shop for what Sylvan calls "westwood cluster" weapons.</text>
+        <event load="SYLVAN_CNC"/>
+    </choice>
+    <choice hidden="true">
+        <text>Shop for Tiberium tech.</text>
+        <event load="SYLVAN_TIBERIUM"/>
+    </choice>
+</event>
+
 <event name="SYLVAN_CNC">
     <text>"Aaaaah. Ssstranger ssstranger, I have sssomething ssspecial for you! There are universssesss out there that developed sssome pretty wild tech long before FTL travel wasss invented. Thessse weaponsss may look old, but sssome of them pack quite a punch!"</text>
     <store>STORE_SYLVAN_CNC</store>
