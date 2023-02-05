@@ -295,7 +295,7 @@
 </event>
 <eventList name="MTBOSS_NODC_DROP_CHANCE">
     <event>
-		<text>You find the remains of a unique weapon model amongst the ruins of the ship, but it appears it did not survive the fight. You'll have to be more careful next time, or get lucky. Fortunately, there's still a bit more supplies to take with you.</text>
+        <text>You find the remains of a unique weapon model amongst the ruins of the ship, but it appears it did not survive the fight. You'll have to be more careful next time, or get lucky. Fortunately, there's still a bit more supplies to take with you.</text>
         <autoReward level="LOW">stuff</autoReward>
     </event>
     <event><loadEvent>MTBOSS_NODC_DROP</loadEvent></event>

@@ -111,18 +111,18 @@
         <mod:selector text="Renegade Cruisers" />
         <mod:findLike type="section" panic="true">
             <mod:selector text="Renegade Cruisers" />
-			<mod-append:achievement name="ACH_REN_NOD_A">
-				<name>That Was Left Handed</name>
-				<description>Defeat the Banshee A Renegade and get a nuke.</description>
-				<icon>renegade_nod_a</icon>
-				<header>Renegade Defeated</header>
-			</mod-append:achievement>
-			<mod-append:achievement name="ACH_REN_NOD_C">
-				<name>The Technology of Peace</name>
-				<description>Defeat the Banshee C Renegade and get Tiberium tech.</description>
-				<icon>renegade_nod_c</icon>
-				<header>Renegade Defeated</header>
-			</mod-append:achievement>
+            <mod-append:achievement name="ACH_REN_NOD_A">
+                <name>That Was Left Handed</name>
+                <description>Defeat the Banshee A Renegade and get a nuke.</description>
+                <icon>renegade_nod_a</icon>
+                <header>Renegade Defeated</header>
+            </mod-append:achievement>
+            <mod-append:achievement name="ACH_REN_NOD_C">
+                <name>The Technology of Peace</name>
+                <description>Defeat the Banshee C Renegade and get Tiberium tech.</description>
+                <icon>renegade_nod_c</icon>
+                <header>Renegade Defeated</header>
+            </mod-append:achievement>
         </mod:findLike>
     </mod:findWithChildLike>
     <mod:findWithChildLike type="page" child-type="section" panic="true">
@@ -131,7 +131,7 @@
             <mod:selector text="Wakeson's Blessings" />
             <mod-append:achievement name="ACH_BOON_NUKE">
                 <name>Blessing of Nukes</name>
-				<secretName>Blessing of ???</secretName>
+                <secretName>Blessing of ???</secretName>
                 <lockImage>ach_locked</lockImage>
                 <secretDescription>Receive the Blessing of ??? from Wakeson.</secretDescription>
                 <description>Show a nuke to Wakeson.

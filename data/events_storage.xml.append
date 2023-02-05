@@ -41,14 +41,14 @@ A substance known as Tiberium has been slowly becoming more prominent in univers
 
 <mod:findName type="event" name="STORAGE_CHECK_REAL">
     <mod-append:choice req="JUDGE_BOON_NUKE" hidden="true" blue="false">
-		<text>Receive a missile.</text>
-		<event>
+        <text>Receive a missile.</text>
+        <event>
             <text>A tiny slip-tunnel opens near your ship and single missile comes through.</text>
-			<item_modify>
-				<item type="missiles" min="1" max="1"/>
-			</item_modify>
+            <item_modify>
+                <item type="missiles" min="1" max="1"/>
+            </item_modify>
         </event>
-	</mod-append:choice>
+    </mod-append:choice>
 </mod:findName>
 
 <mod:findName type="event" name="COMBAT_CHECK_REAL">
