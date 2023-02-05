@@ -454,3 +454,11 @@ BEAM_MC_COMBAT
     <weaponArt>laser_burst_1</weaponArt>
     <iconImage>laser</iconImage>
 </weaponBlueprint>
+
+<augBlueprint name="JUDGE_BOON_NUKE">
+    <title>Nuke Boon</title>
+    <desc>YOU SHOULD NEVER SEE THIS</desc>
+    <cost>0</cost>
+    <rarity>0</rarity>
+    <stackable>true</stackable>
+</augBlueprint>

@@ -96,6 +96,16 @@
     </mod-append:customShip>
 </mod:findLike>
 
+<mod:findLike type="events">
+    <mod-append:metaVariable name="prof_r_boon_nuke" op="set" val="0"/>
+    <mod:findName type="req" name="ANY_BOON">
+        <mod-append:name>prof_r_boon_nuke</mod-append:name>
+    </mod:findName>
+    <mod:findName type="req" name="ALL_BOONS">
+        <mod-append:name>prof_r_boon_nuke</mod-append:name>
+    </mod:findName>
+</mod:findLike>
+
 <mod:findLike type="achievements" limit="1">
     <mod:findWithChildLike type="page" child-type="section" panic="true">
         <mod:selector text="Renegade Cruisers" />
@@ -113,6 +123,23 @@
 				<icon>renegade_nod_c</icon>
 				<header>Renegade Defeated</header>
 			</mod-append:achievement>
+        </mod:findLike>
+    </mod:findWithChildLike>
+    <mod:findWithChildLike type="page" child-type="section" panic="true">
+        <mod:selector text="Wakeson's Blessings" />
+        <mod:findLike type="section" panic="true">
+            <mod:selector text="Wakeson's Blessings" />
+            <mod-append:achievement name="ACH_BOON_NUKE">
+                <name>Blessing of Nukes</name>
+				<secretName>Blessing of ???</secretName>
+                <lockImage>ach_locked</lockImage>
+                <secretDescription>Receive the Blessing of ??? from Wakeson.</secretDescription>
+                <description>Show a nuke to Wakeson.
+While in effect; You may choose to recive a free missile at empty beacons.</description>
+                <header>Blessing Received</header>
+                <icon>ach_boon_nuke</icon>
+                <multiDifficulty>false</multiDifficulty>
+            </mod-append:achievement>
         </mod:findLike>
     </mod:findWithChildLike>
 </mod:findLike>

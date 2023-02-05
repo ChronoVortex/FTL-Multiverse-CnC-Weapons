@@ -320,6 +320,27 @@
 
 
 
+<mod:findName type="event" name="THE_JUDGES_ROCKMAN_REAL" panic="true">
+    <mod-append:choice hidden="true" req="COMBAT_NUKE" blue="false">
+        <text>Present the Nuclear Payload.</text>
+        <event>
+            <text>"A NUKE? I have not seen one of THESE in AGES! It is not the most ORIGINAL weapon, but I must ADMIT, I wish they were EASIER to COME BY in this era. There are a few PEOPLE whose THROATS I'd enjoy SHOVING THIS DOWN! HA! For this, I shall BLESS you with the BLESSING OF NUKES. But have PATIENCE. It is not for now, but for LATER!"</text>
+            <achievement silent="false">ACH_BOON_NUKE</achievement>
+            <metaVariable name="prof_r_boon_nuke" op="set" val="1"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="THE_JUDGES_ROCK_ADVICE"/>
+            </choice>
+        </event>
+    </mod-append:choice>
+</mod:findName>
+
+<mod:findName type="event" name="THE_JUDGES_VARIABLE_CLEAR" panic="true">
+    <mod-append:metaVariable name="prof_r_boon_nuke" op="set" val="0"/>
+</mod:findName>
+
+
+
 <mod:findName type="event" name="SYLVAN_TRADES_DROPPOINT" panic="true">
     <mod:findLike type="loadEventList">
         <mod-append:event name="SYLVAN_CNC"/>
