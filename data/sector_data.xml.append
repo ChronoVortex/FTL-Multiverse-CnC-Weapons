@@ -3,7 +3,7 @@
         <mod-append:blueprint name="ION_CANNON" rarity="0"/>
         <mod-append:blueprint name="DISRUPTOR" rarity="0"/>
         <mod-append:blueprint name="RAILGUN" rarity="0"/>
-        <mod-append:blueprint name="LASER_PRISM_1" rarity="0"/>
+        <mod-append:blueprint name="BEAM_PRISM_1" rarity="0"/>
         <mod-append:blueprint name="COMBAT_CHRONO" rarity="0"/>
         <mod-append:blueprint name="MISSILES_V5_SINGLE" rarity="0"/>
         <mod-append:blueprint name="MISSILES_TIB" rarity="0"/>
@@ -13,6 +13,9 @@
         <mod-append:blueprint name="NOD_LASER" rarity="0"/>
         <mod-append:blueprint name="BOMB_TIBERIUM" rarity="0"/>
         <mod-append:blueprint name="BOMB_TIBERIUM_BLUE" rarity="0"/>
+        <mod-append:blueprint name="AC_LASHER" rarity="0"/>
+        <mod-append:blueprint name="FOCUS_MC_COMBAT" rarity="0"/>
+        <mod-append:blueprint name="BEAM_MC_COMBAT" rarity="0"/>
     </mod:findLike>
 </mod:findName>
 
@@ -21,7 +24,7 @@
         <mod-append:blueprint name="ION_CANNON" rarity="0"/>
         <mod-append:blueprint name="DISRUPTOR" rarity="0"/>
         <mod-append:blueprint name="RAILGUN" rarity="0"/>
-        <mod-append:blueprint name="LASER_PRISM_1" rarity="0"/>
+        <mod-append:blueprint name="BEAM_PRISM_1" rarity="0"/>
         <mod-append:blueprint name="COMBAT_CHRONO" rarity="0"/>
         <mod-append:blueprint name="MISSILES_V5_SINGLE" rarity="0"/>
         <mod-append:blueprint name="MISSILES_TIB" rarity="0"/>
@@ -31,5 +34,8 @@
         <mod-append:blueprint name="NOD_LASER" rarity="0"/>
         <mod-append:blueprint name="BOMB_TIBERIUM" rarity="0"/>
         <mod-append:blueprint name="BOMB_TIBERIUM_BLUE" rarity="0"/>
+        <mod-append:blueprint name="AC_LASHER" rarity="0"/>
+        <mod-append:blueprint name="FOCUS_MC_COMBAT" rarity="0"/>
+        <mod-append:blueprint name="BEAM_MC_COMBAT" rarity="0"/>
     </mod:findLike>
 </mod:findName>

@@ -1,14 +1,20 @@
 <metadata>
     <title><![CDATA[ C&C Weapons: Renegade Edition ]]></title>
     <threadUrl><![CDATA[ https://www.subsetgames.com/forum/viewtopic.php?t=38333#p129743 ]]></threadUrl>
-    <author><![CDATA[ Chrono Vortex ]]></author>
-    <version><![CDATA[ 1.6 ]]></version>
+    <author>
+<![CDATA[
+Chrono Vortex
+additional credit: Vertaalfout, R4V3-0N
+]]>
+    </author>
+    <version><![CDATA[ 2.0 ]]></version>
     <description>
 <![CDATA[
-This mod adds several weapons from the Command and Conquer universe to Multiverse. It is compatible with version 3.2+ of the Tiberian Sun Ship Pack. When used with the ships, this mod must be patched last, so the order should look something like this:
+This mod adds several weapons from the Command and Conquer universe to Multiverse. This version requires version 4.0+ of the Tiberian Sun Ship Pack and version 1.0+ of Vertex Tags and Utility Functions. It must be patched after its dependencies, so the load order should look something like this:
 
 | Multiverse
 | ...
+| Vertex Tags and Utility Functions
 | Tiberian Sun Ship Pack
 | C&C Weapons: Renegade Edition
 V ...

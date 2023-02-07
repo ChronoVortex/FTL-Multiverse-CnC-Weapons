@@ -1,9 +1,3 @@
-<event name="SURGESTART_LASER_PRISM">
-    <superBarrage player="true" name="LASER_PRISM_SURGE"/>
-    <loadEvent>LUA_MOVE_PRISM_SURGE</loadEvent>
-</event>
-<event name="LUA_MOVE_PRISM_SURGE" />
-
 <event name="SURGESTART_NUKE_MISSILE_SURGE_DAMAGE">
     <superBarrage player="true" name="NUKE_MISSILE_SURGE_DAMAGE"/>
     <loadEvent>LUA_MOVE_NUKE_SURGE</loadEvent>

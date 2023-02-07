@@ -39,6 +39,18 @@ A substance known as Tiberium has been slowly becoming more prominent in univers
     </mod-append:choice>
 </mod:findName>
 
+<mod:findName type="event" name="STORAGE_CHECK_REAL">
+    <mod-append:choice req="JUDGE_BOON_NUKE" hidden="true" blue="false">
+        <text>Receive a missile.</text>
+        <event>
+            <text>A tiny slip-tunnel opens near your ship and single missile comes through.</text>
+            <item_modify>
+                <item type="missiles" min="1" max="1"/>
+            </item_modify>
+        </event>
+    </mod-append:choice>
+</mod:findName>
+
 <mod:findName type="event" name="COMBAT_CHECK_REAL">
     <mod-append:choice req="COMBAT_NUKE" blue="false">
         <text>(Nuclear Payload) Fire your nuke.</text>
@@ -97,76 +109,5 @@ A substance known as Tiberium has been slowly becoming more prominent in univers
             <text>You decide not to do anything and prepare to fight.</text>
             <status type="clear" target="enemy" system="teleporter" amount="100"/>
         </event>
-    </choice>
-</event>
-
-
-
-<mod:findName type="event" name="COMBAT_CHECK_TOGGLE" panic="true">
-    <mod:findLike type="choice">
-        <mod:selector req="MISSILES_V5_SINGLE" />
-        <mod:removeTag />
-    </mod:findLike>
-    <mod:findLike type="choice">
-        <mod:selector req="MISSILES_V5_MULTI" />
-        <mod:removeTag />
-    </mod:findLike>
-    <mod-append:choice req="MISSILES_V5_SINGLE" blue="false">
-        <text>(V5 Missiles) Set the state of the missiles. [Current mode: Precision]</text>
-        <event load="COMBAT_CHECK_V5_MISSILES_SINGLE"/>
-    </mod-append:choice>
-    <mod-append:choice req="MISSILES_V5_MULTI" blue="false">
-        <text>(V5 Missiles) Set the state of the missiles. [Current mode: Multi-Warhead]</text>
-        <event load="COMBAT_CHECK_V5_MISSILES_MULTI"/>
-    </mod-append:choice>
-</mod:findName>
-<event name="COMBAT_CHECK_V5_MISSILES_SINGLE">
-    <text>Are you sure you want to change the missiles' settings?</text>
-    <choice hidden="true">
-        <text>Set the missiles to Multi-Warhead Mode.</text>
-        <event>
-            <text>You start calibrating the missiles...</text>
-            <remove name="MISSILES_V5_SINGLE"/>
-            <choice hidden="true">
-                <text>Continue...</text>
-                <event>
-                    <text>You finish calibrating the missiles successfully.</text>
-                    <weapon name="MISSILES_V5_MULTI"/>
-                    <choice hidden="true">
-                        <text>Continue...</text>
-                        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
-                    </choice>
-                </event>
-            </choice>
-        </event>
-    </choice>
-    <choice hidden="true">
-        <text>Return to the toggle menu.</text>
-        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
-    </choice>
-</event>
-<event name="COMBAT_CHECK_V5_MISSILES_MULTI">
-    <text>Are you sure you want to change the missiles' settings?</text>
-    <choice hidden="true">
-        <text>Set the missiles to Precision Mode.</text>
-        <event>
-            <text>You start calibrating the missiles...</text>
-            <remove name="MISSILES_V5_MULTI"/>
-            <choice hidden="true">
-                <text>Continue...</text>
-                <event>
-                    <text>You finish calibrating the missiles successfully.</text>
-                    <weapon name="MISSILES_V5_SINGLE"/>
-                    <choice hidden="true">
-                        <text>Continue...</text>
-                        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
-                    </choice>
-                </event>
-            </choice>
-        </event>
-    </choice>
-    <choice hidden="true">
-        <text>Return to the toggle menu.</text>
-        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
     </choice>
 </event>

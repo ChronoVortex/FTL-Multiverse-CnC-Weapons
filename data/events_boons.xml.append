@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<event name="BOON_SELECT_NUKE">
+    <text>From nowhere, you hear a voice speaking to you. "CHALLENGER! For you, I grant the BLESSING OF NUKES! You may RECEIVE a FREE MISSILE at empty BEACONS, and may your travels be BLESSED! For whom do you thank? Why, the PREVIOUS CHALLENGER! Hahah!"</text>
+    <hiddenAug>JUDGE_BOON_NUKE</hiddenAug>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event>
+            <loadEvent>BOON_SELECT_CONTINUE</loadEvent>
+        </event>
+    </choice>
+</event>

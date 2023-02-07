@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mod:findName type="event" name="BOON_SELECT" panic="true">
+    <mod:findLike type="loadEventList">
+        <mod-append:event name="BOON_SELECT_NUKE" req="prof_r_boon_nuke"/>
+    </mod:findLike>
+</mod:findName>
