@@ -19,25 +19,25 @@ FOCUS_MC_COMBAT
 BEAM_MC_COMBAT
 -->
 
-<mod:findName type="weaponBlueprint" name="ION_CANNON">
+<mod:findName type="weaponBlueprint" name="ION_CANNON" panic="true">
     <mod:findLike type="rarity">
         <mod:setValue>5</mod:setValue>
     </mod:findLike>
 </mod:findName>
 
-<mod:findName type="weaponBlueprint" name="DISRUPTOR">
+<mod:findName type="weaponBlueprint" name="DISRUPTOR" panic="true">
     <mod:findLike type="rarity">
         <mod:setValue>4</mod:setValue>
     </mod:findLike>
 </mod:findName>
 
-<mod:findName type="weaponBlueprint" name="RAILGUN">
+<mod:findName type="weaponBlueprint" name="RAILGUN" panic="true">
     <mod:findLike type="rarity">
         <mod:setValue>3</mod:setValue>
     </mod:findLike>
 </mod:findName>
 
-<mod:findName type="weaponBlueprint" name="BEAM_PRISM_1">
+<mod:findName type="weaponBlueprint" name="BEAM_PRISM_1" panic="true">
     <mod:findLike type="rarity">
         <mod:setValue>3</mod:setValue>
     </mod:findLike>
@@ -262,43 +262,43 @@ BEAM_MC_COMBAT
     <iconImage>bomb</iconImage>
 </weaponBlueprint>
 
-<mod:findName type="weaponBlueprint" name="MISSILES_V5_SINGLE">
+<mod:findName type="weaponBlueprint" name="MISSILES_V5_SINGLE" panic="true">
     <mod:findLike type="rarity">
         <mod:setValue>4</mod:setValue>
     </mod:findLike>
 </mod:findName>
 
-<mod:findName type="weaponBlueprint" name="MISSILES_TIB">
+<mod:findName type="weaponBlueprint" name="MISSILES_TIB" panic="true">
     <mod:findLike type="rarity">
         <mod:setValue>5</mod:setValue>
     </mod:findLike>
 </mod:findName>
 
-<mod:findName type="weaponBlueprint" name="LASER_BANSHEE">
+<mod:findName type="weaponBlueprint" name="LASER_BANSHEE" panic="true">
     <mod:findLike type="rarity">
         <mod:setValue>2</mod:setValue>
     </mod:findLike>
 </mod:findName>
 
-<mod:findName type="weaponBlueprint" name="LASER_BANSHEE_2">
+<mod:findName type="weaponBlueprint" name="LASER_BANSHEE_2" panic="true">
     <mod:findLike type="rarity">
         <mod:setValue>4</mod:setValue>
     </mod:findLike>
 </mod:findName>
 
-<mod:findName type="weaponBlueprint" name="FOCUS_OBELISK">
+<mod:findName type="weaponBlueprint" name="FOCUS_OBELISK" panic="true">
     <mod:findLike type="rarity">
         <mod:setValue>4</mod:setValue>
     </mod:findLike>
 </mod:findName>
 
-<mod:findName type="weaponBlueprint" name="NOD_LASER">
+<mod:findName type="weaponBlueprint" name="NOD_LASER" panic="true">
     <mod:findLike type="rarity">
         <mod:setValue>4</mod:setValue>
     </mod:findLike>
 </mod:findName>
 
-<mod:findName type="weaponBlueprint" name="BOMB_TIBERIUM">
+<mod:findName type="weaponBlueprint" name="BOMB_TIBERIUM" panic="true">
     <mod:findLike type="rarity">
         <mod:setValue>3</mod:setValue>
     </mod:findLike>
@@ -337,19 +337,19 @@ BEAM_MC_COMBAT
     <iconImage>bomb</iconImage>
 </weaponBlueprint>
 
-<mod:findName type="weaponBlueprint" name="AC_LASHER">
+<mod:findName type="weaponBlueprint" name="AC_LASHER" panic="true">
     <mod:findLike type="rarity">
         <mod:setValue>3</mod:setValue>
     </mod:findLike>
 </mod:findName>
 
-<mod:findName type="weaponBlueprint" name="FOCUS_MC_COMBAT">
+<mod:findName type="weaponBlueprint" name="FOCUS_MC_COMBAT" panic="true">
     <mod:findLike type="rarity">
         <mod:setValue>4</mod:setValue>
     </mod:findLike>
 </mod:findName>
 
-<mod:findName type="weaponBlueprint" name="BEAM_MC_COMBAT">
+<mod:findName type="weaponBlueprint" name="BEAM_MC_COMBAT" panic="true">
     <mod:findLike type="rarity">
         <mod:setValue>5</mod:setValue>
     </mod:findLike>
