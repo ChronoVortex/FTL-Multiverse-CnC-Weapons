@@ -1,2 +1,2 @@
-<nukeMissileLaunch volume="9">weapons/bp_nuke_launch.ogg</nukeMissileLaunch>
-<explosionNuke volume="12">explosions/bp_nuke_explode.ogg</explosionNuke>
+<nukeMissileLaunch volume="9">weapons/cv_nuke_launch.ogg</nukeMissileLaunch>
+<explosionNuke volume="12">explosions/cv_nuke_explode.ogg</explosionNuke>
