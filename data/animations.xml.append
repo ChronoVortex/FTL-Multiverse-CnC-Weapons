@@ -18,6 +18,17 @@
     <time>1.0</time>
 </anim>
 
+<animSheet name="beam_frost_cryo" w="450" h="62" fw="25" fh="62">weapons/beam_frost_cryo_strip18.png</animSheet>
+<weaponAnim name="beam_frost_cryo">
+    <sheet>beam_frost_cryo</sheet>
+    <desc length="18" x="0" y="0"/>
+    <chargedFrame>8</chargedFrame>
+    <fireFrame>9</fireFrame>
+    <firePoint x="16" y="21" />
+    <mountPoint x="4" y="46" />
+    <chargeImage>weapons/beam_frost_cryo_glow.png</chargeImage>
+</weaponAnim>
+
 
 
 <!-- BANSHEE A REWARD -->

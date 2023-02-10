@@ -1,2 +1,12 @@
 <nukeMissileLaunch volume="9">weapons/cv_nuke_launch.ogg</nukeMissileLaunch>
 <explosionNuke volume="12">explosions/cv_nuke_explode.ogg</explosionNuke>
+
+<beamCryo1 volume="6">weapons/cv_beam_cryo_1.ogg</beamCryo1>
+<beamCryo2 volume="6">weapons/cv_beam_cryo_2.ogg</beamCryo2>
+<beamCryo3 volume="6">weapons/cv_beam_cryo_3.ogg</beamCryo3>
+<beamCryo4 volume="6">weapons/cv_beam_cryo_4.ogg</beamCryo4>
+<beamCryo5 volume="6">weapons/cv_beam_cryo_5.ogg</beamCryo5>
+
+<beamCryoHit1 volume="1">weapons/cv_beam_cryo_hit_1.ogg</beamCryoHit1>
+<beamCryoHit2 volume="1">weapons/cv_beam_cryo_hit_2.ogg</beamCryoHit2>
+<beamCryoHit3 volume="1">weapons/cv_beam_cryo_hit_3.ogg</beamCryoHit3>

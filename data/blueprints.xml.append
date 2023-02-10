@@ -6,6 +6,7 @@ DISRUPTOR
 RAILGUN
 BEAM_PRISM_1
 COMBAT_CHRONO
+BEAM_FROST_LONG
 MISSILES_V5_SINGLE
 MISSILES_TIB
 LASER_BANSHEE
@@ -260,6 +261,48 @@ BEAM_MC_COMBAT
     </hitShipSounds>
     <weaponArt>combat_chronosphere</weaponArt>
     <iconImage>bomb</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="BEAM_FROST_LONG">
+	<type>BEAM</type>
+	<tip>tip_frost</tip>
+    <title>Cryobeam</title>
+    <short>Cryobeam</short>
+    <desc>In addition to stunning and dealing minor damage to crew, this weapon locks down every room it hits.</desc>
+    <tooltip>Beam weapon that deals minor crew damage and locks down rooms.</tooltip>
+	<damage>0</damage>
+    <persDamage>1</persDamage>
+	<stun>4</stun>
+    <lockdownBeam>
+        <sound>beamCryoHit1</sound>
+        <sound>beamCryoHit2</sound>
+        <sound>beamCryoHit3</sound>
+    </lockdownBeam>
+	<sp>2</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<speed>10</speed>
+	<cooldown>13</cooldown>
+    <color>
+        <r>170</r>
+        <g>255</g>
+        <b>250</b>
+    </color>
+	<power>1</power>
+	<cost>50</cost>
+	<bp>5</bp>
+	<rarity>3</rarity>
+	<image>beam_contact</image>
+	<length>140</length>
+	<launchSounds>
+		<sound>beamCryo1</sound>
+		<sound>beamCryo2</sound>
+		<sound>beamCryo3</sound>
+		<sound>beamCryo4</sound>
+		<sound>beamCryo5</sound>
+	</launchSounds>
+	<weaponArt>beam_frost_cryo</weaponArt>
+	<iconImage>beam</iconImage>
 </weaponBlueprint>
 
 <mod:findName type="weaponBlueprint" name="MISSILES_V5_SINGLE" panic="true">

@@ -229,6 +229,7 @@
     <name>ION_CANNON</name>
     <name>DISRUPTOR</name>
     <name>BEAM_MC_COMBAT</name>
+    <name>BEAM_FROST_LONG</name>
 </blueprintList>
 <blueprintList name="SHOP_ITEM_SYLVAN_CNC_PINPOINT">
     <name>FOCUS_OBELISK</name>
@@ -249,6 +250,10 @@
 
 
 
+<mod:findName type="blueprintList" name="BLUELIST_BEAMS_ALL">
+    <mod-append:name>BEAM_FROST_LONG</mod-append:name>
+</mod:findName>
+
 <mod:findName type="blueprintList" name="BLUELIST_ION">
     <mod-append:name>COMBAT_CHRONO</mod-append:name>
 </mod:findName>
@@ -258,4 +263,11 @@
 </mod:findName>
 <mod:findName type="blueprintList" name="BLUELIST_BOMBS_CREWDAMAGE">
     <mod-append:name>BOMB_TIBERIUM_BLUE</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="BLUELIST_ANTIBIO">
+    <mod-append:name>BEAM_FROST_LONG</mod-append:name>
+</mod:findName>
+<mod:findName type="blueprintList" name="BLUELIST_ANTIBIO_NODAMAGE">
+    <mod-append:name>BEAM_FROST_LONG</mod-append:name>
 </mod:findName>

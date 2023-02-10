@@ -5,6 +5,7 @@
         <mod-append:blueprint name="RAILGUN" rarity="0"/>
         <mod-append:blueprint name="BEAM_PRISM_1" rarity="0"/>
         <mod-append:blueprint name="COMBAT_CHRONO" rarity="0"/>
+        <mod-append:blueprint name="BEAM_FROST_LONG" rarity="0"/>
         <mod-append:blueprint name="MISSILES_V5_SINGLE" rarity="0"/>
         <mod-append:blueprint name="MISSILES_TIB" rarity="0"/>
         <mod-append:blueprint name="LASER_BANSHEE" rarity="0"/>
@@ -26,6 +27,7 @@
         <mod-append:blueprint name="RAILGUN" rarity="0"/>
         <mod-append:blueprint name="BEAM_PRISM_1" rarity="0"/>
         <mod-append:blueprint name="COMBAT_CHRONO" rarity="0"/>
+        <mod-append:blueprint name="BEAM_FROST_LONG" rarity="0"/>
         <mod-append:blueprint name="MISSILES_V5_SINGLE" rarity="0"/>
         <mod-append:blueprint name="MISSILES_TIB" rarity="0"/>
         <mod-append:blueprint name="LASER_BANSHEE" rarity="0"/>
