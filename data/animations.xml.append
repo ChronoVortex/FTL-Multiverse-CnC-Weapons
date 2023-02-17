@@ -29,6 +29,13 @@
     <chargeImage>weapons/beam_frost_cryo_glow.png</chargeImage>
 </weaponAnim>
 
+<animSheet name="chaos_shot" w="32" h="32" fw="32" fh="32">weapons/chaos_shot_strip1.png</animSheet>
+<anim name="chaos_shot">
+	<sheet>chaos_shot</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+
 
 
 <!-- BANSHEE A REWARD -->

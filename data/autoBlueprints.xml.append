@@ -250,6 +250,16 @@
 
 
 
+<!-- Mechanical lists --->
+<blueprintList name="DRONE_CHAOS_WEAPON_LIST">
+    <name>DRONE_CHAOS_WEAPON_LOCKDOWN</name>
+    <name>DRONE_CHAOS_WEAPON_MIND</name>
+    <name>DRONE_CHAOS_WEAPON_HACK</name>
+</blueprintList>
+
+
+
+<!-- Bluelist appends -->
 <mod:findName type="blueprintList" name="BLUELIST_BEAMS_ALL">
     <mod-append:name>BEAM_FROST_LONG</mod-append:name>
 </mod:findName>

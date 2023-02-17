@@ -400,7 +400,186 @@ BEAM_MC_COMBAT
 
 
 
-<!-- Non-weapon blueprints -->
+<!-- Drone blueprints -->
+<weaponBlueprint name="DRONE_CHAOS_WEAPON_LOCKDOWN">
+	<type>LASER</type>
+	<title>CHAOS LOCKDOWN</title>
+	<short>CHAOS LOCKDOWN</short>
+	<tip>tip_laser</tip>
+	<desc>YOU SHOULD NEVER SEE THIS</desc>
+	<tooltip>YOU SHOULD NEVER SEE THIS</tooltip>
+	<damage>0</damage>
+	<lockdown>1</lockdown>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>10</cooldown>
+	<power>1</power>
+	<cost>20</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>laser_light1</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_burst_1</weaponArt>
+	<iconImage>laser</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="DRONE_CHAOS_WEAPON_MIND">
+	<type>LASER</type>
+	<title>CHAOS MIND</title>
+	<short>CHAOS MIND</short>
+	<tip>tip_laser</tip>
+	<desc>YOU SHOULD NEVER SEE THIS</desc>
+	<tooltip>YOU SHOULD NEVER SEE THIS</tooltip>
+	<damage>0</damage>
+	<mindControl limit="1" endSound="psiRelease">5</mindControl>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>10</cooldown>
+	<power>1</power>
+	<cost>20</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>laser_light1</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_burst_1</weaponArt>
+	<iconImage>laser</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="DRONE_CHAOS_WEAPON_HACK">
+	<type>LASER</type>
+	<title>CHAOS HACK</title>
+	<short>CHAOS HACK</short>
+	<tip>tip_laser</tip>
+	<desc>YOU SHOULD NEVER SEE THIS</desc>
+	<tooltip>YOU SHOULD NEVER SEE THIS</tooltip>
+	<damage>0</damage>
+	<hack duration="5" hitShieldDuration="3" />
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>10</cooldown>
+	<power>1</power>
+	<cost>20</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>laser_light1</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_burst_1</weaponArt>
+	<iconImage>laser</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="DRONE_CHAOS_WEAPON">
+	<type>BURST</type>
+    <drone_targetable>0</drone_targetable>
+    <flavorType>Laser</flavorType>
+	<title>CHAOS WEAPON</title>
+	<short>CHAOS WEAPON</short>
+	<desc>YOU SHOULD NEVER SEE THIS</desc>
+	<tooltip>YOU SHOULD NEVER SEE THIS</tooltip>
+	<damage>0</damage>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>10</cooldown>
+	<power>1</power>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<cost>20</cost>
+    <spin>720</spin>
+    <speed>26</speed>
+    <projectiles>
+        <projectile count="1" fake="false" blueprint="DRONE_CHAOS_WEAPON_LIST">chaos_shot</projectile>
+    </projectiles>
+	<launchSounds>
+		<sound>chaosShot</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_burst_1</weaponArt>
+	<iconImage>laser</iconImage>
+</weaponBlueprint>
+<droneBlueprint name="DRONE_CHAOS">
+	<type>COMBAT</type>
+	<tip>tip_combat</tip>
+	<title>Chaos Drone</title>
+	<short>Chaos</short>
+	<desc>This drone is cobbled together from cannibalized weapons and systems, designed for wreaking havoc on ships while their shields are down. Every shot it fires either hacks systems, mind controls crew or locks down rooms.</desc>
+	<power>2</power>
+	<cooldown>1000</cooldown>
+	<dodge>0</dodge>
+	<speed>30</speed>
+	<cost>60</cost>
+	<bp>3</bp>
+	<droneImage>drone_chaos</droneImage>
+	<weaponBlueprint>DRONE_CHAOS_WEAPON</weaponBlueprint>
+	<rarity>5</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+
+
+
+<!-- Other blueprints -->
 <augBlueprint name="COMBAT_NUKE">
     <title>Nuclear Payload</title>
     <desc>Single use combat augment that can be deployed before combat at the cost of 3 missiles to fire a nuke at the enemy ship, dealing massive damage on impact. If the missile is stopped by a Super Shield or intercepted by a defense drone, it has no effect.</desc>

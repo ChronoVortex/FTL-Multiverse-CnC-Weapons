@@ -17,6 +17,7 @@
         <mod-append:blueprint name="AC_LASHER" rarity="0"/>
         <mod-append:blueprint name="FOCUS_MC_COMBAT" rarity="0"/>
         <mod-append:blueprint name="BEAM_MC_COMBAT" rarity="0"/>
+        <mod-append:blueprint name="DRONE_CHAOS" rarity="0"/>
     </mod:findLike>
 </mod:findName>
 
@@ -39,5 +40,6 @@
         <mod-append:blueprint name="AC_LASHER" rarity="0"/>
         <mod-append:blueprint name="FOCUS_MC_COMBAT" rarity="0"/>
         <mod-append:blueprint name="BEAM_MC_COMBAT" rarity="0"/>
+        <mod-append:blueprint name="DRONE_CHAOS" rarity="0"/>
     </mod:findLike>
 </mod:findName>
