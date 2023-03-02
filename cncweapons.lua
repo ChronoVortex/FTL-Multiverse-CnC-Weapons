@@ -88,15 +88,17 @@ if mods.inferno then
                     
                     -- Create the missiles
                     local spaceManager = Hyperspace.Global.GetInstance():GetCApp().world.space
-                    for verticalOffset = 0, 6, 3 do
+                    for vertOffset = 0, 6, 3 do
                         -- Calculate offset for the missile since its barrel doesn't line up with the autocannons
                         local pos = Hyperspace.Pointf()
-                        if ship.iShipId == 0 then
+                        local vertMod = -1
+                        if weapon.mount.mirror then vertMod = 1 end
+                        if weapon.mount.rotate then
                             pos.x = projectile.position.x - 20
-                            pos.y = projectile.position.y + verticalOffset
+                            pos.y = projectile.position.y + vertOffset*vertMod
                         else
                             pos.y = projectile.position.y + 20
-                            pos.x = projectile.position.x + verticalOffset
+                            pos.x = projectile.position.x + vertOffset*vertMod
                         end
                         
                         -- Calculate a random point within a 35px radius of the target
