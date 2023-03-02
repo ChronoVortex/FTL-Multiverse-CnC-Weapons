@@ -65,3 +65,32 @@
     <desc length="22" x="0" y="0"/>
     <time>1.5</time>
 </anim>
+
+
+
+<!-- FORGEMASTER / GO BALLISTIC CROSSOVER -->
+
+<animSheet name="mammoth_cannon_charge" w="126" h="112" fw="42" fh="112">weapons/mammoth_cannon_charges.png</animSheet>
+<anim name="mammoth_cannon_charge">
+	<sheet>mammoth_cannon_charge</sheet>
+	<desc length="3" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+
+<animSheet name="mammoth_cannon" w="966" h="112" fw="42" fh="112">weapons/mammoth_cannon_strip23.png</animSheet>
+<weaponAnim name="mammoth_cannon">
+	<sheet>mammoth_cannon</sheet>
+	<desc length="23" x="0" y="0"/>
+	<chargedFrame>4</chargedFrame>
+	<fireFrame>6</fireFrame>
+	<firePoint x="15" y="38" charge="-12"/>
+	<mountPoint x="6" y="76"/>
+	<boost>mammoth_cannon_charge</boost>
+</weaponAnim>
+
+<animSheet name="missile_mammoth_tusk" w="14" h="22" fw="14" fh="22">weapons/missile_mammoth_tusk.png</animSheet>
+<anim name="missile_mammoth_tusk">
+	<sheet>missile_mammoth_tusk</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>

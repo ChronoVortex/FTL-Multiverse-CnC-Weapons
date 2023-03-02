@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- All weapons IDs with >0 rarity:
+<!-- All non-duplicate obtainable weapons IDs:
 ION_CANNON
 DISRUPTOR
 RAILGUN
 BEAM_PRISM_1
+COMBAT_CHRONO_PLAYER
 COMBAT_CHRONO
 BEAM_FROST_LONG
 MISSILES_V5_SINGLE
@@ -18,6 +19,11 @@ BOMB_TIBERIUM_BLUE
 AC_LASHER
 FOCUS_MC_COMBAT
 BEAM_MC_COMBAT
+MAMMOTH_CANNON
+-->
+
+<!-- All non-duplicate obtainable drone IDs:
+DRONE_CHAOS
 -->
 
 <mod:findName type="weaponBlueprint" name="ION_CANNON" panic="true">
@@ -397,6 +403,83 @@ BEAM_MC_COMBAT
         <mod:setValue>5</mod:setValue>
     </mod:findLike>
 </mod:findName>
+
+<weaponBlueprint name="MAMMOTH_CANNON">
+	<type>LASER</type>
+	<title>'Mammoth' Cannon</title>
+	<short>'Mammoth'</short>
+	<desc>Unlike other charge weapons, this cannon has the ability to charge projectiles of a different type from its primary ammunition. The third shot this weapon fires is burst of three missiles, which target a small radius and deal 1 damage each. This consumes ammo separately from the cannon's other shots and does not benefit from its chance to conserve ammo.</desc>
+	<tooltip>Charges up to 3 shots, first 2 deal 2 damage each, last shot is a cluster missile.</tooltip>
+	<missiles>1</missiles>
+	<freeMissileChance>80</freeMissileChance>
+	<damage>2</damage>
+	<shots>1</shots>
+	<sp>0</sp>
+	<breachChance>2</breachChance>
+	<stunChance>2</stunChance>
+	<cooldown>5</cooldown>
+	<power>3</power>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<cost>145</cost>
+	<image>GB_shot_medium</image>
+	<chargeLevels>3</chargeLevels>
+	<launchSounds>
+		<sound>silence</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>mammoth_cannon</weaponArt>
+	<iconImage>laser</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="MAMMOTH_CANNON_TUSK">
+	<type>MISSILES</type>
+	<tip>tip_missiles</tip>
+    <title>YOU SHOULD NEVER SEE THIS</title>
+    <short>YOU SHOULD NEVER SEE THIS</short>
+    <desc>YOU SHOULD NEVER SEE THIS</desc>
+    <tooltip>YOU SHOULD NEVER SEE THIS</tooltip>
+    <damage>1</damage>
+    <missiles>1</missiles>
+    <accuracyMod>10</accuracyMod>
+    <shots>1</shots>
+    <sp>10</sp>
+    <fireChance>2</fireChance>
+    <breachChance>1</breachChance>
+    <stunChance>2</stunChance>
+    <cooldown>5</cooldown>
+    <power>1</power>
+    <cost>0</cost>
+    <bp>6</bp>
+    <rarity>0</rarity>
+	<image>missile_mammoth_tusk</image>
+    <launchSounds>
+        <sound>missileMammoth</sound>
+    </launchSounds>
+    <hitShipSounds>
+        <sound>smallExplosion</sound>
+    </hitShipSounds>
+    <hitShieldSounds>
+        <sound>hitShield1</sound>
+        <sound>hitShield2</sound>
+        <sound>hitShield3</sound>
+    </hitShieldSounds>
+    <missSounds>
+        <sound>miss</sound>
+    </missSounds>
+    <weaponArt>mammoth_cannon</weaponArt>
+    <iconImage>missile</iconImage>
+</weaponBlueprint>
 
 
 

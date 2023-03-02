@@ -12,3 +12,5 @@
 <beamCryoHit3 volume="1">weapons/cv_beam_cryo_hit_3.ogg</beamCryoHit3>
 
 <chaosShot volume="5">weapons/cv_chaos_shoot.ogg</chaosShot>
+
+<missileMammoth volume="5">weapons/cv_missile_mammoth.ogg</missileMammoth>

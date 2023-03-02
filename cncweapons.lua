@@ -1,6 +1,7 @@
 CNC_WEAPONS_INFO = true
 
 local vter = mods.vertexutil.vter
+local INT_MAX = 2147483647
 
 -- Only set up the namespace if it hasn't already been set up
 if not mods.cnconquer then mods.cnconquer = {} end
@@ -71,4 +72,52 @@ if not mods.cnconquer.RetargetTibBomb then
         end
         script.on_internal_event(Defines.InternalEvents.ON_TICK, mods.cnconquer.RetargetTibBomb)
     end
+end
+
+-- Turn the Mammoth Cannon's 3rd projectile into missiles
+local mammothMissile = Hyperspace.Global.GetInstance():GetBlueprints():GetWeaponBlueprint("MAMMOTH_CANNON_TUSK")
+if mods.inferno then
+    script.on_fire_event(Defines.FireEvents.WEAPON_FIRE, function(ship, weapon, projectile)
+        if Hyperspace.Get_Projectile_Extend(projectile).name == "MAMMOTH_CANNON" then
+            if weapon.weaponVisual.anim.currentFrame > 12 then
+                if ship.weaponSystem.missile_count > 0 then
+                    -- Use a missile
+                    if Hyperspace.random32()%100 >= ship:GetAugmentationValue("EXPLOSIVE_REPLICATOR")*100 then
+                        ship:ModifyMissileCount(-1)
+                    end
+                    
+                    -- Create the missiles
+                    local spaceManager = Hyperspace.Global.GetInstance():GetCApp().world.space
+                    for verticalOffset = 0, 6, 3 do
+                        -- Calculate offset for the missile since its barrel doesn't line up with the autocannons
+                        local pos = Hyperspace.Pointf()
+                        if ship.iShipId == 0 then
+                            pos.x = projectile.position.x - 20
+                            pos.y = projectile.position.y + verticalOffset
+                        else
+                            pos.y = projectile.position.y + 20
+                            pos.x = projectile.position.x + verticalOffset
+                        end
+                        
+                        -- Calculate a random point within a 35px radius of the target
+                        local r = 35*math.sqrt(Hyperspace.random32()/INT_MAX)
+                        local theta = 2*math.pi*Hyperspace.random32()/INT_MAX
+                        local target = Hyperspace.Pointf(projectile.target.x + r*math.cos(theta), projectile.target.y + r*math.sin(theta))
+                        
+                        -- Create a missile
+                        spaceManager:CreateMissile(mammothMissile, pos, projectile.currentSpace, projectile.ownerId, target, projectile.destinationSpace, projectile.heading).entryAngle = projectile.entryAngle
+                    end
+                    
+                    -- Play missile fire sound
+                    Hyperspace.Global.GetInstance():GetSoundControl():PlaySoundMix("missileMammoth", 0.4, false)
+                end
+                projectile:Kill()
+                return true
+            else
+                -- Play normal fire sound
+                local sound = "GB_cannonMedium"..(tostring(Hyperspace.random32()%3 + 1):sub(1, 1))
+                Hyperspace.Global.GetInstance():GetSoundControl():PlaySoundMix(sound, 0.4, false)
+            end
+        end
+    end, INT_MAX)
 end
