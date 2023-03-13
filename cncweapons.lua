@@ -1,6 +1,7 @@
 CNC_WEAPONS_INFO = true
 
 local vter = mods.vertexutil.vter
+local random_point_radius = mods.vertexutil.random_point_radius
 local INT_MAX = 2147483647
 
 -- Only set up the namespace if it hasn't already been set up
@@ -101,13 +102,8 @@ if mods.inferno then
                             pos.x = projectile.position.x + vertOffset*vertMod
                         end
                         
-                        -- Calculate a random point within a 35px radius of the target
-                        local r = 35*math.sqrt(Hyperspace.random32()/INT_MAX)
-                        local theta = 2*math.pi*Hyperspace.random32()/INT_MAX
-                        local target = Hyperspace.Pointf(projectile.target.x + r*math.cos(theta), projectile.target.y + r*math.sin(theta))
-                        
                         -- Create a missile
-                        spaceManager:CreateMissile(mammothMissile, pos, projectile.currentSpace, projectile.ownerId, target, projectile.destinationSpace, projectile.heading).entryAngle = projectile.entryAngle
+                        spaceManager:CreateMissile(mammothMissile, pos, projectile.currentSpace, projectile.ownerId, random_point_radius(projectile.target, 35), projectile.destinationSpace, projectile.heading).entryAngle = projectile.entryAngle
                     end
                     
                     -- Play missile fire sound
