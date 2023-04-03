@@ -6,8 +6,8 @@
     <!-- Banshee A boss -->
     <mod-append:customShip name="MT_BOSS_BANSHEE_A_NORMAL">
         <shipIcons>
-            <shipIcon>icon_specialwep</shipIcon>
             <shipIcon>icon_threat</shipIcon>
+            <shipIcon>icon_specialwep</shipIcon>
         </shipIcons>
         <crew>
             <human_black_hand room="0" name="Seth" />
@@ -17,8 +17,8 @@
     </mod-append:customShip>
     <mod-append:customShip name="MT_BOSS_BANSHEE_A_CHALLENGE">
         <shipIcons>
-            <shipIcon>icon_specialwep</shipIcon>
             <shipIcon>icon_threat</shipIcon>
+            <shipIcon>icon_specialwep</shipIcon>
         </shipIcons>
         <crew>
             <human_black_hand room="0" name="Seth" />
@@ -28,8 +28,8 @@
     </mod-append:customShip>
     <mod-append:customShip name="MT_BOSS_BANSHEE_A_EXTREME">
         <shipIcons>
-            <shipIcon>icon_specialwep</shipIcon>
             <shipIcon>icon_threat</shipIcon>
+            <shipIcon>icon_specialwep</shipIcon>
         </shipIcons>
         <crew>
             <human_black_hand room="0" name="Seth" />
@@ -39,8 +39,8 @@
     </mod-append:customShip>
     <mod-append:customShip name="MT_BOSS_BANSHEE_A_CHAOS">
         <shipIcons>
-            <shipIcon>icon_specialwep</shipIcon>
             <shipIcon>icon_threat</shipIcon>
+            <shipIcon>icon_specialwep</shipIcon>
         </shipIcons>
         <crew>
             <human_black_hand room="0" name="Seth" />
@@ -52,8 +52,8 @@
     <!-- Banshee C boss -->
     <mod-append:customShip name="MT_BOSS_BANSHEE_C_NORMAL">
         <shipIcons>
-            <shipIcon>icon_specialwep</shipIcon>
             <shipIcon>icon_threat</shipIcon>
+            <shipIcon>icon_specialwep</shipIcon>
         </shipIcons>
         <crew>
             <tiberium_fiend room="0" />
@@ -63,8 +63,8 @@
     </mod-append:customShip>
     <mod-append:customShip name="MT_BOSS_BANSHEE_C_CHALLENGE">
         <shipIcons>
-            <shipIcon>icon_specialwep</shipIcon>
             <shipIcon>icon_threat</shipIcon>
+            <shipIcon>icon_specialwep</shipIcon>
         </shipIcons>
         <crew>
             <tiberium_fiend room="0" />
@@ -74,8 +74,8 @@
     </mod-append:customShip>
     <mod-append:customShip name="MT_BOSS_BANSHEE_C_EXTREME">
         <shipIcons>
-            <shipIcon>icon_specialwep</shipIcon>
             <shipIcon>icon_threat</shipIcon>
+            <shipIcon>icon_specialwep</shipIcon>
         </shipIcons>
         <crew>
             <tiberium_fiend room="0" />
@@ -85,8 +85,8 @@
     </mod-append:customShip>
     <mod-append:customShip name="MT_BOSS_BANSHEE_C_CHAOS">
         <shipIcons>
-            <shipIcon>icon_specialwep</shipIcon>
             <shipIcon>icon_threat</shipIcon>
+            <shipIcon>icon_specialwep</shipIcon>
         </shipIcons>
         <crew>
             <tiberium_fiend room="0" />
