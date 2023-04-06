@@ -2,7 +2,7 @@
 
 <FTL>
 
-<mod:findLike type="ships">
+<mod:findLike type="ships" limit="1">
     <!-- Banshee A boss -->
     <mod-append:customShip name="MT_BOSS_BANSHEE_A_NORMAL">
         <shipIcons>
@@ -96,7 +96,7 @@
     </mod-append:customShip>
 </mod:findLike>
 
-<mod:findLike type="events">
+<mod:findLike type="events" limit="1">
     <mod-append:metaVariable name="prof_r_boon_nuke" op="set" val="0"/>
     <mod:findName type="req" name="ANY_BOON">
         <mod-append:name>prof_r_boon_nuke</mod-append:name>
@@ -144,7 +144,7 @@ While in effect; You may choose to recive a free missile at empty beacons.</desc
     </mod:findWithChildLike>
 </mod:findLike>
 
-<mod:findLike type="store">
+<mod:findLike type="store" limit="1">
     <mod-append:customStore id="STORE_SYLVAN_CNC">
         <itemPurchaseLimit>2</itemPurchaseLimit>
         <category type="WEAPONS">
@@ -219,7 +219,7 @@ While in effect; You may choose to recive a free missile at empty beacons.</desc
     </mod-append:customStore>
 </mod:findLike>
 
-<mod:findLike type="boss">
+<mod:findLike type="boss" limit="1">
     <mod-append:surgeBarrage name="NUKE_MISSILE_SURGE_INITIAL">
         <weapon name="WEAPON_NUKE_SURGE_INITIAL" count="1"/>
     </mod-append:surgeBarrage>
@@ -228,7 +228,7 @@ While in effect; You may choose to recive a free missile at empty beacons.</desc
     </mod-append:surgeBarrage>
 </mod:findLike>
 
-<mod:findLike type="crew">
+<mod:findLike type="crew" limit="1">
     <mod-append:race name="dummy_nuke_surge_trigger">
         <maxHealth>999</maxHealth>
         <allDamageTakenMultiplier>0</allDamageTakenMultiplier>
@@ -256,7 +256,7 @@ While in effect; You may choose to recive a free missile at empty beacons.</desc
     </mod-append:race>
 </mod:findLike>
 
-<mod:findLike type="scripts">
+<mod:findLike type="scripts" limit="1">
     <mod-append:script>cncweapons.lua</mod-append:script>
 </mod:findLike>
 
