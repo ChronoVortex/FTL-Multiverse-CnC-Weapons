@@ -81,7 +81,6 @@ script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projec
                 Hyperspace.Global.GetInstance():GetSoundControl():PlaySoundMix("missileMammoth", 0.4, false)
             end
             projectile:Kill()
-            return true
         else
             -- Play normal fire sound
             local sound = "GB_cannonMedium"..(tostring(Hyperspace.random32()%3 + 1):sub(1, 1))

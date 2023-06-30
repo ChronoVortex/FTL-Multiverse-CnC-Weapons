@@ -40,7 +40,7 @@
 
 <!-- BANSHEE A REWARD -->
 
-<animSheet name="missile_nuke" w="34" h="231" fw="34" fh="196">weapons/missile_nuke.png</animSheet>
+<animSheet name="missile_nuke" w="34" h="231" fw="34" fh="231">weapons/missile_nuke.png</animSheet>
 <anim name="missile_nuke">
     <sheet>missile_nuke</sheet>
     <desc length="1" x="0" y="0"/>
