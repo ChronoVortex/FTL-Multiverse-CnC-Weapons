@@ -4,47 +4,36 @@ local vter = mods.vertexutil.vter
 local random_point_radius = mods.vertexutil.random_point_radius
 local INT_MAX = 2147483647
 
--- Only set up the namespace if it hasn't already been set up
-if not mods.cnconquer then mods.cnconquer = {} end
-
 -- Move nuke damage projectiles to their targets immediatly
-if not mods.cnconquer.MoveNukeSurge then
-    function mods.cnconquer.MoveNukeSurge()
-        for proj in vter(Hyperspace.ships.player.superBarrage) do
-            proj:EnterDestinationSpace()
-            proj.position = proj.target
-            proj:ComputeHeading()
-        end
+script.on_game_event("LUA_MOVE_NUKE_SURGE", false, function()
+    for proj in vter(Hyperspace.ships.player.superBarrage) do
+        proj:EnterDestinationSpace()
+        proj.position = proj.target
+        proj:ComputeHeading()
     end
-    script.on_game_event("LUA_MOVE_NUKE_SURGE", false, mods.cnconquer.MoveNukeSurge)
-end
+end)
 
 -- Retarget the Banshee C MV Renegade's tiberium bomb to the room their fiends are in
-if not mods.cnconquer.RetargetTibBomb then
-    function mods.cnconquer.RetargetTibBomb(projectile, weapon)
-        if weapon.iShipId == 1 and weapon.blueprint.name == "BOMB_TIBERIUM" then
-            -- Find the room on the player ship with the most boarders
-            local mostBoardersRoom = nil
-            local mostBoarders = 0
-            local currentRoom = 0
-            while Hyperspace.ships.player:GetRoomCenter(currentRoom).x ~= -1 do -- Hacky way to check if currentRoom exists
-                local numBoarders = Hyperspace.ships.player:CountCrewShipId(currentRoom, 1)
-                if numBoarders > mostBoarders then
-                    mostBoarders = numBoarders
-                    mostBoardersRoom = currentRoom
-                end
-                currentRoom = currentRoom + 1
-            end
-            
-            -- Retarget the bomb to that room
-            if mostBoardersRoom then
-                projectile.target = Hyperspace.ships.player:GetRoomCenter(mostBoardersRoom)
-                projectile:ComputeHeading()
+script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)
+    if weapon.iShipId == 1 and weapon.blueprint.name == "BOMB_TIBERIUM" then
+        -- Find the room on the player ship with the most boarders
+        local mostBoardersRoom = nil
+        local mostBoarders = 0
+        for currentRoom = 0, Hyperspace.ShipGraph.GetShipInfo(0):RoomCount() - 1 do
+            local numBoarders = Hyperspace.ships.player:CountCrewShipId(currentRoom, 1)
+            if numBoarders > mostBoarders then
+                mostBoarders = numBoarders
+                mostBoardersRoom = currentRoom
             end
         end
+        
+        -- Retarget the bomb to that room
+        if mostBoardersRoom then
+            projectile.target = Hyperspace.ships.player:GetRoomCenter(mostBoardersRoom)
+            projectile:ComputeHeading()
+        end
     end
-    script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, mods.cnconquer.RetargetTibBomb)
-end
+end)
 
 -- Turn the Mammoth Cannon's 3rd projectile into missiles
 local mammothMissile = Hyperspace.Global.GetInstance():GetBlueprints():GetWeaponBlueprint("MAMMOTH_CANNON_TUSK")

@@ -257,7 +257,7 @@ While in effect; You may choose to recive a free missile at empty beacons.</desc
 </mod:findLike>
 
 <mod:findLike type="scripts" limit="1">
-    <mod-append:script>cncweapons.lua</mod-append:script>
+    <mod-append:script>data/cnc_scripts/weapons.lua</mod-append:script>
 </mod:findLike>
 
 </FTL>
