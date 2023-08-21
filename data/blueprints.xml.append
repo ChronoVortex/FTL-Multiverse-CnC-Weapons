@@ -20,6 +20,7 @@ AC_LASHER
 FOCUS_MC_COMBAT
 BEAM_MC_COMBAT
 MAMMOTH_CANNON
+BEAM_PRISM_SCATTER
 -->
 
 <!-- All non-duplicate obtainable drone IDs:
@@ -270,45 +271,45 @@ DRONE_CHAOS
 </weaponBlueprint>
 
 <weaponBlueprint name="BEAM_FROST_LONG">
-	<type>BEAM</type>
-	<tip>tip_frost</tip>
+    <type>BEAM</type>
+    <tip>tip_frost</tip>
     <title>Cryobeam</title>
     <short>Cryobeam</short>
     <desc>In addition to stunning and dealing minor damage to crew, this weapon locks down every room it hits.</desc>
     <tooltip>Beam weapon that deals minor crew damage and locks down rooms.</tooltip>
-	<damage>0</damage>
+    <damage>0</damage>
     <persDamage>1</persDamage>
-	<stun>4</stun>
+    <stun>4</stun>
     <lockdownBeam>
         <sound>beamCryoHit1</sound>
         <sound>beamCryoHit2</sound>
         <sound>beamCryoHit3</sound>
     </lockdownBeam>
-	<sp>2</sp>
-	<fireChance>0</fireChance>
-	<breachChance>0</breachChance>
-	<speed>10</speed>
-	<cooldown>13</cooldown>
+    <sp>2</sp>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <speed>10</speed>
+    <cooldown>13</cooldown>
     <color>
         <r>170</r>
         <g>255</g>
         <b>250</b>
     </color>
-	<power>1</power>
-	<cost>50</cost>
-	<bp>5</bp>
-	<rarity>3</rarity>
-	<image>beam_contact</image>
-	<length>140</length>
-	<launchSounds>
-		<sound>beamCryo1</sound>
-		<sound>beamCryo2</sound>
-		<sound>beamCryo3</sound>
-		<sound>beamCryo4</sound>
-		<sound>beamCryo5</sound>
-	</launchSounds>
-	<weaponArt>beam_frost_cryo</weaponArt>
-	<iconImage>beam</iconImage>
+    <power>1</power>
+    <cost>50</cost>
+    <bp>5</bp>
+    <rarity>3</rarity>
+    <image>beam_contact</image>
+    <length>140</length>
+    <launchSounds>
+        <sound>beamCryo1</sound>
+        <sound>beamCryo2</sound>
+        <sound>beamCryo3</sound>
+        <sound>beamCryo4</sound>
+        <sound>beamCryo5</sound>
+    </launchSounds>
+    <weaponArt>beam_frost_cryo</weaponArt>
+    <iconImage>beam</iconImage>
 </weaponBlueprint>
 
 <mod:findName type="weaponBlueprint" name="MISSILES_V5_SINGLE" panic="true">
@@ -405,46 +406,46 @@ DRONE_CHAOS
 </mod:findName>
 
 <weaponBlueprint name="MAMMOTH_CANNON">
-	<type>LASER</type>
-	<title>'Mammoth' Cannon</title>
-	<short>'Mammoth'</short>
-	<desc>Unlike other charge weapons, this cannon has the ability to charge projectiles of a different type from its primary ammunition. The third shot this weapon fires is burst of three missiles, which target a small radius and deal 1 damage each. This consumes ammo separately from the cannon's other shots and does not benefit from its chance to conserve ammo.</desc>
-	<tooltip>Charges up to 3 shots, first 2 deal 2 damage each, last shot is a cluster missile.</tooltip>
-	<missiles>1</missiles>
-	<freeMissileChance>80</freeMissileChance>
-	<damage>2</damage>
-	<shots>1</shots>
-	<sp>0</sp>
-	<breachChance>2</breachChance>
-	<stunChance>2</stunChance>
-	<cooldown>5</cooldown>
-	<power>3</power>
-	<bp>4</bp>
-	<rarity>0</rarity>
-	<cost>145</cost>
-	<image>GB_shot_medium</image>
-	<chargeLevels>3</chargeLevels>
-	<launchSounds>
-		<sound>silence</sound>
-	</launchSounds>
-	<hitShipSounds>
-		<sound>hitHull2</sound>
-		<sound>hitHull3</sound>
-	</hitShipSounds>
-	<hitShieldSounds>
-		<sound>hitShield1</sound>
-		<sound>hitShield2</sound>
-		<sound>hitShield3</sound>
-	</hitShieldSounds>
-	<missSounds>
-		<sound>miss</sound>
-	</missSounds>
-	<weaponArt>mammoth_cannon</weaponArt>
-	<iconImage>laser</iconImage>
+    <type>LASER</type>
+    <title>'Mammoth' Cannon</title>
+    <short>'Mammoth'</short>
+    <desc>Unlike other charge weapons, this cannon has the ability to charge projectiles of a different type from its primary ammunition. The third shot this weapon fires is burst of three missiles, which target a small radius and deal 1 damage each. This consumes ammo separately from the cannon's other shots and does not benefit from its chance to conserve ammo.</desc>
+    <tooltip>Charges up to 3 shots, first 2 deal 2 damage each, last shot is a cluster missile.</tooltip>
+    <missiles>1</missiles>
+    <freeMissileChance>80</freeMissileChance>
+    <damage>2</damage>
+    <shots>1</shots>
+    <sp>0</sp>
+    <breachChance>2</breachChance>
+    <stunChance>2</stunChance>
+    <cooldown>5</cooldown>
+    <power>3</power>
+    <bp>4</bp>
+    <rarity>0</rarity>
+    <cost>145</cost>
+    <image>GB_shot_medium</image>
+    <chargeLevels>3</chargeLevels>
+    <launchSounds>
+        <sound>silence</sound>
+    </launchSounds>
+    <hitShipSounds>
+        <sound>hitHull2</sound>
+        <sound>hitHull3</sound>
+    </hitShipSounds>
+    <hitShieldSounds>
+        <sound>hitShield1</sound>
+        <sound>hitShield2</sound>
+        <sound>hitShield3</sound>
+    </hitShieldSounds>
+    <missSounds>
+        <sound>miss</sound>
+    </missSounds>
+    <weaponArt>mammoth_cannon</weaponArt>
+    <iconImage>laser</iconImage>
 </weaponBlueprint>
 <weaponBlueprint name="MAMMOTH_CANNON_TUSK">
-	<type>MISSILES</type>
-	<tip>tip_missiles</tip>
+    <type>MISSILES</type>
+    <tip>tip_missiles</tip>
     <title>YOU SHOULD NEVER SEE THIS</title>
     <short>YOU SHOULD NEVER SEE THIS</short>
     <desc>YOU SHOULD NEVER SEE THIS</desc>
@@ -462,7 +463,7 @@ DRONE_CHAOS
     <cost>0</cost>
     <bp>6</bp>
     <rarity>0</rarity>
-	<image>missile_mammoth_tusk</image>
+    <image>missile_mammoth_tusk</image>
     <launchSounds>
         <sound>missileMammoth</sound>
     </launchSounds>
@@ -481,183 +482,547 @@ DRONE_CHAOS
     <iconImage>missile</iconImage>
 </weaponBlueprint>
 
+<weaponBlueprint name="BEAM_PRISM_SCATTER">
+    <type>BURST</type>
+    <flavorType>Prism</flavorType>
+    <tip>tip_focus</tip>
+    <title>Prismatic Scatter Beam</title>
+    <short>Prismatic Scatter</short>
+    <desc>The pinnacle of prism tech, this weapon splits beams with varying effects across a large area, damaging the enemy ship up to 8 times.</desc>
+    <tooltip>Refracting focus beam weapon.</tooltip>
+    <radius>45</radius>
+    <damage>2</damage>
+    <shots>1</shots>
+    <fireTime>0.18</fireTime>
+    <sp>0</sp>
+    <fireChance>2</fireChance>
+    <breachChance>2</breachChance>
+    <cooldown>22</cooldown>
+    <power>3</power>
+    <cost>195</cost>
+    <bp>2</bp>
+    <speed>1</speed>
+    <rarity>0</rarity>
+    <projectiles>
+        <projectile count="2" fake="false">laser_burst</projectile>
+    </projectiles>
+    <launchSounds>
+        <sound>beamPrism</sound>
+    </launchSounds>
+    <weaponArt>prismatic_scatter</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="BEAM_PRISM_SCATTER_PROJ_NORMAL">
+    <type>BEAM</type>
+    <tip>tip_focus</tip>
+    <title>Prismatic Scatter Projectile</title>
+    <short>Prismatic Scatter Projectile</short>
+    <desc>YOU SOULD NEVER SEE THIS</desc>
+    <tooltip>YOU SHOULD NEVER SEE THIS</tooltip>
+    <damage>2</damage>
+    <sp>0</sp>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>14</cooldown>
+    <speed>1</speed>
+    <length>1</length>
+    <power>2</power>
+    <cost>0</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <image>beam_contact</image>
+    <launchSounds>
+        <sound>silence</sound>
+    </launchSounds>
+    <weaponArt>prismatic_scatter</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="BEAM_PRISM_SCATTER_PROJ_ENERGY">
+    <type>BEAM</type>
+    <tip>tip_focus</tip>
+    <title>Prismatic Scatter Projectile</title>
+    <short>Prismatic Scatter Projectile</short>
+    <desc>YOU SOULD NEVER SEE THIS</desc>
+    <tooltip>YOU SHOULD NEVER SEE THIS</tooltip>
+    <damage>2</damage>
+    <noSysDamage>true</noSysDamage>
+    <ion>2</ion>
+    <sp>0</sp>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>14</cooldown>
+    <color>
+        <r>53</r>
+        <g>255</g>
+        <b>0</b>
+    </color>
+    <speed>1</speed>
+    <length>1</length>
+    <power>2</power>
+    <cost>0</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <image>beam_contact</image>
+    <launchSounds>
+        <sound>silence</sound>
+    </launchSounds>
+    <weaponArt>prismatic_scatter</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="BEAM_PRISM_SCATTER_PROJ_ION">
+    <type>BEAM</type>
+    <tip>tip_focus</tip>
+    <title>Prismatic Scatter Projectile</title>
+    <short>Prismatic Scatter Projectile</short>
+    <desc>YOU SOULD NEVER SEE THIS</desc>
+    <tooltip>YOU SHOULD NEVER SEE THIS</tooltip>
+    <damage>0</damage>
+    <ion>2</ion>
+    <sp>0</sp>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <stunChance>5</stunChance>
+    <cooldown>14</cooldown>
+    <color>
+        <r>133</r>
+        <g>231</g>
+        <b>237</b>
+    </color>
+    <speed>1</speed>
+    <length>1</length>
+    <power>2</power>
+    <cost>0</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <image>beam_contact</image>
+    <launchSounds>
+        <sound>silence</sound>
+    </launchSounds>
+    <weaponArt>prismatic_scatter</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="BEAM_PRISM_SCATTER_PROJ_PHASE">
+    <type>BEAM</type>
+    <tip>tip_focus</tip>
+    <title>Prismatic Scatter Projectile</title>
+    <short>Prismatic Scatter Projectile</short>
+    <desc>YOU SOULD NEVER SEE THIS</desc>
+    <tooltip>YOU SHOULD NEVER SEE THIS</tooltip>
+    <damage>0</damage>
+    <ion>1</ion>
+    <sp>11</sp>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <stunChance>5</stunChance>
+    <cooldown>14</cooldown>
+    <color>
+        <r>255</r>
+        <g>255</g>
+        <b>255</b>
+    </color>
+    <speed>1</speed>
+    <length>1</length>
+    <power>2</power>
+    <cost>0</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <image>beam_contact</image>
+    <launchSounds>
+        <sound>silence</sound>
+    </launchSounds>
+    <weaponArt>prismatic_scatter</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="BEAM_PRISM_SCATTER_REFRACT_FIRE">
+    <type>BEAM</type>
+    <tip>tip_focus</tip>
+    <title>Prismatic Scatter Projectile</title>
+    <short>Prismatic Scatter Projectile</short>
+    <desc>YOU SOULD NEVER SEE THIS</desc>
+    <tooltip>YOU SHOULD NEVER SEE THIS</tooltip>
+    <damage>1</damage>
+    <sp>0</sp>
+    <fireChance>10</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>14</cooldown>
+    <speed>1</speed>
+    <length>1</length>
+    <power>2</power>
+    <cost>0</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <image>beam_contact</image>
+    <launchSounds>
+        <sound>silence</sound>
+    </launchSounds>
+    <weaponArt>prismatic_scatter</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="BEAM_PRISM_SCATTER_REFRACT_PART">
+    <type>BEAM</type>
+    <tip>tip_focus</tip>
+    <title>Prismatic Scatter Projectile</title>
+    <short>Prismatic Scatter Projectile</short>
+    <desc>YOU SOULD NEVER SEE THIS</desc>
+    <tooltip>YOU SHOULD NEVER SEE THIS</tooltip>
+    <damage>0</damage>
+    <sysDamage>2</sysDamage>
+    <sp>0</sp>
+    <fireChance>4</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>14</cooldown>
+    <color>
+        <r>255</r>
+        <g>166</g>
+        <b>0</b>
+    </color>
+    <speed>1</speed>
+    <length>1</length>
+    <power>2</power>
+    <cost>0</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <image>beam_contact</image>
+    <launchSounds>
+        <sound>silence</sound>
+    </launchSounds>
+    <weaponArt>prismatic_scatter</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="BEAM_PRISM_SCATTER_REFRACT_BREACH">
+    <type>BEAM</type>
+    <tip>tip_focus</tip>
+    <title>Prismatic Scatter Projectile</title>
+    <short>Prismatic Scatter Projectile</short>
+    <desc>YOU SOULD NEVER SEE THIS</desc>
+    <tooltip>YOU SHOULD NEVER SEE THIS</tooltip>
+    <damage>1</damage>
+    <sp>0</sp>
+    <fireChance>0</fireChance>
+    <breachChance>10</breachChance>
+    <cooldown>14</cooldown>
+	<color>
+		<r>255</r>
+		<g>230</g>
+		<b>94</b>
+	</color>
+    <speed>1</speed>
+    <length>1</length>
+    <power>2</power>
+    <cost>0</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <image>beam_contact</image>
+    <launchSounds>
+        <sound>silence</sound>
+    </launchSounds>
+    <weaponArt>prismatic_scatter</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="BEAM_PRISM_SCATTER_REFRACT_ENERGY">
+    <type>BEAM</type>
+    <tip>tip_focus</tip>
+    <title>Prismatic Scatter Projectile</title>
+    <short>Prismatic Scatter Projectile</short>
+    <desc>YOU SOULD NEVER SEE THIS</desc>
+    <tooltip>YOU SHOULD NEVER SEE THIS</tooltip>
+    <damage>1</damage>
+    <noSysDamage>true</noSysDamage>
+    <ion>1</ion>
+    <sp>0</sp>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>14</cooldown>
+    <color>
+        <r>53</r>
+        <g>255</g>
+        <b>0</b>
+    </color>
+    <speed>1</speed>
+    <length>1</length>
+    <power>2</power>
+    <cost>0</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <image>beam_contact</image>
+    <launchSounds>
+        <sound>silence</sound>
+    </launchSounds>
+    <weaponArt>prismatic_scatter</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="BEAM_PRISM_SCATTER_REFRACT_ION">
+    <type>BEAM</type>
+    <tip>tip_focus</tip>
+    <title>Prismatic Scatter Projectile</title>
+    <short>Prismatic Scatter Projectile</short>
+    <desc>YOU SOULD NEVER SEE THIS</desc>
+    <tooltip>YOU SHOULD NEVER SEE THIS</tooltip>
+    <damage>0</damage>
+    <ion>1</ion>
+    <sp>0</sp>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <stunChance>5</stunChance>
+    <cooldown>14</cooldown>
+    <color>
+        <r>133</r>
+        <g>231</g>
+        <b>237</b>
+    </color>
+    <speed>1</speed>
+    <length>1</length>
+    <power>2</power>
+    <cost>0</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <image>beam_contact</image>
+    <launchSounds>
+        <sound>silence</sound>
+    </launchSounds>
+    <weaponArt>prismatic_scatter</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="BEAM_PRISM_SCATTER_REFRACT_BIO">
+    <type>BEAM</type>
+    <tip>tip_focus</tip>
+    <title>Prismatic Scatter Projectile</title>
+    <short>Prismatic Scatter Projectile</short>
+    <desc>YOU SOULD NEVER SEE THIS</desc>
+    <tooltip>YOU SHOULD NEVER SEE THIS</tooltip>
+	<damage>0</damage>
+    <sysDamage>1</sysDamage>
+	<persDamage>3</persDamage>
+    <sp>0</sp>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>14</cooldown>
+	<color>
+		<r>255</r>
+		<g>8</g>
+		<b>200</b>
+	</color>
+	<statBoosts>
+		<statBoost name="moveSpeedMultiplier">
+			<boostType>MULT</boostType>
+			<amount>0.33</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<maxStacks>1</maxStacks>
+			<duration>10</duration>
+			<boostAnim>bio_poison</boostAnim>
+		</statBoost>
+		<statBoost name="stunMultiplier">
+			<boostType>MULT</boostType>
+			<amount>1.75</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<maxStacks>1</maxStacks>
+			<duration>10</duration>
+		</statBoost>
+		<statBoost name="repairSpeed">
+			<boostType>MULT</boostType>
+			<amount>0.33</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<maxStacks>1</maxStacks>
+			<duration>10</duration>
+		</statBoost>
+	</statBoosts>
+    <speed>1</speed>
+    <length>1</length>
+    <power>2</power>
+    <cost>0</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <image>beam_contact</image>
+    <launchSounds>
+        <sound>silence</sound>
+    </launchSounds>
+    <weaponArt>prismatic_scatter</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
 
 
 <!-- Drone blueprints -->
 <weaponBlueprint name="DRONE_CHAOS_WEAPON_LOCKDOWN">
-	<type>LASER</type>
-	<title>CHAOS LOCKDOWN</title>
-	<short>CHAOS LOCKDOWN</short>
-	<tip>tip_laser</tip>
-	<desc>YOU SHOULD NEVER SEE THIS</desc>
-	<tooltip>YOU SHOULD NEVER SEE THIS</tooltip>
-	<damage>0</damage>
-	<lockdown>1</lockdown>
-	<shots>1</shots>
-	<sp>0</sp>
-	<fireChance>1</fireChance>
-	<breachChance>0</breachChance>
-	<cooldown>10</cooldown>
-	<power>1</power>
-	<cost>20</cost>
-	<bp>2</bp>
-	<rarity>0</rarity>
-	<image>laser_light1</image>
-	<launchSounds>
-		<sound>lightLaser1</sound>
-		<sound>lightLaser2</sound>
-		<sound>lightLaser3</sound>
-	</launchSounds>
-	<hitShipSounds>
-		<sound>hitHull2</sound>
-		<sound>hitHull3</sound>
-	</hitShipSounds>
-	<hitShieldSounds>
-		<sound>hitShield1</sound>
-		<sound>hitShield2</sound>
-		<sound>hitShield3</sound>
-	</hitShieldSounds>
-	<missSounds>
-		<sound>miss</sound>
-	</missSounds>
-	<weaponArt>laser_burst_1</weaponArt>
-	<iconImage>laser</iconImage>
+    <type>LASER</type>
+    <title>CHAOS LOCKDOWN</title>
+    <short>CHAOS LOCKDOWN</short>
+    <tip>tip_laser</tip>
+    <desc>YOU SHOULD NEVER SEE THIS</desc>
+    <tooltip>YOU SHOULD NEVER SEE THIS</tooltip>
+    <damage>0</damage>
+    <lockdown>1</lockdown>
+    <shots>1</shots>
+    <sp>0</sp>
+    <fireChance>1</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>10</cooldown>
+    <power>1</power>
+    <cost>20</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <image>laser_light1</image>
+    <launchSounds>
+        <sound>lightLaser1</sound>
+        <sound>lightLaser2</sound>
+        <sound>lightLaser3</sound>
+    </launchSounds>
+    <hitShipSounds>
+        <sound>hitHull2</sound>
+        <sound>hitHull3</sound>
+    </hitShipSounds>
+    <hitShieldSounds>
+        <sound>hitShield1</sound>
+        <sound>hitShield2</sound>
+        <sound>hitShield3</sound>
+    </hitShieldSounds>
+    <missSounds>
+        <sound>miss</sound>
+    </missSounds>
+    <weaponArt>laser_burst_1</weaponArt>
+    <iconImage>laser</iconImage>
 </weaponBlueprint>
 <weaponBlueprint name="DRONE_CHAOS_WEAPON_MIND">
-	<type>LASER</type>
-	<title>CHAOS MIND</title>
-	<short>CHAOS MIND</short>
-	<tip>tip_laser</tip>
-	<desc>YOU SHOULD NEVER SEE THIS</desc>
-	<tooltip>YOU SHOULD NEVER SEE THIS</tooltip>
-	<damage>0</damage>
-	<mindControl limit="1" endSound="psiRelease">5</mindControl>
-	<shots>1</shots>
-	<sp>0</sp>
-	<fireChance>1</fireChance>
-	<breachChance>0</breachChance>
-	<cooldown>10</cooldown>
-	<power>1</power>
-	<cost>20</cost>
-	<bp>2</bp>
-	<rarity>0</rarity>
-	<image>laser_light1</image>
-	<launchSounds>
-		<sound>lightLaser1</sound>
-		<sound>lightLaser2</sound>
-		<sound>lightLaser3</sound>
-	</launchSounds>
-	<hitShipSounds>
-		<sound>hitHull2</sound>
-		<sound>hitHull3</sound>
-	</hitShipSounds>
-	<hitShieldSounds>
-		<sound>hitShield1</sound>
-		<sound>hitShield2</sound>
-		<sound>hitShield3</sound>
-	</hitShieldSounds>
-	<missSounds>
-		<sound>miss</sound>
-	</missSounds>
-	<weaponArt>laser_burst_1</weaponArt>
-	<iconImage>laser</iconImage>
+    <type>LASER</type>
+    <title>CHAOS MIND</title>
+    <short>CHAOS MIND</short>
+    <tip>tip_laser</tip>
+    <desc>YOU SHOULD NEVER SEE THIS</desc>
+    <tooltip>YOU SHOULD NEVER SEE THIS</tooltip>
+    <damage>0</damage>
+    <mindControl limit="1" endSound="psiRelease">5</mindControl>
+    <shots>1</shots>
+    <sp>0</sp>
+    <fireChance>1</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>10</cooldown>
+    <power>1</power>
+    <cost>20</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <image>laser_light1</image>
+    <launchSounds>
+        <sound>lightLaser1</sound>
+        <sound>lightLaser2</sound>
+        <sound>lightLaser3</sound>
+    </launchSounds>
+    <hitShipSounds>
+        <sound>hitHull2</sound>
+        <sound>hitHull3</sound>
+    </hitShipSounds>
+    <hitShieldSounds>
+        <sound>hitShield1</sound>
+        <sound>hitShield2</sound>
+        <sound>hitShield3</sound>
+    </hitShieldSounds>
+    <missSounds>
+        <sound>miss</sound>
+    </missSounds>
+    <weaponArt>laser_burst_1</weaponArt>
+    <iconImage>laser</iconImage>
 </weaponBlueprint>
 <weaponBlueprint name="DRONE_CHAOS_WEAPON_HACK">
-	<type>LASER</type>
-	<title>CHAOS HACK</title>
-	<short>CHAOS HACK</short>
-	<tip>tip_laser</tip>
-	<desc>YOU SHOULD NEVER SEE THIS</desc>
-	<tooltip>YOU SHOULD NEVER SEE THIS</tooltip>
-	<damage>0</damage>
-	<hack duration="5" hitShieldDuration="3" />
-	<shots>1</shots>
-	<sp>0</sp>
-	<fireChance>1</fireChance>
-	<breachChance>0</breachChance>
-	<cooldown>10</cooldown>
-	<power>1</power>
-	<cost>20</cost>
-	<bp>2</bp>
-	<rarity>0</rarity>
-	<image>laser_light1</image>
-	<launchSounds>
-		<sound>lightLaser1</sound>
-		<sound>lightLaser2</sound>
-		<sound>lightLaser3</sound>
-	</launchSounds>
-	<hitShipSounds>
-		<sound>hitHull2</sound>
-		<sound>hitHull3</sound>
-	</hitShipSounds>
-	<hitShieldSounds>
-		<sound>hitShield1</sound>
-		<sound>hitShield2</sound>
-		<sound>hitShield3</sound>
-	</hitShieldSounds>
-	<missSounds>
-		<sound>miss</sound>
-	</missSounds>
-	<weaponArt>laser_burst_1</weaponArt>
-	<iconImage>laser</iconImage>
+    <type>LASER</type>
+    <title>CHAOS HACK</title>
+    <short>CHAOS HACK</short>
+    <tip>tip_laser</tip>
+    <desc>YOU SHOULD NEVER SEE THIS</desc>
+    <tooltip>YOU SHOULD NEVER SEE THIS</tooltip>
+    <damage>0</damage>
+    <hack duration="5" hitShieldDuration="3" />
+    <shots>1</shots>
+    <sp>0</sp>
+    <fireChance>1</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>10</cooldown>
+    <power>1</power>
+    <cost>20</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <image>laser_light1</image>
+    <launchSounds>
+        <sound>lightLaser1</sound>
+        <sound>lightLaser2</sound>
+        <sound>lightLaser3</sound>
+    </launchSounds>
+    <hitShipSounds>
+        <sound>hitHull2</sound>
+        <sound>hitHull3</sound>
+    </hitShipSounds>
+    <hitShieldSounds>
+        <sound>hitShield1</sound>
+        <sound>hitShield2</sound>
+        <sound>hitShield3</sound>
+    </hitShieldSounds>
+    <missSounds>
+        <sound>miss</sound>
+    </missSounds>
+    <weaponArt>laser_burst_1</weaponArt>
+    <iconImage>laser</iconImage>
 </weaponBlueprint>
 <weaponBlueprint name="DRONE_CHAOS_WEAPON">
-	<type>BURST</type>
+    <type>BURST</type>
     <drone_targetable>0</drone_targetable>
     <flavorType>Laser</flavorType>
-	<title>CHAOS WEAPON</title>
-	<short>CHAOS WEAPON</short>
-	<desc>YOU SHOULD NEVER SEE THIS</desc>
-	<tooltip>YOU SHOULD NEVER SEE THIS</tooltip>
-	<damage>0</damage>
-	<shots>1</shots>
-	<sp>0</sp>
-	<fireChance>1</fireChance>
-	<breachChance>0</breachChance>
-	<cooldown>10</cooldown>
-	<power>1</power>
-	<bp>2</bp>
-	<rarity>0</rarity>
-	<cost>20</cost>
+    <title>CHAOS WEAPON</title>
+    <short>CHAOS WEAPON</short>
+    <desc>YOU SHOULD NEVER SEE THIS</desc>
+    <tooltip>YOU SHOULD NEVER SEE THIS</tooltip>
+    <damage>0</damage>
+    <shots>1</shots>
+    <sp>0</sp>
+    <fireChance>1</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>10</cooldown>
+    <power>1</power>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <cost>20</cost>
     <spin>720</spin>
     <speed>26</speed>
     <projectiles>
         <projectile count="1" fake="false" blueprint="DRONE_CHAOS_WEAPON_LIST">chaos_shot</projectile>
     </projectiles>
-	<launchSounds>
-		<sound>chaosShot</sound>
-	</launchSounds>
-	<hitShipSounds>
-		<sound>hitHull2</sound>
-		<sound>hitHull3</sound>
-	</hitShipSounds>
-	<hitShieldSounds>
-		<sound>hitShield1</sound>
-		<sound>hitShield2</sound>
-		<sound>hitShield3</sound>
-	</hitShieldSounds>
-	<missSounds>
-		<sound>miss</sound>
-	</missSounds>
-	<weaponArt>laser_burst_1</weaponArt>
-	<iconImage>laser</iconImage>
+    <launchSounds>
+        <sound>chaosShot</sound>
+    </launchSounds>
+    <hitShipSounds>
+        <sound>hitHull2</sound>
+        <sound>hitHull3</sound>
+    </hitShipSounds>
+    <hitShieldSounds>
+        <sound>hitShield1</sound>
+        <sound>hitShield2</sound>
+        <sound>hitShield3</sound>
+    </hitShieldSounds>
+    <missSounds>
+        <sound>miss</sound>
+    </missSounds>
+    <weaponArt>laser_burst_1</weaponArt>
+    <iconImage>laser</iconImage>
 </weaponBlueprint>
 <droneBlueprint name="DRONE_CHAOS">
-	<type>COMBAT</type>
-	<tip>tip_combat</tip>
-	<title>Chaos Drone</title>
-	<short>Chaos</short>
-	<desc>This drone is cobbled together from cannibalized weapons and systems, designed for wreaking havoc on ships while their shields are down. Every shot it fires either hacks systems, mind controls crew or locks down rooms.</desc>
-	<power>2</power>
-	<cooldown>1000</cooldown>
-	<dodge>0</dodge>
-	<speed>30</speed>
-	<cost>60</cost>
-	<bp>3</bp>
-	<droneImage>drone_chaos</droneImage>
-	<weaponBlueprint>DRONE_CHAOS_WEAPON</weaponBlueprint>
-	<rarity>5</rarity>
-	<iconImage>combat</iconImage>
+    <type>COMBAT</type>
+    <tip>tip_combat</tip>
+    <title>Chaos Drone</title>
+    <short>Chaos</short>
+    <desc>This drone is cobbled together from cannibalized weapons and systems, designed for wreaking havoc on ships while their shields are down. Every shot it fires either hacks systems, mind controls crew or locks down rooms.</desc>
+    <power>2</power>
+    <cooldown>1000</cooldown>
+    <dodge>0</dodge>
+    <speed>30</speed>
+    <cost>60</cost>
+    <bp>3</bp>
+    <droneImage>drone_chaos</droneImage>
+    <weaponBlueprint>DRONE_CHAOS_WEAPON</weaponBlueprint>
+    <rarity>5</rarity>
+    <iconImage>combat</iconImage>
 </droneBlueprint>
 
 

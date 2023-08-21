@@ -94,3 +94,18 @@
 	<desc length="1" x="0" y="0"/>
 	<time>1</time>
 </anim>
+
+
+
+<!-- FORGEMASTER / ALDER'S ADDITIONS CROSSOVER -->
+
+<animSheet name="prismatic_scatter" w="114" h="76" fw="38" fh="76">weapons/prismatic_scatter_strip3.png</animSheet>
+<weaponAnim name="prismatic_scatter">
+	<sheet>prismatic_scatter</sheet>
+	<desc length="3" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint x="23" y="19"/>
+	<mountPoint x="6" y="48"/>
+    <chargeImage>weapons/prismatic_scatter_glow.png</chargeImage>
+</weaponAnim>

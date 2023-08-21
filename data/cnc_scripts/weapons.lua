@@ -77,3 +77,40 @@ script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projec
         end
     end
 end, INT_MAX)
+
+-- Handle prismatic scatter beam
+local prismBeams = mods.cnconquer.prismBeams
+prismScatterRefractions = {
+    refractions = 3,
+    blueprints = {
+        Hyperspace.Blueprints:GetWeaponBlueprint("BEAM_PRISM_SCATTER_REFRACT_FIRE"),
+        Hyperspace.Blueprints:GetWeaponBlueprint("BEAM_PRISM_SCATTER_REFRACT_PART"),
+        Hyperspace.Blueprints:GetWeaponBlueprint("BEAM_PRISM_SCATTER_REFRACT_BREACH"),
+        Hyperspace.Blueprints:GetWeaponBlueprint("BEAM_PRISM_SCATTER_REFRACT_ENERGY"),
+        Hyperspace.Blueprints:GetWeaponBlueprint("BEAM_PRISM_SCATTER_REFRACT_ION"),
+        Hyperspace.Blueprints:GetWeaponBlueprint("BEAM_PRISM_SCATTER_REFRACT_BIO")
+    }
+}
+prismBeams["BEAM_PRISM_SCATTER_PROJ_NORMAL"] = prismScatterRefractions
+prismBeams["BEAM_PRISM_SCATTER_PROJ_ENERGY"] = prismScatterRefractions
+prismBeams["BEAM_PRISM_SCATTER_PROJ_ION"]    = prismScatterRefractions
+prismBeams["BEAM_PRISM_SCATTER_PROJ_PHASE"]  = prismScatterRefractions
+local prismScatterBeams = {
+    Hyperspace.Blueprints:GetWeaponBlueprint("BEAM_PRISM_SCATTER_PROJ_NORMAL"),
+    Hyperspace.Blueprints:GetWeaponBlueprint("BEAM_PRISM_SCATTER_PROJ_ENERGY"),
+    Hyperspace.Blueprints:GetWeaponBlueprint("BEAM_PRISM_SCATTER_PROJ_ION"),
+    Hyperspace.Blueprints:GetWeaponBlueprint("BEAM_PRISM_SCATTER_PROJ_PHASE")
+}
+script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)
+    if weapon.blueprint.name == "BEAM_PRISM_SCATTER" then
+        local spaceManager = Hyperspace.Global.GetInstance():GetCApp().world.space
+        local beam = spaceManager:CreateBeam(
+            prismScatterBeams[math.random(#prismScatterBeams)],
+            projectile.position, projectile.currentSpace, projectile.ownerId,
+            projectile.target, Hyperspace.Pointf(projectile.target.x, projectile.target.y + 1),
+            projectile.destinationSpace, 1, projectile.heading)
+        beam.sub_start.x = 500*math.cos(projectile.entryAngle)
+        beam.sub_start.y = 500*math.sin(projectile.entryAngle) 
+        projectile:Kill()
+    end
+end, INT_MAX)
