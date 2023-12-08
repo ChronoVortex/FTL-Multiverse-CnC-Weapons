@@ -59,11 +59,11 @@
     <time>0.3</time>
 </anim>
 
-<animSheet name="explosion_nuke" w="4818" h="187" fw="219" fh="187">effects/explosion_nuke_strip22.png</animSheet>
+<animSheet name="explosion_nuke" w="1664" h="128" fw="128" fh="128">effects/explosion_nuke_strip13.png</animSheet>
 <anim name="explosion_nuke">
     <sheet>explosion_nuke</sheet>
-    <desc length="22" x="0" y="0"/>
-    <time>1.5</time>
+    <desc length="13" x="0" y="0"/>
+    <time>0.8</time>
 </anim>
 
 
