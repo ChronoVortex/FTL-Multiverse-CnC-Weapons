@@ -98,11 +98,31 @@
 
 <mod:findLike type="events" limit="1">
     <mod-append:metaVariable name="prof_r_boon_nuke" op="set" val="0"/>
+</mod:findLike>
+<mod:findLike type="events">
     <mod:findName type="req" name="ANY_BOON">
         <mod-append:name>prof_r_boon_nuke</mod-append:name>
     </mod:findName>
     <mod:findName type="req" name="ALL_BOONS">
         <mod-append:name>prof_r_boon_nuke</mod-append:name>
+    </mod:findName>
+    <mod:findName type="req" name="SYLVAN_IONCANNON_STORY_CHECK">
+        <mod-append:req type="all">
+            <req type="any">
+                <name>SEC SECTOR_VAGABOND</name>
+                <name>SEC SECTOR_PIRATE</name>
+                <name>SEC SECTOR_PIRATE_HEKTAR</name>
+                <name>SEC SECTOR_UNEXPLORED_GENERIC</name>
+                <name>SEC SECTOR_ABANDONED_GENERIC</name>
+                <name>SEC SECTOR_ABANDONED_GENERIC_HEKTAR</name>
+            </req>
+            <req lvl="0" max_lvl="500">
+                <name>stability</name>
+            </req>
+            <req max_lvl="0">
+                <name>loc_ioncannon_encounter</name>
+            </req>
+        </mod-append:req>
     </mod:findName>
 </mod:findLike>
 

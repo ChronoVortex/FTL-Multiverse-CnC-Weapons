@@ -27,12 +27,6 @@ BEAM_PRISM_SCATTER
 DRONE_CHAOS
 -->
 
-<mod:findName type="weaponBlueprint" name="ION_CANNON" panic="true">
-    <mod:findLike type="rarity">
-        <mod:setValue>5</mod:setValue>
-    </mod:findLike>
-</mod:findName>
-
 <mod:findName type="weaponBlueprint" name="DISRUPTOR" panic="true">
     <mod:findLike type="rarity">
         <mod:setValue>4</mod:setValue>
