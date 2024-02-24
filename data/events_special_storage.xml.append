@@ -84,39 +84,6 @@ A substance known as Tiberium has been slowly becoming more prominent in univers
 	</mod-append:choice>
 </mod:findName>
 
-<mod:findName type="event" name="COMBAT_CHECK_FLAGSHIP_REAL">
-    <mod-append:choice req="COMBAT_NUKE" blue="false">
-        <text>(Nuclear Payload) Fire your nuke.</text>
-        <event load="COMBAT_CHECK_NUKE"/>
-    </mod-append:choice>
-    
-    <mod:findWithChildLike type="choice" child-type="text" panic="true">
-        <mod:selector>Change your toggle or amp equipment.</mod:selector>
-        <mod:removeTag />
-    </mod:findWithChildLike>
-    <mod:findWithChildLike type="choice" child-type="text" panic="true">
-        <mod:selector>Do some last minute check-ups.</mod:selector>
-        <mod:removeTag />
-    </mod:findWithChildLike>
-    <mod:findWithChildLike type="choice" child-type="text" panic="true">
-        <mod:selector>Do nothing.</mod:selector>
-        <mod:removeTag />
-    </mod:findWithChildLike>
-    
-	<mod-append:choice req="LIST_CHECK_TOGGLES_AND_AMPS" lvl="1" blue="false">
-		<text>Change your toggle or amp equipment.</text>
-		<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
-	</mod-append:choice>
-	<mod-append:choice>
-		<text>Do some last minute check-ups.</text>
-		<event load="COMBAT_CHECK_GENERIC"/>
-	</mod-append:choice>
-	<mod-append:choice>
-		<text>Do nothing.</text>
-		<event/>
-	</mod-append:choice>
-</mod:findName>
-
 <event name="COMBAT_CHECK_NUKE">
     <text>Are you sure you want to do this?
 [Consumes 3 missiles and the payload. If the missile is stopped by a Super Shield or intercepted by a defense drone, it will have no effect.]</text>
