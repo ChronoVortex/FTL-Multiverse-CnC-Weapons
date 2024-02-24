@@ -263,6 +263,16 @@
     <name>DRONE_CHAOS_WEAPON_MIND</name>
     <name>DRONE_CHAOS_WEAPON_HACK</name>
 </blueprintList>
+<mod:findName type="blueprintList" name="LIST_WEAPONS_ALL">
+    <mod-append:name>COMBAT_CHRONO</mod-append:name>
+    <mod-append:name>BEAM_FROST_LONG</mod-append:name>
+    <mod-append:name>BOMB_TIBERIUM_BLUE</mod-append:name>
+    <mod-append:name>MAMMOTH_CANNON</mod-append:name>
+    <mod-append:name>BEAM_PRISM_SCATTER</mod-append:name>
+</mod:findName>
+<mod:findName type="blueprintList" name="LIST_DRONES_ALL">
+    <mod-append:name>DRONE_CHAOS</mod-append:name>
+</mod:findName>
 
 
 
@@ -291,6 +301,11 @@
 </mod:findName>
 <mod:findName type="blueprintList" name="LIST_DRONES_ALL_CRAPBUCKET">
     <mod-append:name>DRONE_CHAOS</mod-append:name>
+</mod:findName>
+<mod:findName type="blueprintList" name="LIST_CREW_ALL_CRAPBUCKET">
+    <mod-append:name>human_black_hand</mod-append:name>
+    <mod-append:name>tiberium_fiend</mod-append:name>
+    <mod-append:name>human_adept</mod-append:name>
 </mod:findName>
 
 
