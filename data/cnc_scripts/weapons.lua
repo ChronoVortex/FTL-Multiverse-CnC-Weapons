@@ -36,14 +36,14 @@ script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projec
 end)
 
 -- Turn the Mammoth Cannon's 3rd projectile into missiles
-local mammothMissile = Hyperspace.Global.GetInstance():GetBlueprints():GetWeaponBlueprint("MAMMOTH_CANNON_TUSK")
+local mammothMissile = Hyperspace.Blueprints:GetWeaponBlueprint("MAMMOTH_CANNON_TUSK")
 script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)
     if weapon.blueprint.name == "MAMMOTH_CANNON" then
-        local ship = Hyperspace.Global.GetInstance():GetShipManager(weapon.iShipId)
+        local ship = Hyperspace.ships(weapon.iShipId)
         if weapon.weaponVisual.anim.currentFrame > 12 then
             if ship.weaponSystem.missile_count > 0 then
                 -- Use a missile
-                if Hyperspace.random32()%100 >= ship:GetAugmentationValue("EXPLOSIVE_REPLICATOR")*100 then
+                if math.random(100) > ship:GetAugmentationValue("EXPLOSIVE_REPLICATOR")*100 then
                     ship:ModifyMissileCount(-1)
                 end
                 
@@ -67,13 +67,13 @@ script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projec
                 end
                 
                 -- Play missile fire sound
-                Hyperspace.Global.GetInstance():GetSoundControl():PlaySoundMix("missileMammoth", 0.4, false)
+                Hyperspace.Sounds:PlaySoundMix("missileMammoth", -1, false)
             end
             projectile:Kill()
         else
             -- Play normal fire sound
-            local sound = "GB_cannonMedium"..(tostring(Hyperspace.random32()%3 + 1):sub(1, 1))
-            Hyperspace.Global.GetInstance():GetSoundControl():PlaySoundMix(sound, 0.4, false)
+            local sound = "GB_cannonMedium"..(tostring(math.random(3)):sub(1, 1))
+            Hyperspace.Sounds:PlaySoundMix(sound, -1, false)
         end
     end
 end, INT_MAX)
