@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<mod:findName type="dependencyChecker" name="If you see this you patched CnC Weapons incorrectly! Please read the dependency list and load order on the forum page" panic="true"/>
+
 <animSheet name="bomblauncher_tiberium_blue" w="455" h="41" fw="35" fh="41">weapons/bomblauncher_tiberium_blue_strip13.png</animSheet>
 <weaponAnim name="bomblauncher_tiberium_blue">
     <sheet>bomblauncher_tiberium_blue</sheet>
