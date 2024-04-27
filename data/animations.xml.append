@@ -99,6 +99,21 @@
 
 
 
+<!-- FORGEMASTER / AI CRUISER CROSSOVER -->
+
+<animSheet name="beam_frost_shotgun" w="510" h="57" fw="34" fh="57">weapons/beam_frost_shotgun_strip15.png</animSheet>
+<weaponAnim name="beam_frost_shotgun">
+    <sheet>beam_frost_shotgun</sheet>
+    <desc length="15" x="0" y="0"/>
+    <chargedFrame>8</chargedFrame>
+    <fireFrame>9</fireFrame>
+    <firePoint x="17" y="21" />
+    <mountPoint x="4" y="42" />
+    <chargeImage>weapons/beam_frost_shotgun_glow.png</chargeImage>
+</weaponAnim>
+
+
+
 <!-- FORGEMASTER / ALDER'S ADDITIONS CROSSOVER -->
 
 <animSheet name="prismatic_scatter" w="114" h="76" fw="38" fh="76">weapons/prismatic_scatter_strip3.png</animSheet>

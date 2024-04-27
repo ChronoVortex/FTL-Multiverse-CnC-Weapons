@@ -48,7 +48,7 @@ script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projec
                 end
                 
                 -- Create the missiles
-                local spaceManager = Hyperspace.Global.GetInstance():GetCApp().world.space
+                local spaceManager = Hyperspace.App.world.space
                 for vertOffset = 0, 6, 3 do
                     -- Calculate offset for the missile since its barrel doesn't line up with the autocannons
                     local pos = Hyperspace.Pointf()
@@ -78,6 +78,22 @@ script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projec
     end
 end, INT_MAX)
 
+-- Handle frost splitter beam
+local frostPinpoint = Hyperspace.Blueprints:GetWeaponBlueprint("BEAM_FROST_SHOTGUN_PROJECTILE")
+script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)
+    if weapon.blueprint.name == "BEAM_FROST_SHOTGUN" then
+        local spaceManager = Hyperspace.App.world.space
+        local beam = spaceManager:CreateBeam(
+            frostPinpoint,
+            projectile.position, projectile.currentSpace, projectile.ownerId,
+            projectile.target, Hyperspace.Pointf(projectile.target.x, projectile.target.y + 1),
+            projectile.destinationSpace, 1, projectile.heading)
+        beam.sub_start.x = 500*math.cos(projectile.entryAngle)
+        beam.sub_start.y = 500*math.sin(projectile.entryAngle) 
+        projectile:Kill()
+    end
+end, INT_MAX)
+
 -- Handle prismatic scatter beam
 local prismBeams = mods.cnconquer.prismBeams
 prismScatterRefractions = {
@@ -103,7 +119,7 @@ local prismScatterBeams = {
 }
 script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)
     if weapon.blueprint.name == "BEAM_PRISM_SCATTER" then
-        local spaceManager = Hyperspace.Global.GetInstance():GetCApp().world.space
+        local spaceManager = Hyperspace.App.world.space
         local beam = spaceManager:CreateBeam(
             prismScatterBeams[math.random(#prismScatterBeams)],
             projectile.position, projectile.currentSpace, projectile.ownerId,

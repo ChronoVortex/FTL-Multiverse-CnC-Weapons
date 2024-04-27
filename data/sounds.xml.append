@@ -11,6 +11,10 @@
 <beamCryoHit2 volume="1">weapons/cv_beam_cryo_hit_2.ogg</beamCryoHit2>
 <beamCryoHit3 volume="1">weapons/cv_beam_cryo_hit_3.ogg</beamCryoHit3>
 
+<beamCryoShotgun1 volume="5">weapons/cv_beam_cryo_shotgun_1.ogg</beamCryoShotgun1>
+<beamCryoShotgun2 volume="5">weapons/cv_beam_cryo_shotgun_2.ogg</beamCryoShotgun2>
+<beamCryoShotgun3 volume="5">weapons/cv_beam_cryo_shotgun_3.ogg</beamCryoShotgun3>
+
 <chaosShot volume="5">weapons/cv_chaos_shoot.ogg</chaosShot>
 
 <missileMammoth volume="5">weapons/cv_missile_mammoth.ogg</missileMammoth>

@@ -20,6 +20,7 @@ AC_LASHER
 FOCUS_MC_COMBAT
 BEAM_MC_COMBAT
 MAMMOTH_CANNON
+BEAM_FROST_SHOTGUN
 BEAM_PRISM_SCATTER
 -->
 
@@ -474,6 +475,71 @@ DRONE_CHAOS
     </missSounds>
     <weaponArt>mammoth_cannon</weaponArt>
     <iconImage>missile</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="BEAM_FROST_SHOTGUN">
+    <type>BURST</type>
+    <flavorType>Pinpoint</flavorType>
+    <tip>rvs_tip_focus_split</tip>
+    <title>Frost Splitter</title>
+    <short>Frost Splitter</short>
+    <desc>Fires a cluster of pinpoint beams over a very large area which damage systems and lock down rooms.</desc>
+    <tooltip>Fires a scatter of beams across a random area.</tooltip>
+    <radius>80</radius>
+    <damage>0</damage>
+    <sysDamage>1</sysDamage>
+    <stun>6</stun>
+	<lockdown>1</lockdown>
+    <shots>1</shots>
+    <sp>1</sp>
+    <cooldown>13</cooldown>
+    <power>2</power>
+    <cost>112</cost>
+    <bp>2</bp>
+    <speed>1</speed>
+    <rarity>0</rarity>
+    <projectiles>
+        <projectile count="6" fake="false">laser_burst</projectile>
+    </projectiles>
+    <launchSounds>
+        <sound>beamCryoShotgun1</sound>
+        <sound>beamCryoShotgun2</sound>
+        <sound>beamCryoShotgun3</sound>
+    </launchSounds>
+    <weaponArt>beam_frost_shotgun</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="BEAM_FROST_SHOTGUN_PROJECTILE">
+	<type>BEAM</type>
+	<tip>tip_focus</tip>
+	<title>Splitter Beam Projectile</title>
+	<short>Splitter Beam Projectile</short>
+	<desc>YOU SOULD NEVER SEE THIS</desc>
+	<tooltip>YOU SHOULD NEVER SEE THIS</tooltip>
+    <damage>0</damage>
+    <sysDamage>1</sysDamage>
+    <stun>6</stun>
+	<sp>2</sp>
+    <lockdownBeam/>
+	<cooldown>1</cooldown>
+    <color>
+        <r>170</r>
+        <g>255</g>
+        <b>250</b>
+    </color>
+	<speed>1</speed>
+	<length>1</length>
+	<power>2</power>
+	<cost>45</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>beam_contact</image>
+    <launchSounds>
+        <sound>beamCryoShotgun1</sound>
+        <sound>beamCryoShotgun2</sound>
+        <sound>beamCryoShotgun3</sound>
+    </launchSounds>
+    <weaponArt>beam_frost_shotgun</weaponArt>
 </weaponBlueprint>
 
 <weaponBlueprint name="BEAM_PRISM_SCATTER">

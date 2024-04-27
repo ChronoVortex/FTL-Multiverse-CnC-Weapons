@@ -253,6 +253,7 @@
 <!-- FM shop appends -->
 <mod:findName type="blueprintList" name="FM_SHOP_WEAPONS_3">
     <mod-append:name>MISSILES_V5_SINGLE</mod-append:name>
+    <mod-append:name>BEAM_FROST_LONG</mod-append:name>
     <mod-append:name>BEAM_PRISM_1</mod-append:name>
 </mod:findName>
 
@@ -298,6 +299,7 @@
     <mod-append:name>FOCUS_MC_COMBAT</mod-append:name>
     <mod-append:name>BEAM_MC_COMBAT</mod-append:name>
     <mod-append:name>MAMMOTH_CANNON</mod-append:name>
+    <mod-append:name>BEAM_FROST_SHOTGUN</mod-append:name>
     <mod-append:name>BEAM_PRISM_SCATTER</mod-append:name>
 </mod:findName>
 <mod:findName type="blueprintList" name="LIST_DRONES_ALL_CRAPBUCKET">
@@ -314,6 +316,7 @@
 <!-- Bluelist appends -->
 <mod:findName type="blueprintList" name="BLUELIST_BEAMS_ALL">
     <mod-append:name>BEAM_FROST_LONG</mod-append:name>
+    <mod-append:name>BEAM_FROST_SHOTGUN</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="BLUELIST_ION">
