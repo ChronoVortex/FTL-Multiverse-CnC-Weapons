@@ -485,13 +485,12 @@ DRONE_CHAOS
     <short>Frost Splitter</short>
     <desc>Fires a cluster of pinpoint beams over a very large area which damage systems and lock down rooms.</desc>
     <tooltip>Fires a scatter of beams across a random area.</tooltip>
-    <radius>80</radius>
+    <radius>120</radius>
     <damage>0</damage>
     <sysDamage>1</sysDamage>
     <stun>6</stun>
 	<lockdown>1</lockdown>
     <shots>1</shots>
-    <sp>1</sp>
     <cooldown>13</cooldown>
     <power>2</power>
     <cost>112</cost>
@@ -502,9 +501,9 @@ DRONE_CHAOS
         <projectile count="6" fake="false">laser_burst</projectile>
     </projectiles>
     <launchSounds>
-        <sound>beamCryoShotgun1</sound>
-        <sound>beamCryoShotgun2</sound>
-        <sound>beamCryoShotgun3</sound>
+        <sound>ra_focusbeam1</sound>
+        <sound>ra_focusbeam2</sound>
+        <sound>ra_focusbeam3</sound>
     </launchSounds>
     <weaponArt>beam_frost_shotgun</weaponArt>
     <iconImage>beam</iconImage>
@@ -519,8 +518,11 @@ DRONE_CHAOS
     <damage>0</damage>
     <sysDamage>1</sysDamage>
     <stun>6</stun>
-	<sp>2</sp>
-    <lockdownBeam/>
+    <lockdownBeam>
+        <sound>beamCryoHit1</sound>
+        <sound>beamCryoHit2</sound>
+        <sound>beamCryoHit3</sound>
+    </lockdownBeam>
 	<cooldown>1</cooldown>
     <color>
         <r>170</r>

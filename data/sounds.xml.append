@@ -7,13 +7,9 @@
 <beamCryo4 volume="6">weapons/cv_beam_cryo_4.ogg</beamCryo4>
 <beamCryo5 volume="6">weapons/cv_beam_cryo_5.ogg</beamCryo5>
 
-<beamCryoHit1 volume="1">weapons/cv_beam_cryo_hit_1.ogg</beamCryoHit1>
-<beamCryoHit2 volume="1">weapons/cv_beam_cryo_hit_2.ogg</beamCryoHit2>
-<beamCryoHit3 volume="1">weapons/cv_beam_cryo_hit_3.ogg</beamCryoHit3>
-
-<beamCryoShotgun1 volume="5">weapons/cv_beam_cryo_shotgun_1.ogg</beamCryoShotgun1>
-<beamCryoShotgun2 volume="5">weapons/cv_beam_cryo_shotgun_2.ogg</beamCryoShotgun2>
-<beamCryoShotgun3 volume="5">weapons/cv_beam_cryo_shotgun_3.ogg</beamCryoShotgun3>
+<beamCryoHit1 volume="5">weapons/cv_beam_cryo_hit_1.ogg</beamCryoHit1>
+<beamCryoHit2 volume="5">weapons/cv_beam_cryo_hit_2.ogg</beamCryoHit2>
+<beamCryoHit3 volume="5">weapons/cv_beam_cryo_hit_3.ogg</beamCryoHit3>
 
 <chaosShot volume="5">weapons/cv_chaos_shoot.ogg</chaosShot>
 
