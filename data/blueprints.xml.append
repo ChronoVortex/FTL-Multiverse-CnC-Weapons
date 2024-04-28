@@ -270,7 +270,7 @@ DRONE_CHAOS
     <tip>tip_frost</tip>
     <title>Cryobeam</title>
     <short>Cryobeam</short>
-    <desc>In addition to stunning and dealing minor damage to crew, this weapon locks down every room it hits.</desc>
+    <desc>In addition to stunning and dealing minor damage to crew, this weapon locks down every room it hits. It also charges to full on jump, allowing it to fire immediately.</desc>
     <tooltip>Beam weapon that deals minor crew damage and locks down rooms.</tooltip>
     <damage>0</damage>
     <persDamage>1</persDamage>
@@ -285,6 +285,7 @@ DRONE_CHAOS
     <breachChance>0</breachChance>
     <speed>10</speed>
     <cooldown>13</cooldown>
+    <preignited/>
     <color>
         <r>170</r>
         <g>255</g>
