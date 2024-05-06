@@ -7,10 +7,10 @@ Chrono Vortex
 additional credit: Vertaalfout, R4V3-0N, Alder
 ]]>
     </author>
-    <version><![CDATA[ 4.3 ]]></version>
+    <version><![CDATA[ 4.4 ]]></version>
     <description>
 <![CDATA[
-This mod adds several weapons from the Command and Conquer universe to Multiverse. This version requires version 9.2+ of the Tiberian Sun Ship Pack and version 3.0+ of Vertex Tags and Utility Functions. It must be patched after its dependencies, so the load order should look something like this:
+This mod adds several weapons from the Command and Conquer universe to Multiverse. Requires the latest versions of the Tiberian Sun Ship Pack and Vertex Tags and Utility Functions. It must be patched after its dependencies, so the load order should look something like this:
 
 | Multiverse
 | ...

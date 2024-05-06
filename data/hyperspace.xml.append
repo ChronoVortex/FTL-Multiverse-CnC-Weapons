@@ -99,6 +99,7 @@
 <mod:findLike type="events" limit="1">
     <mod-append:metaVariable name="prof_r_boon_nuke" op="set" val="0"/>
     <mod-append:metaVariable name="fish_obtained_TIBERIUM" op="set" val="0"/>
+    <mod-append:variable name="fish_obtained_tiberium_count" op="set" val="0"/>
 </mod:findLike>
 <mod:findLike type="events">
     <mod:findName type="req" name="ANY_BOON">

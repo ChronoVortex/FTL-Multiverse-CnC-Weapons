@@ -152,6 +152,7 @@ A substance known as Tiberium has been slowly becoming more prominent in univers
                             <text>You pull out the weapon.</text>
                             <weapon name="LIST_WEAPONS_TIBERIUM_SUPPORT" />
                             <remove name="FISH_FOOD_TIBERIUM"/>
+	                        <variable name="fish_obtained_tiberium_count" op="add" val="1"/>
                             <choice hidden="true">
                                 <text>Continue...</text>
                                 <event load="STORAGE_CHECK_FISHING_LOAD" />
@@ -160,6 +161,49 @@ A substance known as Tiberium has been slowly becoming more prominent in univers
                     </choice>
                 </event>
             </choice>
+        </event>
+    </mod-append:choice>
+</mod:findName>
+
+<mod:findName type="event" name="STORAGE_CHECK_FISHING_STATS_4">
+    <mod-append:choice blue="false" hidden="false" req="fish_obtained_tiberium_count" lvl="1" max_lvl="1">
+        <text>1 Consumed</text>
+        <event>
+            <text>A</text>
+            <loadEvent>STORAGE_CHECK_FISHING_STATS_4</loadEvent>
+            <weapon name="FISH_FOOD_TIBERIUM"/>
+        </event>
+    </mod-append:choice>
+    <mod-append:choice blue="false" hidden="false" req="fish_obtained_tiberium_count" lvl="2" max_lvl="2">
+        <text>2 Consumed</text>
+        <event>
+            <text>A</text>
+            <loadEvent>STORAGE_CHECK_FISHING_STATS_4</loadEvent>
+            <weapon name="FISH_FOOD_TIBERIUM"/>
+        </event>
+    </mod-append:choice>
+    <mod-append:choice blue="false" hidden="false" req="fish_obtained_tiberium_count" lvl="3" max_lvl="3">
+        <text>3 Consumed</text>
+        <event>
+            <text>A</text>
+            <loadEvent>STORAGE_CHECK_FISHING_STATS_4</loadEvent>
+            <weapon name="FISH_FOOD_TIBERIUM"/>
+        </event>
+    </mod-append:choice>
+    <mod-append:choice blue="false" hidden="false" req="fish_obtained_tiberium_count" lvl="4" max_lvl="4">
+        <text>4 Consumed</text>
+        <event>
+            <text>A</text>
+            <loadEvent>STORAGE_CHECK_FISHING_STATS_4</loadEvent>
+            <weapon name="FISH_FOOD_TIBERIUM"/>
+        </event>
+    </mod-append:choice>
+    <mod-append:choice blue="false" hidden="false" req="fish_obtained_tiberium_count" lvl="5">
+        <text>5+ Consumed</text>
+        <event>
+            <text>A</text>
+            <loadEvent>STORAGE_CHECK_FISHING_STATS_4</loadEvent>
+            <weapon name="FISH_FOOD_TIBERIUM"/>
         </event>
     </mod-append:choice>
 </mod:findName>
