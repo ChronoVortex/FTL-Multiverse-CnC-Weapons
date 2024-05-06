@@ -1195,3 +1195,24 @@ DRONE_CHAOS
     <rarity>0</rarity>
     <stackable>true</stackable>
 </augBlueprint>
+
+<weaponBlueprint name="FISH_FOOD_TIBERIUM">
+	<type>BEAM</type>
+	<flavorType>Fish</flavorType>
+	<tip>tip_fish_food</tip>
+	<title>Tiberium Fish</title>
+	<short>Tiberium Fish</short>
+	<desc>A legendary space fish, when consumed gives Tiberium crew and equipment.</desc>
+	<tooltip>Fish</tooltip>
+	<damage>0</damage>
+	<sp>0</sp>
+	<cooldown>-1</cooldown>
+	<speed>0</speed>
+	<length>0</length>
+	<rarity>0</rarity>
+	<power>0</power>
+	<cost>150</cost>
+	<image>beam_contact</image>
+	<weaponArt>invisible</weaponArt>
+	<iconReplace>fish_tiberium</iconReplace>
+</weaponBlueprint>

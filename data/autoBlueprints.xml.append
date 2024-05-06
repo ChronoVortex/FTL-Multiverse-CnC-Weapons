@@ -265,6 +265,10 @@
     <name>DRONE_CHAOS_WEAPON_MIND</name>
     <name>DRONE_CHAOS_WEAPON_HACK</name>
 </blueprintList>
+<blueprintList name="LIST_WEAPONS_TIBERIUM_SUPPORT">
+    <name>BOMB_TIBERIUM</name>
+    <name>MISSILES_TIB</name>
+</blueprintList>
 <mod:findName type="blueprintList" name="LIST_WEAPONS_ALL">
     <mod-append:name>COMBAT_CHRONO</mod-append:name>
     <mod-append:name>BEAM_FROST_LONG</mod-append:name>
@@ -274,6 +278,12 @@
 </mod:findName>
 <mod:findName type="blueprintList" name="LIST_DRONES_ALL">
     <mod-append:name>DRONE_CHAOS</mod-append:name>
+</mod:findName>
+<mod:findName type="blueprintList" name="BLUELIST_FISH">
+    <mod-append:name>FISH_FOOD_TIBERIUM</mod-append:name>
+</mod:findName>
+<mod:findName type="blueprintList" name="FISHLIST_LEG">
+    <mod-append:name>FISH_FOOD_TIBERIUM</mod-append:name>
 </mod:findName>
 
 

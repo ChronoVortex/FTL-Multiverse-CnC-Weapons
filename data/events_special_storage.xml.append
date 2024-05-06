@@ -115,3 +115,51 @@ A substance known as Tiberium has been slowly becoming more prominent in univers
         </event>
     </choice>
 </event>
+
+<mod:findName type="event" name="STORAGE_CHECK_FISH_GLOSSARY_4">
+    <mod-append:choice blue="false" req="fish_obtained_TIBERIUM" lvl="1">
+        <text>FOUND    </text>
+        <event>
+            <text>1</text>
+            <loadEvent>STORAGE_CHECK_FISH_GLOSSARY_4</loadEvent>
+            <weapon name="FISH_FOOD_TIBERIUM"/>
+        </event>
+    </mod-append:choice>
+    <mod-append:choice blue="true" req="fish_obtained_TIBERIUM" lvl="0" max_lvl="0">
+        <text>NOT FOUND</text>
+        <event>
+            <text>1</text>
+            <loadEvent>STORAGE_CHECK_FISH_GLOSSARY_4</loadEvent>
+            <weapon name="FISH_FOOD_TIBERIUM"/>
+        </event>
+    </mod-append:choice>
+</mod:findName>
+
+<mod:findName type="event" name="STORAGE_CHECK_FISHING_FOOD">
+    <mod-append:choice req="FISH_FOOD_TIBERIUM" hidden="true">
+        <text>Cook the Tiberium Fish. (2 Tiberium Fiends and 1 Tiberium weapon)</text>
+        <event>
+            <text>You cut the fish open to reveal a pair of dog-like creatues and a weapon. You pull out the first creature.</text>
+            <crewMember amount="1" class="tiberium_fiend"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>You pull out a second creature.</text>
+                    <crewMember amount="1" class="tiberium_fiend"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event>
+                            <text>You pull out the weapon.</text>
+                            <weapon name="LIST_WEAPONS_TIBERIUM_SUPPORT" />
+                            <remove name="FISH_FOOD_TIBERIUM"/>
+                            <choice hidden="true">
+                                <text>Continue...</text>
+                                <event load="STORAGE_CHECK_FISHING_LOAD" />
+                            </choice>
+                        </event>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </mod-append:choice>
+</mod:findName>

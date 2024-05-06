@@ -98,6 +98,7 @@
 
 <mod:findLike type="events" limit="1">
     <mod-append:metaVariable name="prof_r_boon_nuke" op="set" val="0"/>
+    <mod-append:metaVariable name="fish_obtained_TIBERIUM" op="set" val="0"/>
 </mod:findLike>
 <mod:findLike type="events">
     <mod:findName type="req" name="ANY_BOON">
@@ -126,8 +127,8 @@
     </mod:findName>
 </mod:findLike>
 
-<mod:findLike type="achievements" limit="1">
-    <mod:findWithChildLike type="page" child-type="section" panic="true">
+<mod:findLike type="achievements">
+    <mod:findWithChildLike type="page" child-type="section">
         <mod:selector text="Renegade Cruisers" />
         <mod:findLike type="section" panic="true">
             <mod:selector text="Renegade Cruisers" />
@@ -145,7 +146,7 @@
             </mod-append:achievement>
         </mod:findLike>
     </mod:findWithChildLike>
-    <mod:findWithChildLike type="page" child-type="section" panic="true">
+    <mod:findWithChildLike type="page" child-type="section">
         <mod:selector text="Wakeson's Blessings" />
         <mod:findLike type="section" panic="true">
             <mod:selector text="Wakeson's Blessings" />
@@ -158,6 +159,20 @@
 While in effect; You may choose to recive a free missile at empty beacons.</description>
                 <header>Blessing Received</header>
                 <icon>ach_boon_nuke</icon>
+                <multiDifficulty>false</multiDifficulty>
+            </mod-append:achievement>
+        </mod:findLike>
+    </mod:findWithChildLike>
+    <mod:findWithChildLike type="page" child-type="section">
+        <mod:selector text="Legendary Fish" />
+        <mod:findLike type="section" panic="true">
+            <mod:selector text="Legendary Fish" />
+            <mod-append:achievement name="FISH_CAUGHT_TIBERIUM">
+                <name>Tiberium Fish</name>
+                <description>Catch a Tiberium Fish.</description>
+                <header>Fish Caught!</header>
+                <icon>fish_tiberium</icon>
+                <variable name="fish_obtained_TIBERIUM" amount="1" />
                 <multiDifficulty>false</multiDifficulty>
             </mod-append:achievement>
         </mod:findLike>

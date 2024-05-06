@@ -126,3 +126,14 @@
 	<mountPoint x="6" y="48"/>
     <chargeImage>weapons/prismatic_scatter_glow.png</chargeImage>
 </weaponAnim>
+
+
+
+<!-- FISH -->
+
+<animSheet name="fish_tiberium" w="83" h="33" fw="83" fh="33">weapons/fish_tiberium.png</animSheet>
+<anim name="fish_tiberium">
+	<sheet>fish_tiberium</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
