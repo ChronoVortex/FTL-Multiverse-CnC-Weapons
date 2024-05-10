@@ -137,3 +137,14 @@
 	<desc length="1" x="0" y="0"/>
 	<time>1.0</time>
 </anim>
+
+
+
+<!-- Animations from other addons -->
+
+<animSheet name="GB_shot_medium" w="200" h="20" fw="50" fh="20">projectiles/GB_shot_medium_strip4.png</animSheet>
+<anim name="GB_shot_medium">
+	<sheet>GB_shot_medium</sheet>
+	<desc length="4" x="0" y="0" />
+	<time>0.5</time>
+</anim>

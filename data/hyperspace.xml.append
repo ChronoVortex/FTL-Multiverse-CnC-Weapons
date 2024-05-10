@@ -204,11 +204,6 @@ While in effect; You may choose to recive a free missile at empty beacons.</desc
         <category type="WEAPONS">
             <customTitle>WEAPONS</customTitle>
             <item>
-                <blueprint>SHOP_ITEM_SYLVAN_CNC_LASERS</blueprint>
-                <modifier min="0.8" max="1.1" flat="false"/>
-                <price>-1</price>
-            </item>    
-            <item>
                 <blueprint>SHOP_ITEM_SYLVAN_CNC_PINPOINT</blueprint>
                 <modifier min="0.8" max="1.1" flat="false"/>
                 <price>-1</price>
@@ -216,6 +211,11 @@ While in effect; You may choose to recive a free missile at empty beacons.</desc
             <item>
                 <blueprint>SHOP_ITEM_SYLVAN_CNC_BOMBS</blueprint>
                 <modifier min="0.8" max="1.1" flat="false"/>
+                <price>-1</price>
+            </item>    
+            <item>
+                <blueprint>SHOP_ITEM_SYLVAN_CNC_CROSSOVER</blueprint>
+                <modifier min="0.6" max="0.7" flat="false"/>
                 <price>-1</price>
             </item>    
         </category>

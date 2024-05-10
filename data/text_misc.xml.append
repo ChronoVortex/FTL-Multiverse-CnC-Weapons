@@ -13,3 +13,5 @@ Currently Enabled.
 Adds over a dozen new weapons and a couple other surprises based on the Command and Conquer franchise.
     </mod:setValue>
 </mod:findName>
+
+<text name="rvs_tip_focus_split">Tip: Splitter pinpoint beams trade the high damage of most pinpoints for multiple beams, allowing for higher potential damage if the target's shields are down.</text>

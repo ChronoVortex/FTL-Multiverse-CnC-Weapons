@@ -247,6 +247,11 @@
     <name>BOMB_TIBERIUM</name>
     <name>BOMB_TIBERIUM_BLUE</name>
 </blueprintList>
+<blueprintList name="SHOP_ITEM_SYLVAN_CNC_CROSSOVER">
+    <name>MAMMOTH_CANNON</name>
+    <name>BEAM_FROST_SHOTGUN</name>
+    <name>BEAM_PRISM_SCATTER</name>
+</blueprintList>
 
 
 
