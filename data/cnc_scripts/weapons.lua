@@ -88,6 +88,7 @@ script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projec
             projectile.position, projectile.currentSpace, projectile.ownerId,
             projectile.target, Hyperspace.Pointf(projectile.target.x, projectile.target.y + 1),
             projectile.destinationSpace, 1, projectile.heading)
+        if (math.random() > 0.5) then beam.damage.iSystemDamage = beam.damage.iSystemDamage + 1 end
         beam.sub_start.x = 500*math.cos(projectile.entryAngle)
         beam.sub_start.y = 500*math.sin(projectile.entryAngle) 
         projectile:Kill()

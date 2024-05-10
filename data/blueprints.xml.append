@@ -485,10 +485,39 @@ DRONE_CHAOS
     <title>Frost Splitter</title>
     <short>Frost Splitter</short>
     <desc>Fires a cluster of pinpoint beams over a very large area which damage systems and lock down rooms.</desc>
+    <descriptionOverride>Fires a cluster of pinpoint beams over a very large area which damage systems and lock down rooms.
+
+Stats:
+Required Power: 2
+Charge Time: 13 seconds
+
+Shot Radius: 95
+Shots Per Charge: 6
+
+System Damage Chance: 50%
+Total System Damage: 1
+Shield Piercing: 1
+
+Locks down rooms on hit
+Stun Chance: 100% (6 seconds long)
+
+Default Price: 112~   -   Selling Price: 56~
+    </descriptionOverride>
+    <tooltipOverride>Required Power: 2
+Charge Time: 13 seconds
+
+Shot Radius: 95
+Shots Per Charge: 6
+
+System Damage Chance: 50%
+Total System Damage: 1
+Shield Piercing: 1
+
+Locks down rooms on hit
+Stun Chance: 100% (6 seconds long)</tooltipOverride>
     <tooltip>Fires a scatter of beams across a random area.</tooltip>
     <radius>95</radius>
     <damage>0</damage>
-    <sysDamage>1</sysDamage>
     <stun>6</stun>
 	<lockdown>1</lockdown>
     <shots>1</shots>
@@ -518,7 +547,6 @@ DRONE_CHAOS
 	<desc>YOU SOULD NEVER SEE THIS</desc>
 	<tooltip>YOU SHOULD NEVER SEE THIS</tooltip>
     <damage>0</damage>
-    <sysDamage>1</sysDamage>
     <stun>6</stun>
     <sp>2</sp>
     <lockdownBeam>
