@@ -157,7 +157,7 @@
                 <lockImage>ach_locked</lockImage>
                 <secretDescription>Receive the Blessing of ??? from Wakeson.</secretDescription>
                 <description>Show a nuke to Wakeson.
-While in effect; You may choose to recive a free missile at empty beacons.</description>
+While in effect; You may choose to receive a free missile at empty beacons.</description>
                 <header>Blessing Received</header>
                 <icon>ach_boon_nuke</icon>
                 <multiDifficulty>false</multiDifficulty>

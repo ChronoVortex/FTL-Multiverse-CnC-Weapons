@@ -165,7 +165,7 @@
     </choice>
 </event>
 <event name="MTBOSS_NODA_DROP">
-    <text>You're also surprised to find a cargo crate completly intact amongst the wreckage. It contains a warhead which you recognize as a small nuke! Not something you'd typically find in even the less civilized cultures these days, but an effective weapon nonetheless.</text>
+    <text>You're also surprised to find a cargo crate completely intact amongst the wreckage. It contains a warhead which you recognize as a small nuke! Not something you'd typically find in even the less civilized cultures these days, but an effective weapon nonetheless.</text>
     <achievement silent="false">ACH_REN_NOD_A</achievement>
     <autoReward level="LOW">stuff</autoReward>
     <augment name="COMBAT_NUKE"/>

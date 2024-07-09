@@ -7,7 +7,7 @@
             <text>CLASS: Banshee Fighter
 FACTION: The Brotherhood of Nod
 
-Recently, you've been hearing rumors about interlopers from a distant collection of universes where neither the Federation nor the Rebellion ever existed. Until you encountered one of their ships, the only evidence for these interlopers you knew of came in the form of some unusual weapons tech that's been appearing throughout the Multiverse. According to what you've heard, the humans of these universes were forced to flee Earth when its ecosystem was destroyed by a substance called Tiberium. Despite this, many of them belive Tiberium to be part of humanity's next evolutionary step, and seek to spread their belief by force.
+Recently, you've been hearing rumors about interlopers from a distant collection of universes where neither the Federation nor the Rebellion ever existed. Until you encountered one of their ships, the only evidence for these interlopers you knew of came in the form of some unusual weapons tech that's been appearing throughout the Multiverse. According to what you've heard, the humans of these universes were forced to flee Earth when its ecosystem was destroyed by a substance called Tiberium. Despite this, many of them believe Tiberium to be part of humanity's next evolutionary step, and seek to spread their belief by force.
             </text>
             <choice>
                 <text>Continue...</text>
@@ -21,7 +21,7 @@ Recently, you've been hearing rumors about interlopers from a distant collection
             <text>CLASS: Banshee Fighter
 FACTION: The Forgotten
 
-A substance known as Tiberium has been slowly becoming more prominent in universes which play host to the war between the Federation and the Rebellion. Many of the humans in the universes which Tiberium originated from have been forced to adapt to ecosystems dominated by it, and have become proficient in using it as a weapon. A small group of these humans were apparently able to steal a ship belonging to one of their universe's major factions and use it to escape. They probobly attacked you out of necessity, hoping that the supplies they'd get from defeating you would keep them afloat a little longer. You hope that Tiberium never does to your home what it did to theirs.
+A substance known as Tiberium has been slowly becoming more prominent in universes which play host to the war between the Federation and the Rebellion. Many of the humans in the universes which Tiberium originated from have been forced to adapt to ecosystems dominated by it, and have become proficient in using it as a weapon. A small group of these humans were apparently able to steal a ship belonging to one of their universe's major factions and use it to escape. They probably attacked you out of necessity, hoping that the supplies they'd get from defeating you would keep them afloat a little longer. You hope that Tiberium never does to your home what it did to theirs.
             </text>
             <choice>
                 <text>Continue...</text>
@@ -139,7 +139,7 @@ A substance known as Tiberium has been slowly becoming more prominent in univers
     <mod-append:choice req="FISH_FOOD_TIBERIUM" hidden="true">
         <text>Cook the Tiberium Fish. (2 Tiberium Fiends and 1 Tiberium weapon)</text>
         <event>
-            <text>You cut the fish open to reveal a pair of dog-like creatues and a weapon. You pull out the first creature.</text>
+            <text>You cut the fish open to reveal a pair of dog-like creatures and a weapon. You pull out the first creature.</text>
             <crewMember amount="1" class="tiberium_fiend"/>
             <choice hidden="true">
                 <text>Continue...</text>
