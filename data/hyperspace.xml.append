@@ -259,37 +259,6 @@ While in effect; You may choose to recive a free missile at empty beacons.</desc
     <mod-append:surgeBarrage name="NUKE_MISSILE_SURGE_INITIAL">
         <weapon name="WEAPON_NUKE_SURGE_INITIAL" count="1"/>
     </mod-append:surgeBarrage>
-    <mod-append:surgeBarrage name="NUKE_MISSILE_SURGE_DAMAGE">
-        <weapon name="WEAPON_NUKE_SURGE_DAMAGE" count="7"/>
-    </mod-append:surgeBarrage>
-</mod:findLike>
-
-<mod:findLike type="crew" limit="1">
-    <mod-append:race name="dummy_nuke_surge_trigger">
-        <maxHealth>999</maxHealth>
-        <allDamageTakenMultiplier>0</allDamageTakenMultiplier>
-        <noSlot>true</noSlot>
-        <noClone>true</noClone>
-        <canFight>false</canFight>
-        <controllable>false</controllable>
-        <noAI>true</noAI>
-        <selectable>false</selectable>
-        <canRepair>false</canRepair>
-        <canSabotage>false</canSabotage>
-        <canMan>false</canMan>
-        <canTeleport>false</canTeleport>
-        <canSuffocate>false</canSuffocate>
-        <canBurn>false</canBurn>
-        <validTarget>false</validTarget>
-        <canMove>false</canMove>
-        <hasCustomDeathAnimation>true</hasCustomDeathAnimation>
-        <deathSounds>
-            <deathSound>silence</deathSound>
-        </deathSounds>
-        <deathEffect>
-            <playerEvent load="SURGESTART_NUKE_MISSILE_SURGE_DAMAGE"/>
-        </deathEffect>
-    </mod-append:race>
 </mod:findLike>
 
 <mod:findLike type="scripts" limit="1">

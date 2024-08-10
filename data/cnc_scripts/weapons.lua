@@ -1,17 +1,58 @@
 CNC_WEAPONS_INFO = true
 
-local vter = mods.vertexutil.vter
+local vter = mods.multiverse.vter
+local time_increment = mods.multiverse.time_increment
 local random_point_radius = mods.vertexutil.random_point_radius
 local INT_MAX = 2147483647
+local function check_paused()
+    return Hyperspace.App.gui.bPaused or Hyperspace.App.gui.menu_pause or Hyperspace.App.gui.event_pause
+end
 
--- Move nuke damage projectiles to their targets immediatly
-script.on_game_event("LUA_MOVE_NUKE_SURGE", false, function()
-    for proj in vter(Hyperspace.ships.player.superBarrage) do
-        proj:EnterDestinationSpace()
-        proj.position = proj.target
-        proj:ComputeHeading()
+-- Create projectiles and flash for nuke
+do
+    local nukeFlash = 0.3
+    local nukeFlashCurrent = 0
+    local nukeDamageBp = Hyperspace.Blueprints:GetWeaponBlueprint("WEAPON_NUKE_SURGE_DAMAGE")
+    local function check_proj_nuke(projectile)
+        return projectile and projectile.extend and projectile.extend.name == "WEAPON_NUKE_SURGE_INITIAL" and projectile.currentSpace == 1
     end
-end)
+    local doShieldFlash = false
+    script.on_internal_event(Defines.InternalEvents.SHIELD_COLLISION_PRE, function(ship, projectile, damage, response)
+        doShieldFlash = check_proj_nuke(projectile) and ship.shieldSystem and ship.shieldSystem.shields.power.super.first > 0
+    end)
+    script.on_internal_event(Defines.InternalEvents.SHIELD_COLLISION, function(ship, projectile, damage, response)
+        if doShieldFlash then
+            nukeFlashCurrent = nukeFlash
+            doShieldFlash = false
+        end
+    end)
+    script.on_internal_event(Defines.InternalEvents.PROJECTILE_COLLISION, function(projectile1, projectile2)
+        if check_proj_nuke(projectile1) or check_proj_nuke(projectile2) then
+            nukeFlashCurrent = nukeFlash
+        end
+    end)
+    script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA_HIT, function(ship, projectile, location, damage, shipFriendlyFire)
+        if check_proj_nuke(projectile) then
+            nukeFlashCurrent = nukeFlash
+            for i = 1, 7 do
+                local pos = ship:GetRandomRoomCenter()
+                Hyperspace.App.world.space:CreateLaserBlast(nukeDamageBp, pos, 1, 0, pos, 1, 0)
+            end
+        end
+    end)
+    script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
+        if not check_paused() and nukeFlashCurrent > 0 then
+            nukeFlashCurrent = nukeFlashCurrent - time_increment()
+        end
+    end)
+    script.on_render_event(Defines.RenderEvents.SHIP, function() end, function(ship)
+        if ship.iShipId == 1 and nukeFlashCurrent > 0 then
+            local halfTime = nukeFlash/2
+            local alpha = 1 - math.abs((nukeFlashCurrent - halfTime)/halfTime)
+            Graphics.CSurface.GL_DrawRect(-500, -500, 1000, 1000, Graphics.GL_Color(1, 1, 1, alpha))
+        end
+    end)
+end
 
 -- Retarget the Banshee C MV Renegade's tiberium bomb to the room their fiends are in
 script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)

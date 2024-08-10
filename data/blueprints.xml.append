@@ -1128,17 +1128,6 @@ Stun Chance: 100% (6 seconds long)</tooltipOverride>
     <rarity>0</rarity>
     <stackable>true</stackable>
 </augBlueprint>
-<crewBlueprint name="dummy_nuke_surge_trigger">
-    <desc>█</desc>
-    <cost>0</cost>
-    <bp>2</bp>
-    <title>█</title>
-    <short>█</short>
-    <rarity>0</rarity>
-    <powerList>
-        <power>█</power>
-    </powerList>
-</crewBlueprint>
 <weaponBlueprint name="WEAPON_NUKE_SURGE_INITIAL">
     <type>MISSILES</type>
     <tip>tip_missiles</tip>
@@ -1153,11 +1142,6 @@ Stun Chance: 100% (6 seconds long)</tooltipOverride>
     <sp>10</sp>
     <fireChance>0</fireChance>
     <breachChance>0</breachChance>
-    <spawnCrew>
-        <number>1</number>
-        <race>dummy_nuke_surge_trigger</race>
-        <lifetime>0</lifetime>
-    </spawnCrew>
     <stunChance>0</stunChance>
     <cooldown>10</cooldown>
     <power>1</power>

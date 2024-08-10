@@ -48,19 +48,6 @@
     <desc length="1" x="0" y="0"/>
     <time>1</time>
 </anim>
-
-<animSheet name="explosion_whiteness" w="7322" h="1196" fw="1046" fh="1196">effects/explosion_whiteness_strip7.png</animSheet>
-<anim name="dummy_nuke_surge_trigger_death_right">
-    <sheet>explosion_whiteness</sheet>
-    <desc length="7" x="0" y="0"/>
-    <time>0.3</time>
-</anim>
-<anim name="dummy_nuke_surge_trigger_death_left">
-    <sheet>explosion_whiteness</sheet>
-    <desc length="7" x="0" y="0"/>
-    <time>0.3</time>
-</anim>
-
 <animSheet name="explosion_nuke" w="1664" h="128" fw="128" fh="128">effects/explosion_nuke_strip13.png</animSheet>
 <anim name="explosion_nuke">
     <sheet>explosion_nuke</sheet>
