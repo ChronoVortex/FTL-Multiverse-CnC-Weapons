@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<mod:findName type="dependencyChecker" name="If you see this you patched CnC Weapons incorrectly! Please read the dependency list and load order on the forum page" panic="true"/>
+
 <animSheet name="bomblauncher_tiberium_blue" w="455" h="41" fw="35" fh="41">weapons/bomblauncher_tiberium_blue_strip13.png</animSheet>
 <weaponAnim name="bomblauncher_tiberium_blue">
     <sheet>bomblauncher_tiberium_blue</sheet>
@@ -46,19 +48,6 @@
     <desc length="1" x="0" y="0"/>
     <time>1</time>
 </anim>
-
-<animSheet name="explosion_whiteness" w="7322" h="1196" fw="1046" fh="1196">effects/explosion_whiteness_strip7.png</animSheet>
-<anim name="dummy_nuke_surge_trigger_death_right">
-    <sheet>explosion_whiteness</sheet>
-    <desc length="7" x="0" y="0"/>
-    <time>0.3</time>
-</anim>
-<anim name="dummy_nuke_surge_trigger_death_left">
-    <sheet>explosion_whiteness</sheet>
-    <desc length="7" x="0" y="0"/>
-    <time>0.3</time>
-</anim>
-
 <animSheet name="explosion_nuke" w="1664" h="128" fw="128" fh="128">effects/explosion_nuke_strip13.png</animSheet>
 <anim name="explosion_nuke">
     <sheet>explosion_nuke</sheet>
@@ -97,6 +86,21 @@
 
 
 
+<!-- FORGEMASTER / AI CRUISER CROSSOVER -->
+
+<animSheet name="beam_frost_shotgun" w="510" h="57" fw="34" fh="57">weapons/beam_frost_shotgun_strip15.png</animSheet>
+<weaponAnim name="beam_frost_shotgun">
+    <sheet>beam_frost_shotgun</sheet>
+    <desc length="15" x="0" y="0"/>
+    <chargedFrame>8</chargedFrame>
+    <fireFrame>9</fireFrame>
+    <firePoint x="17" y="21" />
+    <mountPoint x="4" y="42" />
+    <chargeImage>weapons/beam_frost_shotgun_glow.png</chargeImage>
+</weaponAnim>
+
+
+
 <!-- FORGEMASTER / ALDER'S ADDITIONS CROSSOVER -->
 
 <animSheet name="prismatic_scatter" w="114" h="76" fw="38" fh="76">weapons/prismatic_scatter_strip3.png</animSheet>
@@ -109,3 +113,25 @@
 	<mountPoint x="6" y="48"/>
     <chargeImage>weapons/prismatic_scatter_glow.png</chargeImage>
 </weaponAnim>
+
+
+
+<!-- FISH -->
+
+<animSheet name="fish_tiberium" w="83" h="33" fw="83" fh="33">weapons/fish_tiberium.png</animSheet>
+<anim name="fish_tiberium">
+	<sheet>fish_tiberium</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+
+
+
+<!-- Animations from other addons -->
+
+<animSheet name="GB_shot_medium" w="200" h="20" fw="50" fh="20">projectiles/GB_shot_medium_strip4.png</animSheet>
+<anim name="GB_shot_medium">
+	<sheet>GB_shot_medium</sheet>
+	<desc length="4" x="0" y="0" />
+	<time>0.5</time>
+</anim>

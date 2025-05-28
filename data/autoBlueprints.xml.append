@@ -247,12 +247,19 @@
     <name>BOMB_TIBERIUM</name>
     <name>BOMB_TIBERIUM_BLUE</name>
 </blueprintList>
+<blueprintList name="SHOP_ITEM_SYLVAN_CNC_CROSSOVER">
+    <name>MAMMOTH_CANNON</name>
+    <name>BEAM_FROST_SHOTGUN</name>
+    <name>BEAM_PRISM_SCATTER</name>
+</blueprintList>
 
 
 
 <!-- FM shop appends -->
 <mod:findName type="blueprintList" name="FM_SHOP_WEAPONS_3">
     <mod-append:name>MISSILES_V5_SINGLE</mod-append:name>
+    <mod-append:name>BEAM_FROST_LONG</mod-append:name>
+    <mod-append:name>BEAM_PRISM_1</mod-append:name>
 </mod:findName>
 
 
@@ -263,6 +270,26 @@
     <name>DRONE_CHAOS_WEAPON_MIND</name>
     <name>DRONE_CHAOS_WEAPON_HACK</name>
 </blueprintList>
+<blueprintList name="LIST_WEAPONS_TIBERIUM_SUPPORT">
+    <name>BOMB_TIBERIUM</name>
+    <name>MISSILES_TIB</name>
+</blueprintList>
+<mod:findName type="blueprintList" name="LIST_WEAPONS_ALL">
+    <mod-append:name>COMBAT_CHRONO</mod-append:name>
+    <mod-append:name>BEAM_FROST_LONG</mod-append:name>
+    <mod-append:name>BOMB_TIBERIUM_BLUE</mod-append:name>
+    <mod-append:name>MAMMOTH_CANNON</mod-append:name>
+    <mod-append:name>BEAM_PRISM_SCATTER</mod-append:name>
+</mod:findName>
+<mod:findName type="blueprintList" name="LIST_DRONES_ALL">
+    <mod-append:name>DRONE_CHAOS</mod-append:name>
+</mod:findName>
+<mod:findName type="blueprintList" name="BLUELIST_FISH">
+    <mod-append:name>FISH_FOOD_TIBERIUM</mod-append:name>
+</mod:findName>
+<mod:findName type="blueprintList" name="FISHLIST_LEG">
+    <mod-append:name>FISH_FOOD_TIBERIUM</mod-append:name>
+</mod:findName>
 
 
 
@@ -287,9 +314,16 @@
     <mod-append:name>FOCUS_MC_COMBAT</mod-append:name>
     <mod-append:name>BEAM_MC_COMBAT</mod-append:name>
     <mod-append:name>MAMMOTH_CANNON</mod-append:name>
+    <mod-append:name>BEAM_FROST_SHOTGUN</mod-append:name>
+    <mod-append:name>BEAM_PRISM_SCATTER</mod-append:name>
 </mod:findName>
 <mod:findName type="blueprintList" name="LIST_DRONES_ALL_CRAPBUCKET">
     <mod-append:name>DRONE_CHAOS</mod-append:name>
+</mod:findName>
+<mod:findName type="blueprintList" name="LIST_CREW_ALL_CRAPBUCKET">
+    <mod-append:name>human_black_hand</mod-append:name>
+    <mod-append:name>tiberium_fiend</mod-append:name>
+    <mod-append:name>human_adept</mod-append:name>
 </mod:findName>
 
 
@@ -297,6 +331,7 @@
 <!-- Bluelist appends -->
 <mod:findName type="blueprintList" name="BLUELIST_BEAMS_ALL">
     <mod-append:name>BEAM_FROST_LONG</mod-append:name>
+    <mod-append:name>BEAM_FROST_SHOTGUN</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="BLUELIST_ION">

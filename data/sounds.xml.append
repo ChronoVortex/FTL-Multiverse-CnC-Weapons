@@ -7,10 +7,20 @@
 <beamCryo4 volume="6">weapons/cv_beam_cryo_4.ogg</beamCryo4>
 <beamCryo5 volume="6">weapons/cv_beam_cryo_5.ogg</beamCryo5>
 
-<beamCryoHit1 volume="1">weapons/cv_beam_cryo_hit_1.ogg</beamCryoHit1>
-<beamCryoHit2 volume="1">weapons/cv_beam_cryo_hit_2.ogg</beamCryoHit2>
-<beamCryoHit3 volume="1">weapons/cv_beam_cryo_hit_3.ogg</beamCryoHit3>
+<beamCryoHit1 volume="5">weapons/cv_beam_cryo_hit_1.ogg</beamCryoHit1>
+<beamCryoHit2 volume="5">weapons/cv_beam_cryo_hit_2.ogg</beamCryoHit2>
+<beamCryoHit3 volume="5">weapons/cv_beam_cryo_hit_3.ogg</beamCryoHit3>
 
 <chaosShot volume="5">weapons/cv_chaos_shoot.ogg</chaosShot>
 
 <missileMammoth volume="5">weapons/cv_missile_mammoth.ogg</missileMammoth>
+
+<!-- Sounds from other addons -->
+
+<GB_cannonMedium1 volume="3">weapons/GB_cannonMedium1.ogg</GB_cannonMedium1>
+<GB_cannonMedium2 volume="3">weapons/GB_cannonMedium2.ogg</GB_cannonMedium2>
+<GB_cannonMedium3 volume="3">weapons/GB_cannonMedium3.ogg</GB_cannonMedium3>
+
+<ra_focusbeam1 volume="5">weapons/bp_laser_2.ogg</ra_focusbeam1>
+<ra_focusbeam2 volume="5">weapons/bp_laser_2b.ogg</ra_focusbeam2>
+<ra_focusbeam3 volume="5">weapons/bp_laser_2c.ogg</ra_focusbeam3>

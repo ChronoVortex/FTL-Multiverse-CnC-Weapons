@@ -98,16 +98,38 @@
 
 <mod:findLike type="events" limit="1">
     <mod-append:metaVariable name="prof_r_boon_nuke" op="set" val="0"/>
+    <mod-append:metaVariable name="fish_obtained_TIBERIUM" op="set" val="0"/>
+    <mod-append:variable name="fish_obtained_tiberium_count" op="set" val="0"/>
+</mod:findLike>
+<mod:findLike type="events">
     <mod:findName type="req" name="ANY_BOON">
         <mod-append:name>prof_r_boon_nuke</mod-append:name>
     </mod:findName>
     <mod:findName type="req" name="ALL_BOONS">
         <mod-append:name>prof_r_boon_nuke</mod-append:name>
     </mod:findName>
+    <mod:findName type="req" name="SYLVAN_IONCANNON_STORY_CHECK">
+        <mod-append:req type="all">
+            <req type="any">
+                <name>SEC SECTOR_VAGABOND</name>
+                <name>SEC SECTOR_PIRATE</name>
+                <name>SEC SECTOR_PIRATE_HEKTAR</name>
+                <name>SEC SECTOR_UNEXPLORED_GENERIC</name>
+                <name>SEC SECTOR_ABANDONED_GENERIC</name>
+                <name>SEC SECTOR_ABANDONED_GENERIC_HEKTAR</name>
+            </req>
+            <req lvl="0" max_lvl="500">
+                <name>stability</name>
+            </req>
+            <req max_lvl="0">
+                <name>loc_ioncannon_encounter</name>
+            </req>
+        </mod-append:req>
+    </mod:findName>
 </mod:findLike>
 
-<mod:findLike type="achievements" limit="1">
-    <mod:findWithChildLike type="page" child-type="section" panic="true">
+<mod:findLike type="achievements">
+    <mod:findWithChildLike type="page" child-type="section">
         <mod:selector text="Renegade Cruisers" />
         <mod:findLike type="section" panic="true">
             <mod:selector text="Renegade Cruisers" />
@@ -125,7 +147,7 @@
             </mod-append:achievement>
         </mod:findLike>
     </mod:findWithChildLike>
-    <mod:findWithChildLike type="page" child-type="section" panic="true">
+    <mod:findWithChildLike type="page" child-type="section">
         <mod:selector text="Wakeson's Blessings" />
         <mod:findLike type="section" panic="true">
             <mod:selector text="Wakeson's Blessings" />
@@ -138,6 +160,20 @@
 While in effect; You may choose to recive a free missile at empty beacons.</description>
                 <header>Blessing Received</header>
                 <icon>ach_boon_nuke</icon>
+                <multiDifficulty>false</multiDifficulty>
+            </mod-append:achievement>
+        </mod:findLike>
+    </mod:findWithChildLike>
+    <mod:findWithChildLike type="page" child-type="section">
+        <mod:selector text="Legendary Fish" />
+        <mod:findLike type="section" panic="true">
+            <mod:selector text="Legendary Fish" />
+            <mod-append:achievement name="FISH_CAUGHT_TIBERIUM">
+                <name>Tiberium Fish</name>
+                <description>Catch a Tiberium Fish.</description>
+                <header>Fish Caught!</header>
+                <icon>fish_tiberium</icon>
+                <variable name="fish_obtained_TIBERIUM" amount="1" />
                 <multiDifficulty>false</multiDifficulty>
             </mod-append:achievement>
         </mod:findLike>
@@ -168,11 +204,6 @@ While in effect; You may choose to recive a free missile at empty beacons.</desc
         <category type="WEAPONS">
             <customTitle>WEAPONS</customTitle>
             <item>
-                <blueprint>SHOP_ITEM_SYLVAN_CNC_LASERS</blueprint>
-                <modifier min="0.8" max="1.1" flat="false"/>
-                <price>-1</price>
-            </item>    
-            <item>
                 <blueprint>SHOP_ITEM_SYLVAN_CNC_PINPOINT</blueprint>
                 <modifier min="0.8" max="1.1" flat="false"/>
                 <price>-1</price>
@@ -180,6 +211,11 @@ While in effect; You may choose to recive a free missile at empty beacons.</desc
             <item>
                 <blueprint>SHOP_ITEM_SYLVAN_CNC_BOMBS</blueprint>
                 <modifier min="0.8" max="1.1" flat="false"/>
+                <price>-1</price>
+            </item>    
+            <item>
+                <blueprint>SHOP_ITEM_SYLVAN_CNC_CROSSOVER</blueprint>
+                <modifier min="0.6" max="0.7" flat="false"/>
                 <price>-1</price>
             </item>    
         </category>
@@ -223,37 +259,6 @@ While in effect; You may choose to recive a free missile at empty beacons.</desc
     <mod-append:surgeBarrage name="NUKE_MISSILE_SURGE_INITIAL">
         <weapon name="WEAPON_NUKE_SURGE_INITIAL" count="1"/>
     </mod-append:surgeBarrage>
-    <mod-append:surgeBarrage name="NUKE_MISSILE_SURGE_DAMAGE">
-        <weapon name="WEAPON_NUKE_SURGE_DAMAGE" count="7"/>
-    </mod-append:surgeBarrage>
-</mod:findLike>
-
-<mod:findLike type="crew" limit="1">
-    <mod-append:race name="dummy_nuke_surge_trigger">
-        <maxHealth>999</maxHealth>
-        <allDamageTakenMultiplier>0</allDamageTakenMultiplier>
-        <noSlot>true</noSlot>
-        <noClone>true</noClone>
-        <canFight>false</canFight>
-        <controllable>false</controllable>
-        <noAI>true</noAI>
-        <selectable>false</selectable>
-        <canRepair>false</canRepair>
-        <canSabotage>false</canSabotage>
-        <canMan>false</canMan>
-        <canTeleport>false</canTeleport>
-        <canSuffocate>false</canSuffocate>
-        <canBurn>false</canBurn>
-        <validTarget>false</validTarget>
-        <canMove>false</canMove>
-        <hasCustomDeathAnimation>true</hasCustomDeathAnimation>
-        <deathSounds>
-            <deathSound>silence</deathSound>
-        </deathSounds>
-        <deathEffect>
-            <playerEvent load="SURGESTART_NUKE_MISSILE_SURGE_DAMAGE"/>
-        </deathEffect>
-    </mod-append:race>
 </mod:findLike>
 
 <mod:findLike type="scripts" limit="1">
