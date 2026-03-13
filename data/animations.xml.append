@@ -72,7 +72,7 @@
 	<desc length="23" x="0" y="0"/>
 	<chargedFrame>4</chargedFrame>
 	<fireFrame>6</fireFrame>
-	<firePoint x="15" y="38" charge="-12"/>
+	<firePoint x="15" y="38"/> <!-- Charge offset handled in lua -->
 	<mountPoint x="6" y="76"/>
 	<boost>mammoth_cannon_charge</boost>
 </weaponAnim>

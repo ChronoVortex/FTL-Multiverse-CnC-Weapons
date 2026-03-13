@@ -78,29 +78,30 @@ end)
 
 -- Turn the Mammoth Cannon's 3rd projectile into missiles
 local mammothMissile = Hyperspace.Blueprints:GetWeaponBlueprint("MAMMOTH_CANNON_TUSK")
+local mammothChargeOffset = 12
 script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)
     if weapon.blueprint.name == "MAMMOTH_CANNON" then
         local ship = Hyperspace.ships(weapon.iShipId)
+		-- Third shot
         if weapon.weaponVisual.anim.currentFrame > 12 then
             if ship.weaponSystem.missile_count > 0 then
-                -- Use a missile
+                -- Use a missile resource
                 if math.random(100) > ship:GetAugmentationValue("EXPLOSIVE_REPLICATOR")*100 then
                     ship:ModifyMissileCount(-1)
                 end
                 
-                -- Create the missiles
+                -- Create the missile projectiles
                 local spaceManager = Hyperspace.App.world.space
                 for vertOffset = 0, 6, 3 do
-                    -- Calculate offset for the missile since its barrel doesn't line up with the autocannons
+                    -- Calculate offset for the missile
                     local pos = Hyperspace.Pointf()
-                    local vertMod = -1
-                    if weapon.mount.mirror then vertMod = 1 end
+                    local vertMod = weapon.mount.mirror and -1 or 1
                     if weapon.mount.rotate then
                         pos.x = projectile.position.x - 20
-                        pos.y = projectile.position.y + vertOffset*vertMod
+                        pos.y = projectile.position.y + vertMod*mammothChargeOffset*2 + -vertMod*vertOffset
                     else
                         pos.y = projectile.position.y + 20
-                        pos.x = projectile.position.x + vertOffset*vertMod
+                        pos.x = projectile.position.x + vertMod*mammothChargeOffset*2 + -vertMod*vertOffset
                     end
                     
                     -- Create a missile
@@ -110,9 +111,24 @@ script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projec
                 -- Play missile fire sound
                 Hyperspace.Sounds:PlaySoundMix("missileMammoth", -1, false)
             end
+			-- Destroy the standard projectile
             projectile:Kill()
-        else
-            -- Play normal fire sound
+		-- Second shot
+        elseif weapon.weaponVisual.anim.currentFrame > 6 then
+            -- Calculate offset for second projectile
+			local vertMod = weapon.mount.mirror and -1 or 1
+			if weapon.mount.rotate then
+				projectile.position.y = projectile.position.y + vertMod*mammothChargeOffset
+			else
+				projectile.position.x = projectile.position.x + vertMod*mammothChargeOffset
+			end
+			
+			-- Play normal fire sound
+            local sound = "GB_cannonMedium"..(tostring(math.random(3)):sub(1, 1))
+            Hyperspace.Sounds:PlaySoundMix(sound, -1, false)
+		-- First shot
+		else
+			-- Play normal fire sound
             local sound = "GB_cannonMedium"..(tostring(math.random(3)):sub(1, 1))
             Hyperspace.Sounds:PlaySoundMix(sound, -1, false)
         end
